@@ -35,4 +35,4 @@ vendor/
 
 # Compiled files
 .sass-cache/
-compiled/
+build/
