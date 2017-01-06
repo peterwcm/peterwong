@@ -29,3 +29,10 @@ crashlytics-build.properties
 
 # NPM files
 node_modules/
+
+# Vendor files
+vendor/
+
+# Compiled files
+.sass-cache/
+compiled/

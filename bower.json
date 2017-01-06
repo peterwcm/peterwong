@@ -1,0 +1,23 @@
+{
+  "name": "peterwong",
+  "version": "1.0.0",
+  "homepage": "https://github.com/peterwcm/peterwong",
+  "authors": [
+    "Portfolio <peterwong.brisbane@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "vendor/bower_components"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1"
+  }
+}
