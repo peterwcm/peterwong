@@ -1,4 +1,4 @@
-$(function() {
+$(() => {
    $(document).foundation({
       'magellan-expedition': {
          active_class: 'is-active'
