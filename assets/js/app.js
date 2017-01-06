@@ -7,21 +7,19 @@ $(() => {
    menu.init();
 });
 
-var menu = {
+const menu = {
    stickyOffest: 200,
    stickyClass: 'is-sticky',
 
-   init: function() {
-      var $window = $(window),
-          $menu = $('.magellan-container'),
-          _this = this;
-      $window.scroll(function() {
-         if ($window.scrollTop() > _this.stickyOffest) {
-            $menu.addClass(_this.stickyClass);
-         }
-         else {
-            $menu.removeClass(_this.stickyClass);
-         }
+   init: () => {
+      const $window = $(window);
+      const $menu = $('.magellan-container');
+      const _this = this;
+
+      $window.scroll(() => {
+         $window.scrollTop() > _this.stickyOffest
+             ? $menu.addClass(_this.stickyClass)
+             : $menu.removeClass(_this.stickyClass);
       });
    }
 };
