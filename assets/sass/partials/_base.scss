@@ -1,0 +1,26 @@
+// Imports all core files + global project variables.
+
+// Variables
+@import '../modules/fonts';
+@import '../modules/colors';
+
+// Foundation
+@import '../modules/settings';
+@import 'foundation';
+
+// Components
+@import '../components/magellan';
+@import '../components/work';
+@import '../components/text-slides';
+
+// Typography
+@import 'typography';
+
+// Structure
+@import 'structure';
+
+// Partials
+@import 'panels';
+@import 'footer';
+@import 'buttons';
+@import 'forms';

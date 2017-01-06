@@ -1,0 +1,16 @@
+$color-fc: #ED303D;
+$color-zippity: #46D7C6;
+
+.work {
+  min-height: 500px;
+
+  &--fc {
+    border-bottom: 1px solid $color-neutral;
+//    background-color: #F1D9DB;
+  }
+
+  &--zippity {
+    border-bottom: 1px solid $color-neutral;
+//    background-color: #CBE8E5;
+  }
+}

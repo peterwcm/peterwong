@@ -1,0 +1,44 @@
+/**
+ * Colors in alphabetical order.
+ */
+
+// Descriptive variables
+
+$color-green: #88C5CC;
+$color-red: #EC7979;
+$color-white: #FFFFFF;
+$color-neutral: #EEEEEE;
+$color-neutral-2: #CCCCCC;
+$color-neutral-3: #AAAAAA;
+$color-neutral-4: #999999;
+$color-dark: #6C6E6E;
+$color-dark-2: #565A5C;
+$color-dark-3: #333333;
+$color-black: #000000;
+
+// Functional variables
+
+// Text
+$color-text-normal: $color-dark-2;
+$color-text-light: $color-neutral-4;
+$color-text-dark: $color-dark;
+$color-text-inverse: $color-white;
+
+// Sections
+$color-panel-normal: $color-white;
+$color-menu-normal: $color-green;
+$color-menu-hover: lighten($color-green, 10%);
+$color-menu-landing: transparent;
+$color-footer-normal: $color-green;
+$color-footer-social: darken($color-green, 10%);
+
+// Forms
+$color-input-normal: $color-white;
+$color-input-focus: $color-white;
+$color-input-border-normal: $color-white;
+$color-input-border-focus: $color-white;
+$color-input-placeholder: $color-neutral-2;
+
+// Elements
+$color-icon-normal: $color-green;
+$color-alert-box-alert: $color-red;

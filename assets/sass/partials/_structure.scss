@@ -1,0 +1,17 @@
+.section {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+
+  &--empty {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &--large {
+    padding-top: rem-calc(40);
+    padding-bottom: rem-calc(40);
+  }
+}

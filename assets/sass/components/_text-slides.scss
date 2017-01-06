@@ -1,0 +1,60 @@
+@keyframes glow {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@keyframes slideRotate {
+  0%, 12%, 100% {transform:translateY(0);}
+  17%, 29% {transform:translateY(-25%);}
+  34%, 46% {transform:translateY(-50%);}
+  51%, 63% {transform:translateY(-75%);}
+  68%, 80% {transform:translateY(-50%);}
+  85%, 97% {transform:translateY(-25%);}
+}
+
+.text-slides {
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+  font-size: 35px;
+  font-family: $font-muli;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-white;
+
+  &:after,
+  &:before {
+    position: absolute;
+    top: 0;
+    color: $color-white;
+    font-size: 42px;
+    animation: 2s linear 0s normal none infinite glow;
+    line-height: 40px;
+  }
+
+  &:before {
+    content: '[';
+    left: 0;
+  }
+
+  &:after {
+    content: ']';
+    right: 0;
+  }
+
+  &__list {
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style:none;
+    animation: 12s linear 0s normal none infinite slideRotate;
+
+    li {
+      line-height: 40px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+#footer_container {
+  color: $color-text-inverse;
+  background-color: $color-footer-normal;
+
+  .fa {
+    color: $color-text-inverse;
+    min-width: 50px;
+  }
+}
