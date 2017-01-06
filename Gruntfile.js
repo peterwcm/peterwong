@@ -18,10 +18,18 @@ module.exports = grunt => {
                 dest: 'build/js/app.js'
             }
         },
-        uglify: {
+        babel: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+                sourceMap: true,
+                presets: ['es2015']
             },
+            dist: {
+                files: {
+                    'build/js/app.js': 'build/js/app.js'
+                }
+            }
+        },
+        uglify: {
             dist: {
                 files: {
                     'build/js/app.min.js': ['<%= concat.dist.dest %>']
@@ -42,7 +50,7 @@ module.exports = grunt => {
         watch: {
             js: {
                 files: ['<%= concat.dist.src %>'],
-                tasks: ['concat', 'uglify']
+                tasks: ['concat', 'babel', 'uglify']
             },
             css: {
                 files: 'assets/sass/**/*.scss',
@@ -52,6 +60,7 @@ module.exports = grunt => {
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
