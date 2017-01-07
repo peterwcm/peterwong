@@ -1,5 +1,6 @@
 .heading {
-  margin-bottom: rem-calc(16);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: $color-text--heading;
   text-transform: uppercase;
   font-weight: 600;
@@ -11,4 +12,5 @@
 
 .sub-heading {
   color: $color-text--sub-heading;
+  margin-bottom: 1rem;
 }

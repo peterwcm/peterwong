@@ -21,4 +21,7 @@ $(() => {
    });
 
    menu.init();
+
+   const date = new Date();
+   $('.copyright__year').text(date.getFullYear());
 });
