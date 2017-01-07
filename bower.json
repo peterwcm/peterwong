@@ -18,6 +18,6 @@
     "vendor/bower_components"
   ],
   "dependencies": {
-    "foundation": "~5.5.1"
+    "foundation": "~5.5.3"
   }
 }

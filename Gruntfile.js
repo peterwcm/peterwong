@@ -47,6 +47,16 @@ module.exports = grunt => {
                 }
             }
         },
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({browsers: ['last 2 versions']})
+                ]
+            },
+            dist: {
+                src: 'build/css/*.css'
+            }
+        },
         watch: {
             js: {
                 files: ['<%= concat.dist.src %>'],
@@ -54,15 +64,19 @@ module.exports = grunt => {
             },
             css: {
                 files: 'assets/sass/**/*.scss',
-                tasks: ['sass']
+                tasks: ['sass', 'postcss']
             }
         }
     });
 
+    // Javascript
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    // Style
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-postcss');
+    // Watch
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['watch']);
