@@ -36,6 +36,15 @@ module.exports = grunt => {
                 }
             }
         },
+        stylelint: {
+            simple: {
+                options: {
+                    configFile: '.stylelintrc',
+                    format: 'sass'
+                },
+                src: ['assets/sass/**/*.{css,scss}', '!assets/sass/modules/_settings.scss']
+            }
+        },
         sass: {
             dist: {
                 options: {
@@ -74,6 +83,7 @@ module.exports = grunt => {
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     // Style
+    grunt.loadNpmTasks('grunt-stylelint');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
     // Watch
