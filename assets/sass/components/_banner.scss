@@ -1,6 +1,6 @@
 .banner {
   @include grid-column(12);
-  min-height: 500px;
+  min-height: rem-calc(500);
   background: $color-theme--primary;
   padding-top: rem-calc(300);
   padding-left: 5%;
@@ -10,7 +10,7 @@
     text-transform: uppercase;
 
     &:first-of-type {
-      margin-top: 50px;
+      margin-top: rem-calc(50);;
       margin-bottom: 0;
     }
 
