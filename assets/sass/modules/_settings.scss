@@ -1423,7 +1423,7 @@ $secondary-color: $color-theme--secondary;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
- $topbar-link-bg-hover: lighten($color-theme--primary, 10%);
+// $topbar-link-bg-hover: lighten($color-theme--secondary, 10%);
  //$topbar-link-bg-color-hover: $color-menu-hover;
  //$topbar-link-bg-active: $color-menu-hover;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
@@ -1436,7 +1436,7 @@ $secondary-color: $color-theme--secondary;
 // $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
- $topbar-dropdown-bg: lighten($color-theme--primary, 10%);;
+// $topbar-dropdown-bg: lighten($color-theme--primary, 10%);
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $color-theme--primary;
 // $topbar-dropdown-link-bg: $oil;
@@ -1459,7 +1459,7 @@ $secondary-color: $color-theme--secondary;
 // $topbar-menu-link-color: $white;
 // $topbar-menu-icon-color: $white;
 // $topbar-menu-link-color-toggled: $color-theme--primary;
- $topbar-menu-icon-color-toggled: lighten($color-theme--primary, 20%);
+// $topbar-menu-icon-color-toggled: lighten($color-theme--secondary, 20%);
 // $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
 
 // Transitions and breakpoint styles
