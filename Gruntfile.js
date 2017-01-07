@@ -9,7 +9,7 @@ module.exports = grunt => {
             dist: {
                 src: [
                     'vendor/bower_components/foundation/js/vendor/jquery.js',
-                    'vendor/bower_components/foundation/js/vendor/modernizr.js',
+                    // 'vendor/bower_components/foundation/js/vendor/modernizr.js',
                     'vendor/bower_components/foundation/js/foundation.js',
                     'vendor/bower_components/foundation/js/foundation/foundation.topbar.js',
                     'vendor/bower_components/foundation/js/foundation/foundation.magellan.js',

@@ -4,7 +4,7 @@ const menu = {
    init: () => {
       const $window = $(window);
       const $menu = $('.magellan-container');
-      const _this = this;
+      const _this = menu;
       $window.scroll(() => {
          $window.scrollTop() > _this.stickyOffest
              ? $menu.addClass(_this.stickyClass)
@@ -19,5 +19,6 @@ $(() => {
          active_class: 'is-active'
       }
    });
+
    menu.init();
 });
