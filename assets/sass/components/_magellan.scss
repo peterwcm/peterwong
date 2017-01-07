@@ -19,13 +19,13 @@ $sticky-height: 50px;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-animation-duration: 0.375s;
-  animation-duration: 0.375s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transition-delay: 0s;
 
   &.is-sticky {
@@ -74,7 +74,7 @@ $sticky-height: 50px;
     width: 100%;
     margin: 0 auto;
     padding: 0 2%;
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
     transition-delay: 0s;
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
@@ -92,10 +92,10 @@ $sticky-height: 50px;
       cursor: pointer;
       text-align: center;
       box-shadow: inset 0 -4px $color-text--inverse;
-      transition-duration: 0.4s;
+      transition-duration: 0.5s;
       transition-delay: 0s;
-      -webkit-animation-duration: 0.35s;
-      animation-duration: 0.35s;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
       -webkit-animation-delay: 1s;
       animation-delay: 1s;
       -webkit-animation-fill-mode: backwards;
@@ -116,7 +116,7 @@ $sticky-height: 50px;
         position: relative;
         display: inline-block;
         width: 0;
-        transition-duration: 0.4s;
+        transition-duration: 0.5s;
         transition-delay: 0s;
       }
 
@@ -137,7 +137,7 @@ $sticky-height: 50px;
       font: inherit;
       font-weight: 300;
       text-align: center;
-      transition-duration: 0.2s;
+      transition-duration: 0.5s;
       transition-delay: 0s;
       float: none;
       text-transform: uppercase;
@@ -172,7 +172,7 @@ $sticky-height: 50px;
       display: block;
       height: 75px;
       color: $color-text--inverse;
-      transition-duration: 0.4s;
+      transition-duration: 0.5s;
       transition-delay: 0s;
 
       &:hover {
@@ -274,7 +274,7 @@ h2[data-magellan-destination] {
         &:hover,
         &.is-active {
           .sub-nav__menu-link {
-            transition-duration: 0.15s;
+            transition-duration: 0.5s;
             transition-delay: 0s;
             -webkit-transform: translate(0, -3px);
             transform: translate(0, -3px);

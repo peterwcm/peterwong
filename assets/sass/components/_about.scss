@@ -2,5 +2,15 @@
   @include grid-column(12);
   padding-top: rem-calc(20);
   padding-bottom: rem-calc(20);
+  background: lighten($color-theme--primary, 20%);
   min-height: rem-calc(500);
+}
+
+.profile-pic {
+  margin: 0 auto;
+  width: rem-calc(120);
+  height: rem-calc(120);
+  border-radius: rem-calc(60);
+  background: $color-theme--primary url('../images/profile-pic.jpg') no-repeat;
+  background-size: cover;
 }
