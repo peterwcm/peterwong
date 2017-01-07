@@ -1,9 +1,13 @@
-#footer_container {
-  color: $color-text-inverse;
-  background-color: $color-footer-normal;
+.footer {
+  position: relative;
+  float: left;
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+  color: $color-text--inverse;
+  background-color: $color-theme--primary;
 
   .fa {
-    color: $color-text-inverse;
+    color: $color-text--inverse;
     min-width: 50px;
   }
 }

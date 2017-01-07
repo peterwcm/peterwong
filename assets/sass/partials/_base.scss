@@ -10,6 +10,7 @@
 
 // Components
 @import '../components/magellan';
+@import '../components/banner';
 @import '../components/work';
 @import '../components/text-slides';
 
@@ -20,7 +21,4 @@
 @import 'structure';
 
 // Partials
-@import 'panels';
 @import 'footer';
-@import 'buttons';
-@import 'forms';

@@ -1,0 +1,21 @@
+.banner {
+  @include grid-column(12);
+  min-height: 500px;
+  background: $color-theme--primary;
+  padding-top: rem-calc(300);
+  padding-left: 5%;
+
+  &__heading {
+    color: $color-text--inverse;
+    text-transform: uppercase;
+
+    &:first-of-type {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+
+    &:last-of-type {
+      margin-top: 0;
+    }
+  }
+}

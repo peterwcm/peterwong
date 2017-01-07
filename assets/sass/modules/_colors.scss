@@ -1,40 +1,40 @@
 // Descriptive variables
 
 $color-green: #88C5CC;
-$color-red: #EC7979;
+$color-green--light: #E8F8FA;
+$color-green--light2: #BAE4E8;
+$color-green--dark: #59A1A8;
+$color-green--dark2: #37848B;
+
+$color-yellow: #FFE3A9;
+$color-yellow--light: #FFF9ED;
+$color-yellow--light2: #FFEFCC;
+$color-yellow--dark: #FFD885;
+$color-yellow--dark2: #E4B758;
+
+$color-red: #FFADA9;
+$color-red--light: #FFEEED;
+$color-red--light2: #FFCFCC;
+$color-red--dark: #FF8B85;
+$color-red--dark2: #E45F58;
+
 $color-white: #FFFFFF;
 $color-neutral: #EEEEEE;
-$color-neutral-2: #CCCCCC;
-$color-neutral-3: #AAAAAA;
-$color-neutral-4: #999999;
+$color-neutral2: #CCCCCC;
+$color-neutral3: #AAAAAA;
+$color-neutral4: #999999;
 $color-dark: #6C6E6E;
-$color-dark-2: #565A5C;
-$color-dark-3: #333333;
+$color-dark2: #565A5C;
+$color-dark3: #333333;
 $color-black: #000000;
 
 // Functional variables
 
+// Theme
+$color-theme--primary: $color-green;
+$color-theme--secondary: $color-red;
+$color-theme--tertiary: $color-yellow;
+
 // Text
-$color-text-normal: $color-dark-2;
-$color-text-light: $color-neutral-4;
-$color-text-dark: $color-dark;
-$color-text-inverse: $color-white;
-
-// Sections
-$color-panel-normal: $color-white;
-$color-menu-normal: $color-green;
-$color-menu-hover: lighten($color-green, 10%);
-$color-menu-landing: transparent;
-$color-footer-normal: $color-green;
-$color-footer-social: darken($color-green, 10%);
-
-// Forms
-$color-input-normal: $color-white;
-$color-input-focus: $color-white;
-$color-input-border-normal: $color-white;
-$color-input-border-focus: $color-white;
-$color-input-placeholder: $color-neutral-2;
-
-// Elements
-$color-icon-normal: $color-green;
-$color-alert-box-alert: $color-red;
+$color-text--normal: $color-dark2;
+$color-text--inverse: $color-white;
