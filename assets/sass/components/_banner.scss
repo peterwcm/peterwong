@@ -1,37 +1,47 @@
 .banner {
   @include grid-column(12);
-  min-height: rem-calc(500);
+  min-height: rem-calc(450);
   background: $color-theme--primary;
-  padding-top: rem-calc(300);
+  padding-top: rem-calc(250);
   padding-left: 5%;
   -webkit-transition: height 0.5s ease;
   -moz-transition: height 0.5s ease;
   -o-transition: height 0.5s ease;
   -ms-transition: height 0.5s ease;
 
-  @media #{$large-up} {
-    min-height: rem-calc(600);
+  @media #{$medium-up} {
+    min-height: rem-calc(500);
   }
 
-  &__heading {
+  &__heading,
+  &__sub-heading {
     color: $color-text--inverse;
     -webkit-transition: font-size 0.5s ease;
     -moz-transition: font-size 0.5s ease;
     -o-transition: font-size 0.5s ease;
     -ms-transition: font-size 0.5s ease;
+  }
+
+  &__heading {
+    margin-top: rem-calc(50);
+    margin-bottom: 0;
+    font-size: $h1-font-size;
+    text-transform: uppercase;
+
+    @media #{$medium-up} {
+      font-size: $h1-font-size + rem-calc(10);
+    }
 
     @media #{$large-up} {
-      font-size: $h2-font-size * 1.5;
+      font-size: $h1-font-size + rem-calc(20);
     }
+  }
 
-    &:first-of-type {
-      margin-top: rem-calc(50);
-      margin-bottom: 0;
-      text-transform: uppercase;
-    }
+  &__sub-heading {
+    margin-top: 0;
 
-    &:last-of-type {
-      margin-top: 0;
+    @media #{$large-up} {
+      font-size: $h3-font-size + rem-calc(5);
     }
   }
 }

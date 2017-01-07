@@ -43,16 +43,13 @@
 }
 
 .text-slides {
+  display: inline-block;
   position: relative;
   overflow: hidden;
-  max-width: 400px;
+  width: 200px;
   height: 40px;
-  line-height: 40px;
-  padding: 0 40px;
-  font-size: 35px;
   font-family: $font-muli;
   font-weight: 600;
-  text-transform: uppercase;
   color: $color-text--inverse;
 
   &::after,
@@ -60,18 +57,16 @@
     position: absolute;
     top: 0;
     color: $color-text--inverse;
-    font-size: 42px;
-    animation: 2s linear 0s normal none infinite glow;
-    line-height: 40px;
+    animation: 5s linear 0s normal none infinite glow;
   }
 
   &::before {
-    content: '[';
+    content: '{';
     left: 0;
   }
 
   &::after {
-    content: ']';
+    content: '}';
     right: 0;
   }
 
@@ -81,10 +76,6 @@
     padding: 0;
     text-align: center;
     list-style: none;
-    animation: 12s linear 0s normal none infinite slideRotate;
-
-    li {
-      line-height: 40px;
-    }
+    animation: 15s linear 0s normal none infinite slideRotate;
   }
 }
