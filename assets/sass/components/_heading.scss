@@ -3,4 +3,12 @@
   color: $color-text--heading;
   text-transform: uppercase;
   font-weight: 600;
+
+  &--inverse {
+    color: $color-text--inverse;
+  }
+}
+
+.sub-heading {
+  color: $color-text--sub-heading;
 }

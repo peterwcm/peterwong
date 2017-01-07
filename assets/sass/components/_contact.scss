@@ -4,4 +4,14 @@
   padding-bottom: rem-calc(20);
   min-height: rem-calc(500);
   text-align: center;
+
+  &__content {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem-calc(500);
+  }
+
+  &__email-button {
+    border-radius: 6px;
+  }
 }

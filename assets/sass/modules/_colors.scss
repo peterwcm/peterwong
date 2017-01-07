@@ -6,11 +6,23 @@ $color-green--light2: #BAE4E8;
 $color-green--dark: #59A1A8;
 $color-green--dark2: #37848B;
 
+$color-orange: #FFD1A9;
+$color-orange--light: #FFF5ED;
+$color-orange--light2: #FFE4CC;
+$color-orange--dark: #FFC085;
+$color-orange--dark2: #E49A58;
+
 $color-yellow: #FFE3A9;
 $color-yellow--light: #FFF9ED;
 $color-yellow--light2: #FFEFCC;
 $color-yellow--dark: #FFD885;
 $color-yellow--dark2: #E4B758;
+
+$color-blue: #95A6D4;
+$color-blue--light: #EBEFFB;
+$color-blue--light2: #C2CDEC;
+$color-blue--dark: #697EB6;
+$color-blue--dark2: #465C99;
 
 $color-red: #FFADA9;
 $color-red--light: #FFEEED;
@@ -32,10 +44,11 @@ $color-black: #000000;
 
 // Theme
 $color-theme--primary: $color-green;
-$color-theme--secondary: $color-red;
+$color-theme--secondary: $color-orange;
 $color-theme--tertiary: $color-yellow;
 
 // Text
 $color-text--normal: $color-dark2;
 $color-text--inverse: $color-white;
 $color-text--heading: $color-yellow--dark;
+$color-text--sub-heading: $color-yellow;
