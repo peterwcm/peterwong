@@ -2,7 +2,6 @@
   @include grid-column(12);
   padding-top: rem-calc(20);
   padding-bottom: rem-calc(20);
-  background: lighten($color-theme--primary, 20%);
   min-height: rem-calc(500);
 }
 
