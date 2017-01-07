@@ -1,0 +1,12 @@
+.contact {
+  @include grid-column(12);
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+  background: $color-neutral;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 100px;
+}

@@ -8,17 +8,19 @@
 @import '../modules/settings';
 @import 'foundation';
 
+// Typography
+@import 'typography';
+
+// Structure
+//@import 'structure';
+
 // Components
 @import '../components/magellan';
 @import '../components/banner';
 @import '../components/text-slides';
 @import '../components/work';
-
-// Typography
-@import 'typography';
-
-// Structure
-@import 'structure';
+@import '../components/about';
+@import '../components/contact';
 
 // Partials
 @import 'footer';

@@ -1,8 +1,17 @@
 $color-fc: #ED303D;
 $color-zippity: #46D7C6;
 
+.works {
+  @include grid-column(12);
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+}
+
 .work {
-  min-height: 500px;
+  @include grid-column(12);
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+  min-height: rem-calc(500);
 
   &--fc {
     border-bottom: 1px solid $color-neutral;

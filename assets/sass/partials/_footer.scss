@@ -1,6 +1,5 @@
 .footer {
-  position: relative;
-  float: left;
+  @include grid-column(12);
   padding-top: rem-calc(20);
   padding-bottom: rem-calc(20);
   color: $color-text--inverse;
