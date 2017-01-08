@@ -1,8 +1,7 @@
 .banner {
-  @include grid-column(12);
-  min-height: rem-calc(450);
+  min-height: rem-calc(500);
   background: $color-theme--primary;
-  padding-top: rem-calc(250);
+  padding-top: rem-calc(300);
   padding-left: 5%;
   -webkit-transition: height 0.5s ease;
   -moz-transition: height 0.5s ease;
@@ -10,11 +9,11 @@
   -ms-transition: height 0.5s ease;
 
   @media #{$medium-up} {
-    min-height: rem-calc(500);
+    min-height: rem-calc(550);
   }
 
   @media #{$large-up} {
-    min-height: rem-calc(550);
+    min-height: rem-calc(600);
   }
 
   &__heading,

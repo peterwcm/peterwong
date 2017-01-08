@@ -1,12 +1,10 @@
 .footer {
-  @include grid-column(12);
-  padding-top: rem-calc(10);
-  padding-bottom: rem-calc(10);
+  padding: rem-calc(10) 0;
   color: $color-text--inverse;
   background-color: $color-green--dark;
+  text-align: center;
 }
 
 .copyright {
   font-size: 80%;
-  text-align: center;
 }

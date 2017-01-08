@@ -2,13 +2,11 @@ $color-fc: #ED303D;
 $color-zippity: #46D7C6;
 
 .works {
-  @include grid-column(12);
   padding: 0;
   text-align: center;
 }
 
 .work {
-  @include grid-column(12);
   padding-top: 3rem;
   padding-bottom: 5rem;
   min-height: rem-calc(500);
