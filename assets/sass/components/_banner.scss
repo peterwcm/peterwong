@@ -13,6 +13,10 @@
     min-height: rem-calc(500);
   }
 
+  @media #{$large-up} {
+    min-height: rem-calc(550);
+  }
+
   &__heading,
   &__sub-heading {
     color: $color-text--inverse;
@@ -20,9 +24,6 @@
     -moz-transition: font-size 0.5s ease;
     -o-transition: font-size 0.5s ease;
     -ms-transition: font-size 0.5s ease;
-
-    transform: translateX(0px) translateY(0px) translateZ(0px);
-    transition: opacity 1200ms, transform 1200ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   &__heading {
