@@ -1,0 +1,57 @@
+.works {
+  &__title {
+    background-color: $color-theme--primary;
+  }
+}
+
+.work {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  left: 0;
+
+  &:hover {
+   .work__image {
+     -webkit-transform: scale(1.3);
+     -ms-transform: scale(1.3);
+     transform: scale(1.3);
+   }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 15s -webkit-transform linear;
+    transition: 15s transform linear;
+  }
+
+  &--flight-centre {
+    .work__image {
+      background: $color-theme--primary url('../images/flight-centre.jpg') no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+  &--zippity {
+    .work__image {
+      background: $color-theme--primary url('../images/zippity.jpg') no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+  &--blossom-days {
+    .work__image {
+      background: $color-theme--primary url('../images/blossom-days.jpg') no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
