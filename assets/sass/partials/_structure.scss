@@ -1,3 +1,16 @@
+body {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -ms-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+
+  &.section-loaded {
+    opacity: 1;
+  }
+}
+
 .section {
   position: relative;
 }

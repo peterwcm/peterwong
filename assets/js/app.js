@@ -18,6 +18,7 @@ const menu = {
 const section = {
    init: () => {
       section.updateHeight(windowHeight);
+      $('body').addClass('section-loaded');
 
       $(window).resize(() => {
          const currentHeight = $(window).height();
