@@ -13,4 +13,8 @@
 .sub-heading {
   color: $color-text--sub-heading;
   margin-bottom: 1rem;
+
+  &--inverse {
+    color: $color-text--inverse;
+  }
 }
