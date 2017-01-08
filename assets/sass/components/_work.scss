@@ -9,8 +9,8 @@ $color-zippity: #46D7C6;
 
 .work {
   @include grid-column(12);
-  padding-top: rem-calc(20);
-  padding-bottom: rem-calc(20);
+  padding-top: 3rem;
+  padding-bottom: 5rem;
   min-height: rem-calc(500);
 
   &--flight-centre {
