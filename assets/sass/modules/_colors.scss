@@ -44,11 +44,11 @@ $color-black: #000000;
 
 // Theme
 $color-theme--primary: $color-green;
-$color-theme--secondary: $color-orange;
+$color-theme--secondary: $color-orange--dark;
 $color-theme--tertiary: $color-yellow;
 
 // Text
 $color-text--normal: $color-dark2;
 $color-text--inverse: $color-white;
 $color-text--heading: $color-yellow--dark;
-$color-text--sub-heading: $color-yellow;
+$color-text--sub-heading: lighten($color-yellow--dark, 5%);
