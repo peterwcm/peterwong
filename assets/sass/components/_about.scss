@@ -1,9 +1,7 @@
 .about {
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-  min-height: rem-calc(500);
-  text-align: center;
-  background-color: $color-theme--primary;
+  &__content {
+    background-color: $color-theme--primary;
+  }
 }
 
 .profile-pic {

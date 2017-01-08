@@ -21,8 +21,6 @@ const section = {
 
       $(window).resize(() => {
          const currentHeight = $(window).height();
-         console.log(currentHeight);
-         console.log(windowHeight);
          if(currentHeight && currentHeight !== windowHeight) {
             windowHeight = currentHeight;
             section.updateHeight(windowHeight);
@@ -31,6 +29,7 @@ const section = {
    },
    updateHeight: height => {
       $('.section--full-page').css('min-height', height);
+      $('.block--full-page').css('min-height', height);
    }
 };
 

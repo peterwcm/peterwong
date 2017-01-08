@@ -154,12 +154,12 @@ $secondary-color: $color-theme--secondary;
  $small-breakpoint:  em-calc(480);
  $medium-breakpoint: em-calc(768);
  $large-breakpoint:  em-calc(1024);
- //$xlarge-breakpoint: em-calc(1224);
+ $xlarge-breakpoint: em-calc(1224);
 
  $small-range:   (0, $small-breakpoint);
  $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
  $large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
- //$xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
+ $xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
  //$xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));
 
  $screen: "only screen";

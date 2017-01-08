@@ -1,15 +1,7 @@
-$color-fc: #ED303D;
-$color-zippity: #46D7C6;
-
-.works {
-  padding: 0;
-  text-align: center;
-}
-
 .work {
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-  min-height: rem-calc(500);
+  &__title {
+    background-color: $color-theme--primary;
+  }
 
   &--flight-centre {
     background-color: $color-green--light2;
@@ -17,11 +9,5 @@ $color-zippity: #46D7C6;
 
   &--zippity {
     background-color: $color-green--light2;
-  }
-
-  &--blossom-days {
-  }
-
-  &--budget-direct {
   }
 }

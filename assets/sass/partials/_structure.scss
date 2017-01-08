@@ -1,19 +1,31 @@
 .section {
   position: relative;
-  min-height: rem-calc(500);
 }
 
-%section-block {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 200;
-
-  &--half {
-    @media #{$medium-up} {
+.block {
+  &--title,
+  &--content {
+    @media #{$large-up} {
+      position: absolute;
+      top: 0;
       width: 50%;
+      z-index: 200;
+    }
+  }
+
+  &--title {
+    @media #{$large-up} {
+      left: 0;
+      -webkit-transition: 1s width cubic-bezier(0.77, 0, 0.175, 1);
+      transition: 1s width cubic-bezier(0.77, 0, 0.175, 1);
+    }
+  }
+
+  &--content {
+    @media #{$large-up} {
+      left: 50%;
+      -webkit-transition: 1s width cubic-bezier(0.77, 0, 0.175, 1), 1s left cubic-bezier(0.77, 0, 0.175, 1);
+      transition: 1s width cubic-bezier(0.77, 0, 0.175, 1), 1s left cubic-bezier(0.77, 0, 0.175, 1);
     }
   }
 }
