@@ -6,7 +6,6 @@
   &--title,
   &--content {
     @media #{$large-up} {
-      position: absolute;
       top: 0;
       width: 50%;
       z-index: 200;
@@ -15,6 +14,7 @@
 
   &--title {
     @media #{$large-up} {
+      position: absolute;
       left: 0;
       -webkit-transition: 1s width cubic-bezier(0.77, 0, 0.175, 1);
       transition: 1s width cubic-bezier(0.77, 0, 0.175, 1);
@@ -23,6 +23,7 @@
 
   &--content {
     @media #{$large-up} {
+      position: relative;
       left: 50%;
       -webkit-transition: 1s width cubic-bezier(0.77, 0, 0.175, 1), 1s left cubic-bezier(0.77, 0, 0.175, 1);
       transition: 1s width cubic-bezier(0.77, 0, 0.175, 1), 1s left cubic-bezier(0.77, 0, 0.175, 1);
