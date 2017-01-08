@@ -7,10 +7,21 @@
 }
 
 .profile-pic {
-  margin: 0 auto;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
   width: rem-calc(120);
   height: rem-calc(120);
+  margin-left: rem-calc(-60);
   border-radius: rem-calc(60);
-  background: $color-theme--primary url('../images/profile-pic-filtered.jpg') no-repeat;
+  background: $color-theme--primary url('../images/profile-pic.jpg') no-repeat;
   background-size: cover;
+  z-index: 300;
+
+  @media #{$large-up} {
+    width: rem-calc(132);
+    height: rem-calc(132);
+    border-radius: rem-calc(66);
+    margin-left: rem-calc(-66);
+  }
 }

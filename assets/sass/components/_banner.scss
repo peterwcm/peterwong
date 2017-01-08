@@ -1,20 +1,11 @@
 .banner {
-  min-height: rem-calc(500);
+  @extend %section-block;
   background: $color-theme--primary;
-  padding-top: rem-calc(300);
   padding-left: 5%;
   -webkit-transition: height 0.5s ease;
   -moz-transition: height 0.5s ease;
   -o-transition: height 0.5s ease;
   -ms-transition: height 0.5s ease;
-
-  @media #{$medium-up} {
-    min-height: rem-calc(550);
-  }
-
-  @media #{$large-up} {
-    min-height: rem-calc(600);
-  }
 
   &__heading,
   &__sub-heading {
@@ -26,8 +17,8 @@
   }
 
   &__heading {
-    margin-top: rem-calc(50);
-    margin-bottom: 0;
+    position: absolute;
+    bottom: 5rem;
     font-size: $h1-font-size;
     text-transform: uppercase;
 
@@ -41,7 +32,8 @@
   }
 
   &__sub-heading {
-    margin-top: 0;
+    position: absolute;
+    bottom: 3rem;
 
     @media #{$large-up} {
       font-size: $h3-font-size + rem-calc(5);

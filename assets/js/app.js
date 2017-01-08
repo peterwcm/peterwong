@@ -1,3 +1,5 @@
+let windowHeight = $(window).height();
+
 const menu = {
    stickyOffest: 200,
    stickyClass: 'is-sticky',
@@ -13,6 +15,32 @@ const menu = {
    }
 };
 
+const section = {
+   init: () => {
+      section.updateHeight(windowHeight);
+
+      $(window).resize(() => {
+         const currentHeight = $(window).height();
+         console.log(currentHeight);
+         console.log(windowHeight);
+         if(currentHeight && currentHeight !== windowHeight) {
+            windowHeight = currentHeight;
+            section.updateHeight(windowHeight);
+         }
+      });
+   },
+   updateHeight: height => {
+      $('.section--full-page').css('min-height', height);
+   }
+};
+
+const copyright = {
+   init: () => {
+      const date = new Date();
+      $('.copyright__year').text(date.getFullYear());
+   }
+};
+
 $(() => {
    $(document).foundation({
       'magellan-expedition': {
@@ -21,7 +49,6 @@ $(() => {
    });
 
    menu.init();
-
-   const date = new Date();
-   $('.copyright__year').text(date.getFullYear());
+   section.init();
+   copyright.init();
 });
