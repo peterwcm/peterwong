@@ -17,7 +17,7 @@ const menu = {
 
 const section = {
    init: () => {
-      const LOADING_TIME = 1000;
+      const LOADING_TIME = 1500;
       // Update section min height.
       section.updateHeight(windowHeight);
       // Create a fake loading effect by setting a 1s time out.
