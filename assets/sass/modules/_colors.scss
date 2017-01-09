@@ -52,3 +52,7 @@ $color-text--normal: $color-dark2;
 $color-text--inverse: $color-white;
 $color-text--heading: $color-yellow--dark;
 $color-text--sub-heading: lighten($color-yellow--dark, 5%);
+
+// Spinner
+$color-spinner--normal: $color-green;
+$color-spinner--inverse: $color-white;

@@ -17,9 +17,14 @@ const menu = {
 
 const section = {
    init: () => {
+      const LOADING_TIME = 1000;
+      // Update section min height.
       section.updateHeight(windowHeight);
-      $('body').addClass('section-loaded');
-
+      // Create a fake loading effect by setting a 1s time out.
+      setTimeout(() => {
+         $('body').addClass('section-loaded');
+      }, LOADING_TIME);
+      // Initial window resize handler to update min height.
       $(window).resize(() => {
          const currentHeight = $(window).height();
          if(currentHeight && currentHeight !== windowHeight) {
