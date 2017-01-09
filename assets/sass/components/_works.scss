@@ -1,6 +1,6 @@
 .works {
   &__title {
-    background-color: $color-theme--primary;
+    //background-color: $color-red;
   }
 }
 
@@ -33,7 +33,7 @@
 
   &--flight-centre {
     .work__image {
-      //background: $color-theme--primary url('../images/flight-centre.jpg') no-repeat;
+      background: $color-theme--primary url('../images/flight-centre.jpg') no-repeat;
       background-size: cover;
       background-position: center center;
     }

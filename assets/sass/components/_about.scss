@@ -1,25 +1,29 @@
 .about {
-  &__content {
+  &__title {
     background-color: $color-theme--primary;
+  }
+
+  &__content {
+    padding: 3rem;
   }
 }
 
 .profile-pic {
   position: absolute;
-  top: 5rem;
+  top: 7rem;
   left: 50%;
-  width: rem-calc(120);
-  height: rem-calc(120);
-  margin-left: rem-calc(-60);
-  border-radius: rem-calc(60);
+  width: rem-calc(140);
+  height: rem-calc(140);
+  margin-left: rem-calc(-70);
+  border-radius: rem-calc(70);
   background: $color-theme--primary url('../images/profile-pic.jpg') no-repeat;
   background-size: cover;
   z-index: 300;
 
   @media #{$large-up} {
-    width: rem-calc(132);
-    height: rem-calc(132);
-    border-radius: rem-calc(66);
-    margin-left: rem-calc(-66);
+    width: rem-calc(120);
+    height: rem-calc(120);
+    border-radius: rem-calc(60);
+    margin-left: rem-calc(-60);
   }
 }
