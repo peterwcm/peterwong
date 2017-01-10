@@ -35,6 +35,18 @@ body {
       -webkit-transition: 1s width cubic-bezier(0.77, 0, 0.175, 1);
       transition: 1s width cubic-bezier(0.77, 0, 0.175, 1);
     }
+
+    &.scroll-start {
+      @media #{$large-up} {
+        position: fixed;
+      }
+    }
+
+    &.scroll-end {
+      @media #{$large-up} {
+        bottom: 0;
+      }
+    }
   }
 
   &--content {

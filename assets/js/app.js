@@ -19,15 +19,19 @@ class Section {
    constructor(loadingTime) {
       this._loadingTime = loadingTime;
       this._windowHeight = $(window).height();
+      this._scrollOffsets = [];
    }
 
    init() {
-      // Update section min height.
+      // Update section min height and scroll offsets.
       this._updateHeight();
+      this._updateScrollOffsets();
       // Create a fake loading effect.
       this._loadPage();
       // Initial window resize handler to update min height.
       this._initResizeHandler();
+      // Initial scroll handler.
+      this._initScrollHandler();
    }
 
    _loadPage() {
@@ -36,20 +40,52 @@ class Section {
       }, this._loadingTime);
    }
 
+   _updateScrollOffsets() {
+      this._scrollOffsets = [];
+      $('.block--content').each((i, elem) => {
+         this._scrollOffsets.push({
+            $elem: $(elem).prev('.block--title'),
+            start: $(elem).offset().top,
+            end: $(elem).offset().top + $(elem).outerHeight() - this._windowHeight
+         });
+      });
+   }
+
+   _initScrollHandler() {
+      const $window = $(window);
+      $window.scroll(() => {
+         this._scrollOffsets.forEach(offset => {
+            if ($window.scrollTop() >= offset.start
+                && $window.scrollTop() < offset.end) {
+               offset.$elem
+                   .removeClass('scroll-start scroll-end')
+                   .addClass('scroll-start');
+            } else if ($window.scrollTop() >= offset.end) {
+               offset.$elem
+                   .removeClass('scroll-start scroll-end')
+                   .addClass('scroll-end');
+            } else {
+               offset.$elem.removeClass('scroll-start scroll-end');
+            }
+         });
+      });
+   }
+
    _initResizeHandler() {
-      $(window).resize(() => {
-         const currentHeight = $(window).height();
+      const $window = $(window);
+      $window.resize(() => {
+         const currentHeight = $window.height();
          if(currentHeight && currentHeight !== this._windowHeight) {
             this._windowHeight = currentHeight;
             this._updateHeight();
+            this._updateScrollOffsets();
          }
       });
    }
 
    _updateHeight() {
-      $('.section--full-page, .block--full-page').css(
-          'min-height', this._windowHeight
-      );
+      $('.section--full-page, .block--full-page')
+          .css('min-height', this._windowHeight);
    }
 }
 
