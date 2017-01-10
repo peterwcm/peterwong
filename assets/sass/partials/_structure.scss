@@ -1,19 +1,5 @@
-.spinner {
-  opacity: 1;
-  -webkit-transition: opacity 2s ease-in;
-  -moz-transition: opacity 2s ease-in;
-  -ms-transition: opacity 2s ease-in;
-  -o-transition: opacity 2s ease-in;
-  transition: opacity 2s ease-in;
-}
-
 .page {
   opacity: 0;
-  -webkit-transition: opacity 2s ease-out;
-  -moz-transition: opacity 2s ease-out;
-  -ms-transition: opacity 2s ease-out;
-  -o-transition: opacity 2s ease-out;
-  transition: opacity 2s ease-out;
 }
 
 body {
@@ -22,7 +8,7 @@ body {
   &.section-loaded {
     overflow: initial;
 
-    .spinner {
+    .loading-overlay {
       opacity: 0;
     }
 

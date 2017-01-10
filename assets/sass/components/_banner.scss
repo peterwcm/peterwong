@@ -2,17 +2,11 @@
   background: $color-theme--primary;
   padding-left: 5%;
   -webkit-transition: height 0.5s ease;
-  -moz-transition: height 0.5s ease;
-  -o-transition: height 0.5s ease;
-  -ms-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 
   &__heading,
   &__sub-heading {
     color: $color-text--inverse;
-    -webkit-transition: font-size 0.5s ease;
-    -moz-transition: font-size 0.5s ease;
-    -o-transition: font-size 0.5s ease;
-    -ms-transition: font-size 0.5s ease;
   }
 
   &__heading {
@@ -20,6 +14,13 @@
     bottom: 5rem;
     font-size: $h1-font-size;
     text-transform: uppercase;
+    transform: translateX(-300px);
+    -webkit-transition: font-size 0.5s, transform 0.5s, linear;
+    transition: font-size 0.5s, transform 0.5s, linear;
+
+    .section-loaded & {
+      transform: translateX(0);
+    }
 
     @media #{$medium-up} {
       font-size: $h1-font-size + rem-calc(10);
@@ -33,6 +34,13 @@
   &__sub-heading {
     position: absolute;
     bottom: 3rem;
+    transform: translateX(-500px);
+    -webkit-transition: font-size 0.5s, transform 1s, linear;
+    transition: font-size 0.5s, transform 1s, linear;
+
+    .section-loaded & {
+      transform: translateX(0);
+    }
 
     @media #{$large-up} {
       font-size: $h3-font-size + rem-calc(5);
