@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 
   &.section-loaded {
-    overflow: initial;
+    overflow: auto;
   }
 }
 
@@ -61,7 +61,7 @@ body {
 
     &.scroll-end {
       @media #{$large-up} {
-        top: initial;
+        top: auto;
         bottom: 0;
       }
     }
