@@ -1,5 +1,9 @@
 .page {
   opacity: 0;
+
+  .section-loaded & {
+    opacity: 1;
+  }
 }
 
 body {
@@ -7,14 +11,6 @@ body {
 
   &.section-loaded {
     overflow: initial;
-
-    .loading-overlay {
-      opacity: 0;
-    }
-
-    .page {
-      opacity: 1;
-    }
   }
 }
 
