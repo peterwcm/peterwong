@@ -19,6 +19,23 @@ body {
 }
 
 .block {
+  position: relative;
+
+  &__heading {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    margin-top: -1.5rem;
+    font-size: 3rem;
+    text-align: center;
+
+    &--inverse {
+      color: $color-text--inverse;
+    }
+  }
+
   &--title,
   &--content {
     @media #{$large-up} {

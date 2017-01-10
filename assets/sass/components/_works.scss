@@ -1,9 +1,3 @@
-.works {
-  &__title {
-    //background-color: $color-red;
-  }
-}
-
 .work {
   overflow: hidden;
   position: relative;
@@ -41,7 +35,7 @@
 
   &--zippity {
     .work__image {
-      //background: $color-theme--primary url('../images/zippity.jpg') no-repeat;
+      background: $color-theme--primary url('../images/zippity.jpg') no-repeat;
       background-size: cover;
       background-position: center center;
     }
@@ -49,7 +43,7 @@
 
   &--blossom-days {
     .work__image {
-      //background: $color-theme--primary url('../images/blossom-days.jpg') no-repeat;
+      background: $color-theme--primary url('../images/blossom-days.jpg') no-repeat;
       background-size: cover;
       background-position: center center;
     }
