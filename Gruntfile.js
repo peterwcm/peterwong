@@ -68,9 +68,10 @@ module.exports = grunt => {
         copy: {
           main: {
               files: [{
-                  expand: true,
-                  src: ['assets/images/**'],
-                  dest: 'build/images/'
+              	  expand: true,
+              	  cwd: 'assets/images/',
+              	  src: ['**'],
+              	  dest: 'build/images/'
               }]
           }
         },
