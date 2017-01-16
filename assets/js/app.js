@@ -28,6 +28,7 @@ class Section {
         // Update section min height and scroll offsets.
         this._updateHeight();
         this._updateScrollOffsets();
+        this._updateScroll();
         // Initial window resize handler to update min height.
         this._initResizeHandler();
         // Initial scroll handler.
@@ -54,22 +55,8 @@ class Section {
    }
 
    _initScrollHandler() {
-      const $window = $(window);
-      $window.scroll(() => {
-         this._scrollOffsets.forEach(offset => {
-            if ($window.scrollTop() >= offset.start
-                && $window.scrollTop() < offset.end) {
-               offset.$elem
-                   .removeClass('scroll-start scroll-end')
-                   .addClass('scroll-start');
-            } else if ($window.scrollTop() >= offset.end) {
-               offset.$elem
-                   .removeClass('scroll-start scroll-end')
-                   .addClass('scroll-end');
-            } else {
-               offset.$elem.removeClass('scroll-start scroll-end');
-            }
-         });
+      $(window).scroll(() => {
+        this._updateScroll();
       });
    }
 
@@ -80,9 +67,28 @@ class Section {
          if(currentHeight && currentHeight !== this._windowHeight) {
             this._windowHeight = currentHeight;
             this._updateHeight();
-            this._updateScrollOffsets();
          }
+         this._updateScrollOffsets();
+         this._updateScroll();
       });
+   }
+
+   _updateScroll() {
+     const $window = $(window);
+     this._scrollOffsets.forEach(offset => {
+        if ($window.scrollTop() >= offset.start
+            && $window.scrollTop() < offset.end) {
+           offset.$elem
+               .removeClass('scroll-start scroll-end')
+               .addClass('scroll-start');
+        } else if ($window.scrollTop() >= offset.end) {
+           offset.$elem
+               .removeClass('scroll-start scroll-end')
+               .addClass('scroll-end');
+        } else {
+           offset.$elem.removeClass('scroll-start scroll-end');
+        }
+     });
    }
 
    _updateHeight() {
