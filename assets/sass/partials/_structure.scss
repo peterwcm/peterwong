@@ -30,15 +30,25 @@ body {
     margin-top: -1.5rem;
     font-size: 3rem;
     text-align: center;
+    font-weight: 700;
+    font-family: $font-heading--section;
 
     &--inverse {
       color: $color-text--inverse;
+    }
+
+    @media #{$medium-up} {
+      font-size: 4rem;
+    }
+
+    @media #{$xlarge-up} {
+      font-size: 3rem;
     }
   }
 
   &--title,
   &--content {
-    @media #{$large-up} {
+    @media #{$xlarge-up} {
       top: 0;
       width: 50%;
       z-index: 200;
@@ -46,7 +56,7 @@ body {
   }
 
   &--title {
-    @media #{$large-up} {
+    @media #{$xlarge-up} {
       position: absolute;
       left: 0;
       -webkit-transition: 1s width cubic-bezier(0.77, 0, 0.175, 1);
@@ -54,13 +64,13 @@ body {
     }
 
     &.scroll-start {
-      @media #{$large-up} {
+      @media #{$xlarge-up} {
         position: fixed;
       }
     }
 
     &.scroll-end {
-      @media #{$large-up} {
+      @media #{$xlarge-up} {
         top: auto;
         bottom: 0;
       }
@@ -68,7 +78,7 @@ body {
   }
 
   &--content {
-    @media #{$large-up} {
+    @media #{$xlarge-up} {
       position: relative;
       left: 50%;
       -webkit-transition: 1s width cubic-bezier(0.77, 0, 0.175, 1), 1s left cubic-bezier(0.77, 0, 0.175, 1);

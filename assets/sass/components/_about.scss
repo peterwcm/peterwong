@@ -14,7 +14,7 @@
   background-size: cover;
   z-index: 300;
 
-  @media #{$large-up} {
+  @media #{$xlarge-up} {
     display: block;
     position: absolute;
     top: rem-calc(120);
