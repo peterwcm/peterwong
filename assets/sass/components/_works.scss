@@ -25,6 +25,36 @@
     transition: 15s transform linear;
   }
 
+  &__content {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    color: $color-text--inverse;
+
+  	&::before {
+	    content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-left: -5px;
+  	}
+  }
+
+  &__heading {
+    margin-bottom: 0;
+    color: $color-text--inverse;
+    text-transform: uppercase;
+  }
+
+  &__sub-heading {
+    margin-top: 0;
+    color: $color-text--inverse;
+    text-transform: uppercase;
+    font-size: 0.8rem
+  }
+
   &--flight-centre {
     .work__image {
       background: $color-theme--primary url('../images/flight-centre.jpg') no-repeat;
