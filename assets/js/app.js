@@ -23,20 +23,22 @@ class Section {
    }
 
    init() {
-      // Update section min height and scroll offsets.
-      this._updateHeight();
-      this._updateScrollOffsets();
       // Create a fake loading effect.
-      this._loadPage();
-      // Initial window resize handler to update min height.
-      this._initResizeHandler();
-      // Initial scroll handler.
-      this._initScrollHandler();
+      this._loadPage(() => {
+        // Update section min height and scroll offsets.
+        this._updateHeight();
+        this._updateScrollOffsets();
+        // Initial window resize handler to update min height.
+        this._initResizeHandler();
+        // Initial scroll handler.
+        this._initScrollHandler();
+      });
    }
 
-   _loadPage() {
+   _loadPage(onFinishedLoading) {
       setTimeout(() => {
          $('body').addClass('section-loaded');
+         onFinishedLoading();
       }, this._loadingTime);
    }
 
