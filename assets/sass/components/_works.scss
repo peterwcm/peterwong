@@ -26,20 +26,17 @@
   }
 
   &__content {
-    position: relative;
-    display: inline-block;
+    position: absolute;
     width: 100%;
-    vertical-align: middle;
+    height: 100%;
     text-align: center;
     color: $color-text--inverse;
 
-  	&::before {
-	    content: '';
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-      margin-left: -5px;
-  	}
+    &::before {
+      content: '';
+      display: block;
+      height: 45%;
+    }
   }
 
   &__heading {
@@ -52,7 +49,7 @@
     margin-top: 0;
     color: $color-text--inverse;
     text-transform: uppercase;
-    font-size: 0.8rem
+    font-size: 0.8rem;
   }
 
   &--flight-centre {
