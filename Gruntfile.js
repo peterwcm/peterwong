@@ -65,6 +65,15 @@ module.exports = grunt => {
                 src: 'build/css/*.css'
             }
         },
+        copy: {
+          main: {
+              files: [{
+                  expand: true,
+                  src: ['assets/images/**'],
+                  dest: 'build/images/'
+              }]
+          }
+        },
         watch: {
             js: {
                 files: ['<%= concat.dist.src %>'],
@@ -73,6 +82,10 @@ module.exports = grunt => {
             css: {
                 files: 'assets/sass/**/*.scss',
                 tasks: ['sass', 'postcss']
+            },
+            images: {
+                files: 'assets/images/**',
+                tasks: ['copy']
             }
         }
     });
@@ -85,9 +98,11 @@ module.exports = grunt => {
     grunt.loadNpmTasks('grunt-stylelint');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
+    // Copy
+    grunt.loadNpmTasks('grunt-contrib-copy');
     // Watch
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['concat', 'babel', 'uglify', 'sass', 'postcss']);
+    grunt.registerTask('build', ['concat', 'babel', 'uglify', 'sass', 'postcss', 'copy']);
 };
