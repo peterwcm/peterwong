@@ -27,13 +27,17 @@ class Section {
         this._loadPage(() => {
             // Update section min height and scroll offsets.
             this._updateHeight();
-            this._updateScrollOffsets();
-            this._updateScroll();
+            this.refreshScroll();
             // Initial window resize handler to update min height.
             this._initResizeHandler();
             // Initial scroll handler.
             this._initScrollHandler();
         });
+    }
+
+    refreshScroll() {
+        this._updateScrollOffsets();
+        this._updateScroll();
     }
 
     _loadPage(onFinishedLoading) {
@@ -68,8 +72,7 @@ class Section {
                 this._windowHeight = currentHeight;
                 this._updateHeight();
             }
-            this._updateScrollOffsets();
-            this._updateScroll();
+            this.refreshScroll();
         });
     }
 
@@ -98,8 +101,10 @@ class Section {
 }
 
 class Work {
-    constructor() {
+    constructor(section) {
         this._menuHeight = 60;
+        this._section = section;
+        this._delay = 500;
     }
 
     init() {
@@ -108,9 +113,23 @@ class Work {
             const id = $elem.data('id');
             const $details = $(`.work__details[data-id='${id}']`);
             $details.slideDown();
-            $('html, body').animate({
-                scrollTop: $details.offset().top - this._menuHeight
-            });
+            setTimeout(() => {
+                this._section.refreshScroll();
+                $('html, body').animate({
+                    scrollTop: $details.offset().top - this._menuHeight
+                });
+            }, this._delay);
+        });
+
+
+        $('.work__less').click(e => {
+            const $elem = $(e.currentTarget);
+            const id = $elem.data('id');
+            const $details = $(`.work__details[data-id='${id}']`);
+            $details.slideUp();
+            setTimeout(() => {
+                this._section.refreshScroll();
+            }, this._delay);
         });
     }
 }
@@ -137,7 +156,7 @@ $(() => {
     menu.init();
     const section = new Section(3000);
     section.init();
-    const work = new Work();
+    const work = new Work(section);
     work.init();
     const copyright = new Copyright();
     copyright.init();
