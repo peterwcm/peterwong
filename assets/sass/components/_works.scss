@@ -75,6 +75,14 @@
     }
   }
 
+  &--budget-direct {
+    .work__image {
+      background: $color-theme--primary url('../images/budget-direct.jpg') no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
   &--blossom-days {
     .work__image {
       background: $color-theme--primary url('../images/blossom-days.jpg') no-repeat;
@@ -107,12 +115,18 @@
 
   &--close {
     position: absolute;
-    right: 0;
+    right: 1.5em;
 
-    .hexagon__slice {
-      border-top: 0.3em solid transparent;
-      border-bottom: 0.9em solid transparent;
-      border-left: 1.5em solid $color-red--dark2;
+    .hexagon {
+      width: 3em;
+      height: 3em;
+
+      &__slice {
+        right: 0;
+        border-top: 0.3em solid transparent;
+        border-bottom: 0.9em solid transparent;
+        border-left: 1.5em solid $color-red--dark2;
+      }
     }
 
     &:hover {
