@@ -77,29 +77,36 @@
   }
 }
 
-.button--hexagon {
-  font-size: 1em;
+.hexagon {
+  position: relative;
   display: block;
   width: 3.75em;
   height: 4.25em;
   margin: 0 auto;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1em;
   -webkit-transform-origin: center center;
   -ms-transform-origin: center center;
   transform-origin: center center;
-  color: #FFFFFF;
-  position: relative;
-  text-decoration: none;
 
-  .button__label {
-    z-index: 200;
+  &:hover {
+    cursor: pointer;
+
+    .hexagon__slice {
+      border-left-color: $color-dark2;
+    }
+  }
+
+  &__label {
     position: relative;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 0.05em;
-    top: 50%;
-    left: 0;
     display: block;
-    line-height: 1em;
+    top: 50%;
+    z-index: 200;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.1em;
     -webkit-transform: translateY(-50%) scale(1);
     -ms-transform: translateY(-50%) scale(1);
     transform: translateY(-50%) scale(1);
@@ -107,20 +114,17 @@
     transition: 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s;
   }
 
-  .slice {
+  &__slice {
     position: absolute;
     border-top: 1.125em solid transparent;
     border-right: none;
     border-bottom: 1em solid transparent;
-    border-left: 1.875em solid #292929;
-    top: 0;
-    left: 50%;
+    border-left: 1.875em solid $color-dark3;
     -webkit-transform-origin: left bottom;
     -ms-transform-origin: left bottom;
     transform-origin: left bottom;
     border-radius: 3px 3px 0 0;
     z-index: 100;
-    border-left-color: #000000;
 
     &:nth-child(1) {
       -webkit-transform: rotateZ(60deg) rotateY(0) rotateX(0deg);
