@@ -1,123 +1,144 @@
 class Menu {
-   constructor() {
-      this._stickyOffest = 200;
-      this._stickyClass = 'is-sticky';
-   }
+    constructor() {
+        this._stickyOffest = 200;
+        this._stickyClass = 'is-sticky';
+    }
 
-   init() {
-      const $window = $(window);
-      const $menu = $('.magellan-container');
-      $window.scroll(() => {
-         $window.scrollTop() > this._stickyOffest
-             ? $menu.addClass(this._stickyClass)
-             : $menu.removeClass(this._stickyClass);
-      });
-   }
+    init() {
+        const $window = $(window);
+        const $menu = $('.magellan-container');
+        $window.scroll(() => {
+            $window.scrollTop() > this._stickyOffest
+                ? $menu.addClass(this._stickyClass)
+                : $menu.removeClass(this._stickyClass);
+        });
+    }
 }
 
 class Section {
-   constructor(loadingTime) {
-      this._loadingTime = loadingTime;
-      this._windowHeight = $(window).height();
-      this._scrollOffsets = [];
-   }
+    constructor(loadingTime) {
+        this._loadingTime = loadingTime;
+        this._windowHeight = $(window).height();
+        this._scrollOffsets = [];
+    }
 
-   init() {
-      // Create a fake loading effect.
-      this._loadPage(() => {
-        // Update section min height and scroll offsets.
-        this._updateHeight();
-        this._updateScrollOffsets();
-        this._updateScroll();
-        // Initial window resize handler to update min height.
-        this._initResizeHandler();
-        // Initial scroll handler.
-        this._initScrollHandler();
-      });
-   }
-
-   _loadPage(onFinishedLoading) {
-      setTimeout(() => {
-         $('body').addClass('section-loaded');
-         onFinishedLoading();
-      }, this._loadingTime);
-   }
-
-   _updateScrollOffsets() {
-      this._scrollOffsets = [];
-      $('.block--content').each((i, elem) => {
-         this._scrollOffsets.push({
-            $elem: $(elem).prev('.block--title'),
-            start: $(elem).offset().top,
-            end: $(elem).offset().top + $(elem).outerHeight() - this._windowHeight
-         });
-      });
-   }
-
-   _initScrollHandler() {
-      $(window).scroll(() => {
-        this._updateScroll();
-      });
-   }
-
-   _initResizeHandler() {
-      const $window = $(window);
-      $window.resize(() => {
-         const currentHeight = $window.height();
-         if(currentHeight && currentHeight !== this._windowHeight) {
-            this._windowHeight = currentHeight;
+    init() {
+        // Create a fake loading effect.
+        this._loadPage(() => {
+            // Update section min height and scroll offsets.
             this._updateHeight();
-         }
-         this._updateScrollOffsets();
-         this._updateScroll();
-      });
-   }
+            this._updateScrollOffsets();
+            this._updateScroll();
+            // Initial window resize handler to update min height.
+            this._initResizeHandler();
+            // Initial scroll handler.
+            this._initScrollHandler();
+        });
+    }
 
-   _updateScroll() {
-     const $window = $(window);
-     this._scrollOffsets.forEach(offset => {
-        if ($window.scrollTop() >= offset.start
-            && $window.scrollTop() < offset.end) {
-           offset.$elem
-               .removeClass('scroll-start scroll-end')
-               .addClass('scroll-start');
-        } else if ($window.scrollTop() >= offset.end) {
-           offset.$elem
-               .removeClass('scroll-start scroll-end')
-               .addClass('scroll-end');
-        } else {
-           offset.$elem.removeClass('scroll-start scroll-end');
-        }
-     });
-   }
+    _loadPage(onFinishedLoading) {
+        setTimeout(() => {
+            $('body').addClass('section-loaded');
+            onFinishedLoading();
+        }, this._loadingTime);
+    }
 
-   _updateHeight() {
-      $('.section--full-page, .block--full-page')
-          .css('min-height', this._windowHeight);
-   }
+    _updateScrollOffsets() {
+        this._scrollOffsets = [];
+        $('.block--content').each((i, elem) => {
+            this._scrollOffsets.push({
+                $elem: $(elem).prev('.block--title'),
+                start: $(elem).offset().top,
+                end: $(elem).offset().top + $(elem).outerHeight() - this._windowHeight
+            });
+        });
+    }
+
+    _initScrollHandler() {
+        $(window).scroll(() => {
+            this._updateScroll();
+        });
+    }
+
+    _initResizeHandler() {
+        const $window = $(window);
+        $window.resize(() => {
+            const currentHeight = $window.height();
+            if (currentHeight && currentHeight !== this._windowHeight) {
+                this._windowHeight = currentHeight;
+                this._updateHeight();
+            }
+            this._updateScrollOffsets();
+            this._updateScroll();
+        });
+    }
+
+    _updateScroll() {
+        const $window = $(window);
+        this._scrollOffsets.forEach(offset => {
+            if ($window.scrollTop() >= offset.start
+                && $window.scrollTop() < offset.end) {
+                offset.$elem
+                    .removeClass('scroll-start scroll-end')
+                    .addClass('scroll-start');
+            } else if ($window.scrollTop() >= offset.end) {
+                offset.$elem
+                    .removeClass('scroll-start scroll-end')
+                    .addClass('scroll-end');
+            } else {
+                offset.$elem.removeClass('scroll-start scroll-end');
+            }
+        });
+    }
+
+    _updateHeight() {
+        $('.section--full-page, .block--full-page')
+            .css('min-height', this._windowHeight);
+    }
+}
+
+class Work {
+    constructor() {
+        this._menuHeight = 60;
+    }
+
+    init() {
+        $('.work__more').click(e => {
+            const $elem = $(e.currentTarget);
+            const id = $elem.data('id');
+            const $details = $(`.work__details[data-id='${id}']`);
+            $details.slideDown();
+            $('html, body').animate({
+                scrollTop: $details.offset().top - this._menuHeight
+            });
+        });
+    }
 }
 
 class Copyright {
-   constructor() {}
+    constructor() {
+    }
 
-   init() {
-      const date = new Date();
-      $('.copyright__year').text(date.getFullYear());
-   }
+    init() {
+        const date = new Date();
+        $('.copyright__year').text(date.getFullYear());
+    }
 }
 
 $(() => {
-   $(document).foundation({
-      'magellan-expedition': {
-         active_class: 'is-active',
-         destination_threshold: 0
-      }
-   });
+    $(document).foundation({
+        'magellan-expedition': {
+            active_class: 'is-active',
+            destination_threshold: 0
+        }
+    });
 
-   const menu = new Menu();
-   menu.init();
-   const section = new Section(3000);
-   section.init();
-   const copyright = new Copyright();
-   copyright.init();
+    const menu = new Menu();
+    menu.init();
+    const section = new Section(3000);
+    section.init();
+    const work = new Work();
+    work.init();
+    const copyright = new Copyright();
+    copyright.init();
 });

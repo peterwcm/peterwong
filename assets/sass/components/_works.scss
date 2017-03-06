@@ -47,9 +47,15 @@
 
   &__sub-heading {
     margin-top: 0;
+    margin-bottom: 1rem;
     color: $color-text--inverse;
     text-transform: uppercase;
     font-size: 0.8rem;
+  }
+
+  &__details {
+    display: none;
+    padding: 2rem 0;
   }
 
   &--flight-centre {
@@ -105,7 +111,6 @@
     z-index: 200;
     text-transform: uppercase;
     font-size: 0.75em;
-    font-weight: $font-weight-bold;
     letter-spacing: 0.1em;
     -webkit-transform: translateY(-50%) scale(1);
     -ms-transform: translateY(-50%) scale(1);
