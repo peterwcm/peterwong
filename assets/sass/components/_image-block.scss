@@ -1,11 +1,7 @@
 .image-block {
   padding: 1.5rem 3rem;
   background-color: $color-neutral;
-
-  &__heading,
-  &__sub-heading {
-    text-align: center;
-  }
+  text-align: center;
 
   &__heading {
     margin-bottom: 0;
