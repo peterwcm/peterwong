@@ -154,7 +154,8 @@ $(() => {
 
     const menu = new Menu();
     menu.init();
-    const section = new Section(3000);
+    const loadingTime = location.protocol === 'file:' ? 0 : 3000;
+    const section = new Section(loadingTime);
     section.init();
     const work = new Work(section);
     work.init();

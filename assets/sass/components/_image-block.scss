@@ -1,0 +1,23 @@
+.image-block {
+  padding: 1.5rem 3rem;
+  background-color: $color-neutral;
+
+  &__heading,
+  &__sub-heading {
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 0;
+  }
+
+  &__sub-heading {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: $color-red--dark2;
+  }
+
+  img {
+    margin-bottom: 2rem;
+  }
+}
