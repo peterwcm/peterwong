@@ -152,9 +152,12 @@ $(() => {
         }
     });
 
+    const isLocal = location.protocol === 'file:';
+    if (isLocal) $('.work__details').show();
+    const loadingTime = isLocal ? 0 : 3000;
+
     const menu = new Menu();
     menu.init();
-    const loadingTime = location.protocol === 'file:' ? 0 : 3000;
     const section = new Section(loadingTime);
     section.init();
     const work = new Work(section);

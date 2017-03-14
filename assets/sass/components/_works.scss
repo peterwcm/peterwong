@@ -107,10 +107,9 @@
 
   &:hover {
     cursor: pointer;
-    color: $color-white;
 
     .hexagon__slice {
-      border-left-color: $color-dark2;
+      border-left-color: $color-neutral;
     }
   }
 
