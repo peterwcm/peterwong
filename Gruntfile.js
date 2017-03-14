@@ -31,7 +31,7 @@ module.exports = grunt => {
         uglify: {
             dist: {
                 files: {
-                    'build/js/app-v1.min.js': ['<%= concat.dist.dest %>']
+                    'build/js/app-v2.min.js': ['<%= concat.dist.dest %>']
                 }
             }
         },
@@ -51,7 +51,7 @@ module.exports = grunt => {
                     style: 'compressed'
                 },
                 files: {
-                    'build/css/app-v1.min.css': 'assets/sass/app.scss'
+                    'build/css/app-v2.min.css': 'assets/sass/app.scss'
                 }
             }
         },

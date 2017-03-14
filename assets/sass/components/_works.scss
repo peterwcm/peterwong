@@ -98,7 +98,7 @@
   width: 3.75em;
   height: 4.25em;
   margin: 0 auto;
-  color: #FFFFFF;
+  color: $color-text--normal;
   text-decoration: none;
   font-size: 1em;
   -webkit-transform-origin: center center;
@@ -107,6 +107,7 @@
 
   &:hover {
     cursor: pointer;
+    color: $color-white;
 
     .hexagon__slice {
       border-left-color: $color-dark2;
@@ -156,7 +157,7 @@
     border-top: 1.125em solid transparent;
     border-right: none;
     border-bottom: 1em solid transparent;
-    border-left: 1.875em solid $color-dark3;
+    border-left: 1.875em solid $color-white;
     -webkit-transform-origin: left bottom;
     -ms-transform-origin: left bottom;
     transform-origin: left bottom;
