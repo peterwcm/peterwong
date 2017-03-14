@@ -6,7 +6,8 @@ The online portfolio for Peter Wong
 ## Project Requirements
 
 * Node.js, download and install Node [here](https://nodejs.org/download/).
-* Bower, install Bower using ```sudo npm install -g bower```
+* Bower, install it by running ```sudo npm install -g bower```
+* Grunt CLI, install it by running ```sudo npm install -g grunt-cli```
 
 ## Project Installation & Setup
 
