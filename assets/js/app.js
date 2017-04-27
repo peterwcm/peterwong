@@ -153,7 +153,7 @@ $(() => {
     });
 
     const isLocal = location.protocol === 'file:';
-    if (isLocal) $('.work__details').show();
+    // if (isLocal) $('.work__details').show();
     const loadingTime = isLocal ? 1000 : 3000;
 
     const menu = new Menu();
