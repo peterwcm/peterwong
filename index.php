@@ -136,7 +136,7 @@
 
                     <div class="text-block">
                         <p>
-                            I have more than 5 years of experience in web development.
+                            I have more than <?php echo date('Y') - 2012; ?> years of experience in web development.
                             From server hosting, back-end API to front-end development.
                             I have not only worked in big enterprise companies like Flight Centre or Budget Direct,
                             but have also started my own businesses including Zippity and Blossom Days.
