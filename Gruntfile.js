@@ -45,15 +45,24 @@ module.exports = grunt => {
             }
         },
         sass: {
-            dist: {
-                options: {
-                    loadPath: ['vendor/bower_components/foundation/scss'],
-                    style: 'compressed'
-                },
-                files: {
-                    'build/css/app.min.css': 'assets/sass/app.scss'
-                }
+          app: {
+            options: {
+              loadPath: ['vendor/bower_components/foundation/scss'],
+              style: 'compressed'
+            },
+            files: {
+              'build/css/app.min.css': 'assets/sass/app.scss'
             }
+          },
+          resume: {
+            options: {
+              loadPath: ['vendor/bower_components/foundation/scss'],
+              style: 'compressed'
+            },
+            files: {
+              'build/css/resume.min.css': 'assets/sass/resume.scss'
+            }
+          }
         },
         postcss: {
             options: {
@@ -80,9 +89,13 @@ module.exports = grunt => {
                 files: ['<%= concat.dist.src %>'],
                 tasks: ['concat', 'babel', 'uglify']
             },
-            css: {
-                files: 'assets/sass/**/*.scss',
-                tasks: ['sass', 'postcss']
+            appCss: {
+                files: ['assets/sass/**/*.scss', '!assets/sass/resume.scss'],
+                tasks: ['sass:app', 'postcss']
+            },
+            resumeCss: {
+              files: 'assets/sass/resume.scss',
+              tasks: ['sass:resume', 'postcss']
             },
             images: {
                 files: 'assets/images/**',
