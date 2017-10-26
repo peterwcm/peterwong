@@ -134,16 +134,6 @@ class Work {
     }
 }
 
-class Copyright {
-    constructor() {
-    }
-
-    init() {
-        const date = new Date();
-        $('.copyright__year').text(date.getFullYear());
-    }
-}
-
 $(() => {
     $(document).foundation({
         'magellan-expedition': {
@@ -162,6 +152,4 @@ $(() => {
     section.init();
     const work = new Work(section);
     work.init();
-    const copyright = new Copyright();
-    copyright.init();
 });

@@ -24,7 +24,7 @@
           type="text/css"
           rel="stylesheet"
           href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link href="build/css/app-v2.min.css" rel="stylesheet">
+    <link href="build/css/app.min.css?v=<?php echo date("ymdGi", filemtime("build/css/app.min.css")); ?>" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=
@@ -539,15 +539,14 @@
 
         <footer class="footer">
             <div class="copyright">
-                Design & Created by Peter Wong &copy;
-                <span class="copyright__year">2017</span>
+                Design & Created by Peter Wong &copy; <?php echo date('Y'); ?>
             </div>
         </footer>
     </div>
 
     <!-- JS -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="build/js/app-v2.min.js"></script>
+    <script src="build/js/app.min.js?v=<?php echo date("ymdGi", filemtime("build/js/app.min.js")); ?>"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
