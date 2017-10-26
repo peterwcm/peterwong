@@ -252,7 +252,7 @@
                         <div class="text-block">
                             <h4 class="text-block__heading">My Job</h4>
                             <p>
-                                My main responsibilities include developing and
+                                My main responsibilities include designing, developing and
                                 maintaining the website in Wordpress.
                                 Site's performance and SEO are
                                 constantly being improved by optimising
@@ -271,6 +271,68 @@
                             <img src="./build/images/examples/blossom-days.jpg" />
                         </div>
                     </div>
+
+
+                    <div class="work work--santiago block block--full-page">
+                        <div class="work__image"></div>
+                        <div class="work__content">
+                            <h5 class="work__heading">Santiago</h5>
+                            <h6 class="work__sub-heading">Coffee Beans Shop</h6>
+                            <span class="work__more hexagon" data-id="santiago">
+                                <span class="hexagon__slice"></span>
+                                <span class="hexagon__slice"></span>
+                                <span class="hexagon__slice"></span>
+                                <span class="hexagon__slice"></span>
+                                <span class="hexagon__slice"></span>
+                                <span class="hexagon__slice"></span>
+                                <span class="hexagon__label">More</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="work__details" data-id="santiago">
+                        <span class="work__less hexagon hexagon--close" data-id="santiago">
+                            <span class="hexagon__slice"></span>
+                            <span class="hexagon__slice"></span>
+                            <span class="hexagon__slice"></span>
+                            <span class="hexagon__slice"></span>
+                            <span class="hexagon__slice"></span>
+                            <span class="hexagon__slice"></span>
+                        </span>
+
+                        <div class="text-block">
+                            <h4 class="text-block__heading">Company</h4>
+                            <p>
+                                Santiago is a Brisbane based online coffee beans shop.
+                                They import high quality Arabica coffee beans from El Salvador
+                                and offer a wide range of premium coffee beans.
+                            </p>
+                            <p>
+                                Website:
+                                <a href="https://santiago.com.au/" target="_blank">
+                                    www.santiago.com.au
+                                </a>
+                            </p>
+                        </div>
+                        <div class="text-block">
+                            <h4 class="text-block__heading">My Job</h4>
+                            <p>
+                                In this job, my client has already chosen a theme
+                                so my job is basically just to finish the setup
+                                in WordPress including setting up the eCommerce with PayPal.
+                            </p>
+                            <p>
+                                The most challenging part is to customise the theme's
+                                components since it doesn't provide too much flexibility out
+                                of the box.
+                            </p>
+                        </div>
+                        <div class="image-block">
+                            <h4 class="image-block__heading">Home Page</h4>
+                            <h6 class="image-block__sub-heading">Desktop</h6>
+                            <img src="./build/images/examples/santiago.jpg" />
+                        </div>
+                    </div>
+                    
 
                     <div class="work work--zippity block block--full-page">
                         <div class="work__image"></div>
@@ -347,6 +409,7 @@
                         </div>
                     </div>
 
+                    
                     <div class="work work--budget-direct block block--full-page">
                         <div class="work__image"></div>
                         <div class="work__content">
@@ -413,6 +476,7 @@
                             <img src="./build/images/examples/income-protection.jpg" />
                         </div>
                     </div>
+
 
                     <div class="work work--flight-centre block block--full-page">
                         <div class="work__image"></div>
