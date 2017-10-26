@@ -18,6 +18,10 @@
     height: 100%;
     transform: scale(1);
     transition: 15s transform linear;
+    background-color: $color-theme--primary;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   &__content {
@@ -56,33 +60,31 @@
 
   &--flight-centre {
     .work__image {
-      background: $color-theme--primary url('../images/flight-centre.jpg') no-repeat;
-      background-size: cover;
-      background-position: center center;
+      background-image: url('../images/flight-centre.jpg');
     }
   }
 
   &--zippity {
     .work__image {
-      background: $color-theme--primary url('../images/zippity.jpg') no-repeat;
-      background-size: cover;
-      background-position: center center;
+      background-image: url('../images/zippity.jpg');
     }
   }
 
   &--budget-direct {
     .work__image {
-      background: $color-theme--primary url('../images/budget-direct.jpg') no-repeat;
-      background-size: cover;
-      background-position: center center;
+      background-image: url('../images/budget-direct.jpg');
+    }
+  }
+
+  &--santiago {
+    .work__image {
+      background-image: url('../images/santiago.jpg');
     }
   }
 
   &--blossom-days {
     .work__image {
-      background: $color-theme--primary url('../images/blossom-days.jpg') no-repeat;
-      background-size: cover;
-      background-position: center center;
+      background-image: url('../images/blossom-days.jpg');
     }
   }
 }
