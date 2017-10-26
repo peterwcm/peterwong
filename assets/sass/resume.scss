@@ -1,1 +1,27 @@
+// Variables
+@import 'modules/misc';
+@import 'modules/fonts';
+@import 'modules/colors';
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-neutral;
+}
+
+.page {
+  margin: 0 auto;
+  width: 595px;
+  height: 842px;
+  background-color: $color-white;
+}
+
+.top-bar {
+  background-color: $color-theme--primary;
+  height: 1.5rem;
+}
+
+.footer {
+  background-color: $color-theme--primary;
+  height: 1.5rem;
+}
