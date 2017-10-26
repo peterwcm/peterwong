@@ -60,31 +60,31 @@
 
   &--flight-centre {
     .work__image {
-      background-image: url('../images/flight-centre.jpg');
+      background-image: url('#{$image-dir}flight-centre.jpg');
     }
   }
 
   &--zippity {
     .work__image {
-      background-image: url('../images/zippity.jpg');
+      background-image: url('#{$image-dir}zippity.jpg');
     }
   }
 
   &--budget-direct {
     .work__image {
-      background-image: url('../images/budget-direct.jpg');
+      background-image: url('#{$image-dir}budget-direct.jpg');
     }
   }
 
   &--santiago {
     .work__image {
-      background-image: url('../images/santiago.jpg');
+      background-image: url('#{$image-dir}santiago.jpg');
     }
   }
 
   &--blossom-days {
     .work__image {
-      background-image: url('../images/blossom-days.jpg');
+      background-image: url('#{$image-dir}blossom-days.jpg');
     }
   }
 }

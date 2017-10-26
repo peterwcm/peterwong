@@ -10,7 +10,7 @@
 
 .profile-pic {
   display: none;
-  background: $color-theme--primary url('../images/profile-pic.jpg') no-repeat;
+  background: $color-theme--primary url('#{$image-dir}profile-pic.jpg') no-repeat;
   background-size: cover;
   z-index: 300;
 
