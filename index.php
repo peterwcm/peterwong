@@ -16,8 +16,8 @@
     <link rel="canonical" href="http://peterwong.name">
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
 
     <!-- CSS -->
     <link media="all"
