@@ -39,14 +39,37 @@
     <div class="page">
         <div class="top-bar"></div>
 
-        <section class="section section--full-page">
-            <div class="banner block block--full-page">
-                <h2 class="banner__heading">I'm Peter,</h2>
-                <h3 class="banner__sub-heading">a freelance web developer.</h3>
+        <section class="header">
+            <div class="header__left">
+                <div class="profile-pic"></div>
+                <h2>Peter Wong</h2>
+            </div>
+            <div class="header__right">
+                <section class="contact-info">
+                    <div class="contact-info__icon">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-info__details">
+                        <h5 class="contact-info__heading">Website</h5>
+                        <div class="contact-info__text">www.peterwong.name</div>
+                    </div>
+                </section>
+                <section class="contact-info">
+                    <div class="contact-info__icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-info__details">
+                        <h5 class="contact-info__heading">Email</h5>
+                        <div class="contact-info__text">peterwong.brisbane@gmail.com</div>
+                    </div>
+                </section>
             </div>
         </section>
 
-        <footer class="footer"></footer>
+        <section class="main">
+        </section>
+
+        <div class="bottom-bar"><div>
     </div>
 </body>
 </html>

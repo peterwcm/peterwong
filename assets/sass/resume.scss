@@ -3,10 +3,26 @@
 @import 'modules/fonts';
 @import 'modules/colors';
 
+$color-neutral-light: #f9f9f9;
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: $color-neutral;
+  font-family: $font-default;
+  color: $color-text--normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-heading;
 }
 
 .page {
@@ -16,12 +32,64 @@ body {
   background-color: $color-white;
 }
 
-.top-bar {
+.top-bar,
+.bottom-bar {
   background-color: $color-theme--primary;
-  height: 1.5rem;
+  height: 21px;
 }
 
-.footer {
-  background-color: $color-theme--primary;
-  height: 1.5rem;
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  height: 200px;
+  background-color: $color-neutral-light;
+  text-align: center;
+
+  &__left {
+    width: 30%;
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+
+    > section {
+      width: 50%;
+    }
+  }
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__heading {
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 12px;
+  }
+}
+
+.profile-pic {
+  $size: 110px;
+
+  margin: 0 auto;
+  width: $size;
+  height: $size;
+  border-radius: $size / 2;
+  background: $color-theme--primary url('#{$image-dir}profile-pic-resume.jpg') no-repeat;
+  background-size: cover;
+}
+
+.main {
+  height: 600px;
 }
