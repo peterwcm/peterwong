@@ -115,14 +115,19 @@ h5 {
       width: 100%;
 
       > section {
+        margin: 5px 0;
         width: 100%;
+
+        &:first-child {
+          margin-top: 0;
+        }
 
         &:nth-child(odd) {
           padding-left: 0;
         }
 
-        &:nth-child(even) {
-          margin-top: 10px;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
