@@ -51,7 +51,7 @@
                     </div>
                     <div class="contact-info__details">
                         <h5 class="contact-info__heading">Website</h5>
-                        <div class="contact-info__text">www.peterwong.name</div>
+                        <div class="contact-info__text">peterwong.name</div>
                     </div>
                 </section>
                 <section class="contact-info">
@@ -61,6 +61,42 @@
                     <div class="contact-info__details">
                         <h5 class="contact-info__heading">Email</h5>
                         <div class="contact-info__text">peterwong.brisbane@gmail.com</div>
+                    </div>
+                </section>
+                <section class="contact-info">
+                    <div class="contact-info__icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-info__details">
+                        <h5 class="contact-info__heading">Phone</h5>
+                        <div class="contact-info__text">0421957638</div>
+                    </div>
+                </section>
+                <section class="contact-info">
+                    <div class="contact-info__icon">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-info__details">
+                        <h5 class="contact-info__heading">LinkedIn</h5>
+                        <div class="contact-info__text">linkedin.com/in/peterwcm</div>
+                    </div>
+                </section>
+                <section class="contact-info">
+                    <div class="contact-info__icon">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-info__details">
+                        <h5 class="contact-info__heading">GitHub</h5>
+                        <div class="contact-info__text">github.com/peterwcm</div>
+                    </div>
+                </section>
+                <section class="contact-info">
+                    <div class="contact-info__icon">
+                        <i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-info__details">
+                        <h5 class="contact-info__heading">StackOverflow</h5>
+                        <div class="contact-info__text">stackoverflow.com/users/731968</div>
                     </div>
                 </section>
             </div>

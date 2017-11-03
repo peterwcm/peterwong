@@ -57,6 +57,10 @@ h5 {
 
     > section {
       width: 50%;
+
+      &:nth-child(odd) {
+        padding-left: 45px;
+      }
     }
   }
 }
@@ -75,7 +79,7 @@ h5 {
   }
 
   &__text {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -92,4 +96,39 @@ h5 {
 
 .main {
   height: 600px;
+}
+
+@media only screen and (max-width: 595px) {
+  .page {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    height: auto;
+
+    &__left {
+      width: 100%;
+    }
+
+    &__right {
+      width: 100%;
+
+      > section {
+        width: 100%;
+
+        &:nth-child(odd) {
+          padding-left: 0;
+        }
+
+        &:nth-child(even) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .main {
+    height: auto;
+  }
 }
