@@ -51,7 +51,10 @@
                     </div>
                     <div class="contact-info__details">
                         <h5 class="contact-info__heading">Website</h5>
-                        <div class="contact-info__text">peterwong.name</div>
+                        <div class="contact-info__text">
+                            <a href="http://peterwong.name"
+                               target="_blank">peterwong.name</a>
+                        </div>
                     </div>
                 </section>
                 <section class="contact-info">
@@ -60,7 +63,11 @@
                     </div>
                     <div class="contact-info__details">
                         <h5 class="contact-info__heading">Email</h5>
-                        <div class="contact-info__text">peterwong.brisbane@gmail.com</div>
+                        <div class="contact-info__text">
+                            <a href="mailto:peterwong.brisbane@gmail.com">
+                                peterwong.brisbane@gmail.com
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section class="contact-info">
@@ -78,7 +85,10 @@
                     </div>
                     <div class="contact-info__details">
                         <h5 class="contact-info__heading">LinkedIn</h5>
-                        <div class="contact-info__text">linkedin.com/in/peterwcm</div>
+                        <div class="contact-info__text">
+                            <a href="https://www.linkedin.com/in/peterwcm"
+                               target="_blank">linkedin.com/in/peterwcm</a>
+                        </div>
                     </div>
                 </section>
                 <section class="contact-info">
@@ -87,7 +97,10 @@
                     </div>
                     <div class="contact-info__details">
                         <h5 class="contact-info__heading">GitHub</h5>
-                        <div class="contact-info__text">github.com/peterwcm</div>
+                        <div class="contact-info__text">
+                            <a href="https://github.com/peterwcm"
+                               target="_blank">github.com/peterwcm</a>
+                        </div>
                     </div>
                 </section>
                 <section class="contact-info">
@@ -96,7 +109,10 @@
                     </div>
                     <div class="contact-info__details">
                         <h5 class="contact-info__heading">StackOverflow</h5>
-                        <div class="contact-info__text">stackoverflow.com/users/731968</div>
+                        <div class="contact-info__text">
+                            <a href="https://stackoverflow.com/users/731968/peter-wong"
+                               target="_blank">stackoverflow.com/users/731968</a>
+                        </div>
                     </div>
                 </section>
             </div>
