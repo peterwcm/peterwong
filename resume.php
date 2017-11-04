@@ -42,7 +42,8 @@
         <section class="header">
             <div class="header__left">
                 <div class="profile-pic"></div>
-                <h2>Peter Wong</h2>
+                <h4 class="full-name">Peter Wong</h4>
+                <h5 class="job-title">Full Stack Web Developer</h5>
             </div>
             <div class="header__right">
                 <section class="contact-info">
