@@ -1,0 +1,16 @@
+.progress {
+  $progress-height: 10px;
+
+  width: 100%;
+  height: $progress-height;
+  overflow: hidden;
+  background-color: lighten($color-dark, 10%);
+  border-radius: $progress-height / 2;
+
+  &__bar {
+    width: 0;
+    height: 100%;
+    background-color: $color-theme--primary;
+    transition: width 0.5s ease;
+  }
+}

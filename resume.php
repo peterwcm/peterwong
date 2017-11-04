@@ -120,6 +120,20 @@
         </section>
 
         <section class="main">
+            <section class="work-experience">
+                <h3>Work Experience</h3>
+            </section>
+            <section class="pro-skills">
+                <h3>Professional Skills</h3>
+                <section class="skill">
+                    <div class="skill__name">Javascript</div>
+                    <div class="skill__level">
+                        <div class="progress">
+                            <div class="progress__bar" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
         </section>
 
         <div class="bottom-bar"><div>

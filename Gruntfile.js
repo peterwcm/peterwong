@@ -90,11 +90,18 @@ module.exports = grunt => {
                 tasks: ['concat', 'babel', 'uglify']
             },
             appCss: {
-                files: ['assets/sass/**/*.scss', '!assets/sass/resume.scss'],
+                files: [
+                  'assets/sass/**/*.scss',
+                  '!assets/sass/resume.scss',
+                  '!assets/sass/components/resume/**/*.scss'
+                ],
                 tasks: ['sass:app', 'postcss']
             },
             resumeCss: {
-              files: 'assets/sass/resume.scss',
+              files: [
+                'assets/sass/resume.scss',
+                'assets/sass/components/resume/**/*.scss'
+              ],
               tasks: ['sass:resume', 'postcss']
             },
             images: {

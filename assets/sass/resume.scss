@@ -3,7 +3,8 @@
 @import 'modules/fonts';
 @import 'modules/colors';
 
-$color-neutral-light: #F9F9F9;
+// Components
+@import 'components/resume/progress';
 
 * {
   box-sizing: border-box;
@@ -50,6 +51,7 @@ a {
   height: 200px;
   background-color: $color-neutral-light;
   text-align: center;
+  overflow: hidden;
 
   &__left {
     width: 30%;
@@ -112,6 +114,26 @@ a {
 
 .main {
   height: 600px;
+  overflow: hidden;
+}
+
+.pro-skills {
+  > section {
+    width: 50%;
+  }
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+
+  &__name {
+    width: 50%;
+  }
+
+  &__level {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 595px) {
