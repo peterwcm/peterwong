@@ -124,7 +124,8 @@ a {
   }
 }
 
-.pro-skills {
+.pro-skills,
+.languages {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -155,23 +156,6 @@ a {
   &__level {
     padding: 0 20px;
     width: 60%;
-  }
-}
-
-.languages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 20px;
-
-  &__title {
-    width: 100%;
-    text-align: center;
-  }
-
-  > section {
-    margin-bottom: 3px;
-    width: 45%;
   }
 }
 
@@ -214,7 +198,8 @@ a {
     height: auto;
   }
 
-  .pro-skills {
+  .pro-skills,
+  .languages {
     > section {
       width: 100%;
     }
