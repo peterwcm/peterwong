@@ -131,6 +131,7 @@ a {
   flex-wrap: wrap;
 
   &__overview {
+    padding-left: 10px;
     width: 30%;
     text-align: right;
   }
@@ -147,7 +148,7 @@ a {
 
   &__details {
     width: 70%;
-    padding-left: 20px;
+    padding: 0 20px;
   }
 
   &__title {
