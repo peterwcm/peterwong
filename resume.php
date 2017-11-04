@@ -49,8 +49,16 @@
     ];
 
     $skills = [
-        new Skill('PHP', 30),
-        new Skill('Java', 70)
+        new Skill('PHP', 90),
+        new Skill('Java', 70),
+        new Skill('ASP.NET', 70),
+        new Skill('AngularJS', 60),
+        new Skill('React', 30),
+        new Skill('Sass', 90),
+        new Skill('Node.js', 75),
+        new Skill('Laravel', 75),
+        new Skill('WordPress', 70),
+        new Skill('Drupal', 80),
     ];
 ?>
 
@@ -93,13 +101,13 @@
 
         <section class="main">
             <section class="work-experience">
-                <h3>Work Experience</h3>
+<!--                <h3>Work Experience</h3>-->
             </section>
             <section class="pro-skills">
-                <h3>Professional Skills</h3>
+                <h3 class="pro-skills__title">Professional Skills</h3>
                 <?php foreach($skills as $key => $skill): ?>
                     <section class="skill">
-                        <div class="skill__name"><?=$skill->getName()?></div>
+                        <h5 class="skill__name"><?=$skill->getName()?></h5>
                         <div class="skill__level">
                             <div class="progress">
                                 <div class="progress__bar"

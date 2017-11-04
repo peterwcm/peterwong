@@ -118,8 +118,19 @@ a {
 }
 
 .pro-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+
   > section {
-    width: 50%;
+    margin-bottom: 3px;
+    width: 45%;
   }
 }
 
@@ -128,11 +139,15 @@ a {
   align-items: center;
 
   &__name {
-    width: 50%;
+    margin: 0;
+    width: 40%;
+    text-align: right;
+    font-weight: normal;
   }
 
   &__level {
-    width: 50%;
+    padding: 0 20px;
+    width: 60%;
   }
 }
 
@@ -173,5 +188,17 @@ a {
 
   .main {
     height: auto;
+  }
+
+  .pro-skills {
+    > section {
+      width: 100%;
+    }
+  }
+
+  .skill {
+    &__name {
+      width: 30%;
+    }
   }
 }
