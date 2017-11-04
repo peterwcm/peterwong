@@ -118,9 +118,45 @@ a {
 }
 
 .work-experience {
+  padding-bottom: 5px;
+
   &__title {
     width: 100%;
     text-align: center;
+  }
+}
+
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__overview {
+    width: 30%;
+    text-align: right;
+  }
+
+  &__employer {
+    margin: 0;
+    color: $color-theme--primary;
+    text-transform: uppercase;
+  }
+
+  &__period {
+    margin-top: 5px;
+  }
+
+  &__details {
+    width: 70%;
+    padding-left: 20px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    margin-top: 5px;
+    font-size: 14px;
   }
 }
 
@@ -157,6 +193,10 @@ a {
     padding: 0 20px;
     width: 60%;
   }
+}
+
+.pro-skills {
+  background-color: $color-neutral-light;
 }
 
 @media only screen and (max-width: 595px) {
