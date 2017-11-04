@@ -37,6 +37,7 @@
 
 <?php
     require_once('classes/Contact.php');
+    require_once('classes/Experience.php');
     require_once('classes/Skill.php');
 
     $contacts = [
@@ -46,6 +47,21 @@
         new Contact('LinkedIn', 'linkedin', 'linkedin.com/in/peterwcm', 'https://www.linkedin.com/in/peterwcm'),
         new Contact('GitHub', 'github', 'github.com/peterwcm', 'https://github.com/peterwcm'),
         new Contact('StackOverflow', 'stack-overflow', 'stackoverflow.com/users/731968', 'https://stackoverflow.com/users/731968/peter-wong'),
+    ];
+
+    $experiences = [
+      new Experience(
+        'May 2017 - Present',
+        'Flight Centre',
+        'Freelance Web Developer',
+        'Description'
+      ),
+      new Experience(
+        'May 2016 - Present',
+        'Blossom Days',
+        'Full Stack Web Developer',
+        'Description'
+      ),
     ];
 
     $skills = [
@@ -59,6 +75,13 @@
         new Skill('Laravel', 75),
         new Skill('WordPress', 70),
         new Skill('Drupal', 80),
+    ];
+
+    $languages = [
+        new Skill('English', 95),
+        new Skill('Chinese', 90),
+        new Skill('Cantonese', 100),
+        new Skill('Korean', 35),
     ];
 ?>
 
@@ -101,7 +124,12 @@
 
         <section class="main">
             <section class="work-experience">
-<!--                <h3>Work Experience</h3>-->
+                <h3 class="work-experience__title">Work Experience</h3>
+                <?php foreach($experiences as $key => $experience): ?>
+                    <section class="experience">
+                        <h5 class="experience__period"><?=$experience->getPeriod()?></h5>
+                    </section>
+                <?php endforeach; ?>
             </section>
             <section class="pro-skills">
                 <h3 class="pro-skills__title">Professional Skills</h3>
@@ -116,6 +144,20 @@
                         </div>
                     </section>
                 <?php endforeach; ?>
+            </section>
+            <section class="languages">
+                <h3 class="languages__title">Languages</h3>
+              <?php foreach($languages as $key => $language): ?>
+                  <section class="skill">
+                      <h5 class="skill__name"><?=$language->getName()?></h5>
+                      <div class="skill__level">
+                          <div class="progress">
+                              <div class="progress__bar"
+                                   style="width: <?=$language->getLevel()?>%;"></div>
+                          </div>
+                      </div>
+                  </section>
+              <?php endforeach; ?>
             </section>
         </section>
 
