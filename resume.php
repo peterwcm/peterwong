@@ -53,20 +53,20 @@
       new Experience(
         'May 2017 - Present',
         'Flight Centre',
-        'Freelance Web Developer',
-        'Develop and maintain the corporate travel websites using Drupal. Create new custom modules and features based on new project\'s needs. Make use of Drupal Paragraphs to create reusable components for site builders.'
+        'Freelance Drupal Developer',
+        'Deliver Drupal projects for the Flight Centre corporate team.'
       ),
       new Experience(
         'May 2016 - Present',
         'Blossom Days',
-        'Full Stack Web Developer',
-        'My responsibilities include developing and maintaining the website in WordPress. I am also in charge of online advertising and marketing.'
+        'Freelance WordPress Developer',
+        'Designed, built and maintain the website in WordPress.'
       ),
       new Experience(
         'May 2016 - Mar 2017',
         'Auto & General',
         'Full Stack Web Developer',
-        'In Auto & General, I am responsible for all partnership websites and life products, such as Income Protection. My responsibilities include maintaining the old applications that are written in JSTL. I am also involved in building the new Income Protection website with new tech stacks such as Angular, Webpack and Jest. For back-end, I will also need to build API in Java along with the Spring framework.'
+        'Built Node.js websites using tech stacks such as Angular, Webpack and Jest. Back-end REST API was built in Java using Spring.'
       ),
     ];
 

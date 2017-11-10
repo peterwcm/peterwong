@@ -118,8 +118,6 @@ a {
 }
 
 .work-experience {
-  padding-bottom: 5px;
-
   &__title {
     width: 100%;
     text-align: center;
@@ -129,6 +127,7 @@ a {
 .experience {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 
   &__overview {
     padding-left: 10px;
@@ -157,7 +156,7 @@ a {
 
   &__description {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -238,6 +237,20 @@ a {
   .main {
     height: auto;
   }
+
+.experience {
+  &__overview {
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__details {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
 
   .pro-skills,
   .languages {
