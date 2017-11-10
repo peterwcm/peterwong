@@ -158,19 +158,27 @@
                     </section>
                 <?php endforeach; ?>
             </section>
-            <section class="languages">
-                <h3 class="languages__title">Languages</h3>
-              <?php foreach($languages as $key => $language): ?>
-                  <section class="skill">
-                      <h5 class="skill__name"><?=$language->getName()?></h5>
-                      <div class="skill__level">
-                          <div class="progress">
-                              <div class="progress__bar"
-                                   style="width: <?=$language->getLevel()?>%;"></div>
-                          </div>
-                      </div>
-                  </section>
-              <?php endforeach; ?>
+        </section>
+
+        <div class="bottom-bar"></div>
+    </div>
+    <div class="page">
+        <div class="top-bar"></div>
+
+        <section class="main">
+        <section class="languages">
+            <h3 class="languages__title">Languages</h3>
+            <?php foreach($languages as $key => $language): ?>
+                <section class="skill">
+                    <h5 class="skill__name"><?=$language->getName()?></h5>
+                    <div class="skill__level">
+                        <div class="progress">
+                            <div class="progress__bar"
+                                 style="width: <?=$language->getLevel()?>%;"></div>
+                        </div>
+                    </div>
+                </section>
+            <?php endforeach; ?>
             </section>
         </section>
 
