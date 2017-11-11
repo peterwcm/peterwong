@@ -5,6 +5,7 @@
 
 // Components
 @import 'components/resume/progress';
+@import 'components/resume/nav-button';
 
 * {
   box-sizing: border-box;
@@ -36,6 +37,10 @@ a {
   width: 595px;
   height: 842px;
   background-color: $color-white;
+
+  &--two {
+    display: none;
+  }
 }
 
 .top-bar,
@@ -203,6 +208,18 @@ a {
   .page {
     width: 100%;
     height: 100%;
+
+    .bottom-bar {
+      display: none;
+    }
+
+    &--two {
+      display: block;
+
+      .top-bar {
+        display: none;
+      }
+    }
   }
 
   .header {
@@ -238,19 +255,19 @@ a {
     height: auto;
   }
 
-.experience {
-  &__overview {
-    padding: 0 20px;
-    width: 100%;
-    text-align: center;
-  }
+  .experience {
+    &__overview {
+      padding: 0 20px;
+      width: 100%;
+      text-align: center;
+    }
 
-  &__details {
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
+    &__details {
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
   }
-}
 
   .pro-skills,
   .languages {
@@ -263,5 +280,9 @@ a {
     &__name {
       width: 30%;
     }
+  }
+
+  .nav-button {
+    display: none;
   }
 }

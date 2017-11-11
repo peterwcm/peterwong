@@ -1,0 +1,28 @@
+$nav-button-size: 44px;
+
+.nav-button {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  margin-top: -$nav-button-size;
+  width: $nav-button-size;
+  height: $nav-button-size;
+  background-color: $color-theme--primary;
+
+  .fa {
+    width: $nav-button-size;
+    line-height: $nav-button-size;
+    color: $color-text--inverse;
+    font-size: $nav-button-size / 2;
+    font-weight: $font-weight-highlight;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: lighten($color-theme--primary, 10);
+  }
+
+  &--previous {
+    left: 10px;
+  }
+}

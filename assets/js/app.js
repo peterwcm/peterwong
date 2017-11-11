@@ -7,6 +7,7 @@ class Menu {
     init() {
         const $window = $(window);
         const $menu = $('.magellan-container');
+
         $window.scroll(() => {
             $window.scrollTop() > this._stickyOffest
                 ? $menu.addClass(this._stickyClass)
@@ -66,6 +67,7 @@ class Section {
 
     _initResizeHandler() {
         const $window = $(window);
+
         $window.resize(() => {
             const currentHeight = $window.height();
             if (currentHeight && currentHeight !== this._windowHeight) {
@@ -78,6 +80,7 @@ class Section {
 
     _updateScroll() {
         const $window = $(window);
+
         this._scrollOffsets.forEach(offset => {
             if ($window.scrollTop() >= offset.start
                 && $window.scrollTop() < offset.end) {
@@ -112,6 +115,7 @@ class Work {
             const $elem = $(e.currentTarget);
             const id = $elem.data('id');
             const $details = $(`.work__details[data-id='${id}']`);
+
             $details.slideDown();
             setTimeout(() => {
                 this._section.refreshScroll();
@@ -126,6 +130,7 @@ class Work {
             const $elem = $(e.currentTarget);
             const id = $elem.data('id');
             const $details = $(`.work__details[data-id='${id}']`);
+
             $details.slideUp();
             setTimeout(() => {
                 this._section.refreshScroll();

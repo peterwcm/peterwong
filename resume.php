@@ -92,7 +92,7 @@
 ?>
 
 <body>
-    <div class="page">
+    <div class="page page--one">
         <div class="top-bar"></div>
 
         <section class="header">
@@ -161,8 +161,14 @@
         </section>
 
         <div class="bottom-bar"></div>
+
+        <a href="javascript:void(0)"
+           class="js-nav-button nav-button nav-button--next"
+           data-current-class="page--one" data-target-class="page--two">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </a>
     </div>
-    <div class="page">
+    <div class="page page--two">
         <div class="top-bar"></div>
 
         <section class="main">
@@ -183,6 +189,15 @@
         </section>
 
         <div class="bottom-bar"><div>
+
+        <a href="javascript:void(0)"
+           class="js-nav-button nav-button nav-button--previous"
+           data-current-class="page--two" data-target-class="page--one">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </a>
     </div>
+
+    <!-- JS -->
+    <script src="build/js/resume.min.js?v=<?php echo date("ymdGi", filemtime("build/js/resume.min.js")); ?>"></script>
 </body>
 </html>
