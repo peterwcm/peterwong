@@ -1,28 +1,22 @@
-$nav-button-size: 44px;
+$nav-icon-size: 44px;
 
 .nav-button {
   position: fixed;
-  top: 50%;
-  right: 10px;
-  margin-top: -$nav-button-size;
-  width: $nav-button-size;
-  height: $nav-button-size;
-  background-color: $color-theme--primary;
+  top: 842px;
+  padding: 0 10px;
+  width: 595px;
+  height: $nav-icon-size;
+  background-color: $color-white;
 
   .fa {
-    width: $nav-button-size;
-    line-height: $nav-button-size;
-    color: $color-text--inverse;
-    font-size: $nav-button-size / 2;
+    width: $nav-icon-size;
+    line-height: $nav-icon-size;
+    color: $color-theme--primary;
     font-weight: $font-weight-highlight;
     text-align: center;
   }
 
-  &:hover {
-    background-color: lighten($color-theme--primary, 10);
-  }
-
-  &--previous {
-    left: 10px;
+  &--next {
+    text-align: right;
   }
 }
