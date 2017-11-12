@@ -36,7 +36,6 @@
     "declaration-colon-space-before": "never",
     "declaration-no-important": true,
     "declaration-block-no-duplicate-properties": true,
-    "declaration-block-no-ignored-properties": true,
     "declaration-block-no-redundant-longhand-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
     "declaration-block-semicolon-newline-after": "always",
@@ -47,7 +46,6 @@
     "block-closing-brace-newline-after": "always",
     "block-closing-brace-newline-before": "always",
     "block-no-empty": true,
-    "block-no-single-line": true,
     "block-opening-brace-newline-after": "always",
     "block-opening-brace-newline-before": "never-single-line",
     "block-opening-brace-space-before": "always",
@@ -58,7 +56,6 @@
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
-    "selector-no-empty": true,
     "selector-no-id": true,
     "selector-pseudo-class-case": "lower",
     "selector-pseudo-class-no-unknown": true,
@@ -71,12 +68,8 @@
     "selector-list-comma-newline-after": "always",
     "selector-list-comma-newline-before": "never-multi-line",
 
-    "rule-nested-empty-line-before": ["always", {
+    "rule-empty-line-before": ["always", {
       "except": ["first-nested"],
-      "ignore": ["after-comment"]
-    }],
-    "rule-non-nested-empty-line-before": ["always", {
-      "except": ["after-single-line-comment"],
       "ignore": ["after-comment"]
     }],
 

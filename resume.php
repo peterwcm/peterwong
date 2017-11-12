@@ -39,6 +39,7 @@
     require_once('classes/Contact.php');
     require_once('classes/Experience.php');
     require_once('classes/Skill.php');
+    require_once('classes/Reference.php');
 
     $contacts = [
         new Contact('Website', 'globe', 'peterwong.name', 'http://peterwong.name'),
@@ -89,6 +90,10 @@
         new Skill('Cantonese', 100),
         new Skill('Korean', 35),
     ];
+
+    $references = [
+        new Reference('Peter'),
+    ];
 ?>
 
 <body>
@@ -129,8 +134,8 @@
         </section>
 
         <section class="main">
-            <section class="work-experience">
-                <h3 class="work-experience__title">Work Experience</h3>
+            <section class="experiences">
+                <h3 class="experiences__title">Work Experience</h3>
                 <?php foreach($experiences as $key => $experience): ?>
                     <section class="experience">
                         <div class="experience__overview">
@@ -144,8 +149,8 @@
                     </section>
                 <?php endforeach; ?>
             </section>
-            <section class="pro-skills">
-                <h3 class="pro-skills__title">Professional Skills</h3>
+            <section class="skills">
+                <h3 class="skills__title">Professional Skills</h3>
                 <?php foreach($skills as $key => $skill): ?>
                     <section class="skill">
                         <h5 class="skill__name"><?=$skill->getName()?></h5>
@@ -172,20 +177,30 @@
         <div class="top-bar"></div>
 
         <section class="main">
-        <section class="languages">
-            <h3 class="languages__title">Languages</h3>
-            <?php foreach($languages as $key => $language): ?>
-                <section class="skill">
-                    <h5 class="skill__name"><?=$language->getName()?></h5>
-                    <div class="skill__level">
-                        <div class="progress">
-                            <div class="progress__bar"
-                                 style="width: <?=$language->getLevel()?>%;"></div>
+            <section class="languages">
+                <h3 class="languages__title">Languages</h3>
+                <?php foreach($languages as $key => $language): ?>
+                    <section class="skill">
+                        <h5 class="skill__name"><?=$language->getName()?></h5>
+                        <div class="skill__level">
+                            <div class="progress">
+                                <div class="progress__bar"
+                                     style="width: <?=$language->getLevel()?>%;"></div>
+                            </div>
                         </div>
-                    </div>
-                </section>
-            <?php endforeach; ?>
+                    </section>
+                <?php endforeach; ?>
             </section>
+            
+            <scetion class="references">
+                <h3 class="references__title">References</h3>
+                <?php foreach($references as $key => $reference): ?>
+                    <section class="reference">
+                        <h5 class="reference__name"><?=$reference->getName()?></h5>
+                        <div class="reference__contacts"></div>
+                    </section>
+                <?php endforeach; ?>
+            </scetion>
         </section>
 
         <div class="bottom-bar"></div>

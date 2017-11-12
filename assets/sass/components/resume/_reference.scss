@@ -1,0 +1,12 @@
+.references {
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.reference {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}

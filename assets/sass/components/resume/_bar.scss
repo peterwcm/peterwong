@@ -1,0 +1,21 @@
+.top-bar,
+.bottom-bar {
+  background-color: $color-theme--primary;
+  height: 21px;
+}
+
+@media only screen and (max-width: 595px) {
+  .page {
+    &--one {
+      .bottom-bar {
+        display: none;
+      }
+    }
+
+    &--two {
+      .top-bar {
+        display: none;
+      }
+    }
+  }
+}
