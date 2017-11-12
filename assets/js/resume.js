@@ -1,21 +1,36 @@
-class NavButton {
+class Page {
   constructor() { }
 
   init() {
+    this._loadPageNum();
+    this._initNavButton();
+  }
+
+  _goTo(targetPage) {
+    $('.page').hide();
+    $(`.page[data-page=${targetPage}]`).show();
+  }
+
+  _loadPageNum() {
+    const url = new URL(window.location.href);
+    const targetPage = url.searchParams.get('page');
+
+    if (targetPage) {
+      this._goTo(targetPage);
+    }
+  }
+
+  _initNavButton() {
     $('.js-nav-button').click(e => {
       const $button = $(e.currentTarget);
-      const currentClass = $button.data('currentClass');
-      const targetClass = $button.data('targetClass');
+      const targetPage = $button.data('targetPage');
 
-      console.log('here', currentClass, targetClass);
-
-      $(`.${currentClass}`).hide();
-      $(`.${targetClass}`).show();
+      this._goTo(targetPage);
     });
   }
 }
 
 $(() => {
-  const navButton = new NavButton();
-  navButton.init();
+  const page = new Page();
+  page.init();
 });

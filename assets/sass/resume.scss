@@ -40,6 +40,10 @@ a {
 
   &--two {
     display: none;
+
+    .main {
+      height: 800px;
+    }
   }
 }
 
