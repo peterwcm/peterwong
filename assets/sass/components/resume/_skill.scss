@@ -1,0 +1,48 @@
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 20px;
+  background-color: $color-neutral-light;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+
+  > section {
+    margin-bottom: 3px;
+    width: 45%;
+  }
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+
+  &__name {
+    margin: 0;
+    width: 40%;
+    text-align: right;
+    font-weight: normal;
+  }
+
+  &__level {
+    padding: 0 20px;
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .skills {
+    > section {
+      width: 100%;
+    }
+  }
+
+  .skill {
+    &__name {
+      width: 30%;
+    }
+  }
+}

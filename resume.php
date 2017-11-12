@@ -177,8 +177,8 @@
         <div class="top-bar"></div>
 
         <section class="main">
-            <section class="languages">
-                <h3 class="languages__title">Languages</h3>
+            <section class="skills">
+                <h3 class="skills__title">Languages</h3>
                 <?php foreach($languages as $key => $language): ?>
                     <section class="skill">
                         <h5 class="skill__name"><?=$language->getName()?></h5>

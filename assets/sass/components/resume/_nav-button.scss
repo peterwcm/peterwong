@@ -20,3 +20,9 @@ $nav-icon-size: 44px;
     text-align: right;
   }
 }
+
+@media only screen and (max-width: 595px) {
+  .nav-button {
+    display: none;
+  }
+}

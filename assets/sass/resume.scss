@@ -4,10 +4,13 @@
 @import 'modules/colors';
 
 // Components
-@import 'components/resume/progress';
 @import 'components/resume/nav-button';
-@import 'components/resume/reference';
 @import 'components/resume/bar';
+@import 'components/resume/header';
+@import 'components/resume/experience';
+@import 'components/resume/skill';
+@import 'components/resume/progress';
+@import 'components/resume/reference';
 
 * {
   box-sizing: border-box;
@@ -49,159 +52,9 @@ a {
   }
 }
 
-.header {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  height: 200px;
-  background-color: $color-neutral-light;
-  text-align: center;
-  overflow: hidden;
-
-  &__left {
-    width: 30%;
-  }
-
-  &__right {
-    display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-
-    > section {
-      width: 50%;
-
-      &:nth-child(odd) {
-        padding-left: 45px;
-      }
-    }
-  }
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
-  text-align: left;
-
-  &__icon {
-    margin-right: 10px;
-  }
-
-  &__heading {
-    margin: 0;
-  }
-
-  &__text {
-    font-size: 10px;
-  }
-}
-
-.profile-pic {
-  $size: 110px;
-
-  margin: 0 auto;
-  width: $size;
-  height: $size;
-  border-radius: $size / 2;
-  background: $color-theme--primary url('#{$image-dir}profile-pic-resume.jpg') no-repeat;
-  background-size: cover;
-}
-
-.full-name {
-  margin: 15px 0 0;
-  text-transform: uppercase;
-}
-
-.job-title {
-  margin: 5px 0 15px;
-  font-size: 11px;
-  font-weight: normal;
-}
-
 .main {
   height: 600px;
   overflow: hidden;
-}
-
-.experiences {
-  &__title {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-.experience {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-
-  &__overview {
-    padding-left: 10px;
-    width: 30%;
-    text-align: right;
-  }
-
-  &__employer {
-    margin: 0;
-    color: $color-theme--primary;
-    text-transform: uppercase;
-  }
-
-  &__period {
-    margin-top: 5px;
-  }
-
-  &__details {
-    width: 70%;
-    padding: 0 20px;
-  }
-
-  &__title {
-    margin: 0;
-  }
-
-  &__description {
-    margin-top: 5px;
-    font-size: 13px;
-  }
-}
-
-.skills,
-.languages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 20px;
-
-  &__title {
-    width: 100%;
-    text-align: center;
-  }
-
-  > section {
-    margin-bottom: 3px;
-    width: 45%;
-  }
-}
-
-.skills {
-  background-color: $color-neutral-light;
-}
-
-.skill {
-  display: flex;
-  align-items: center;
-
-  &__name {
-    margin: 0;
-    width: 40%;
-    text-align: right;
-    font-weight: normal;
-  }
-
-  &__level {
-    padding: 0 20px;
-    width: 60%;
-  }
 }
 
 @media only screen and (max-width: 595px) {
@@ -216,67 +69,7 @@ a {
     }
   }
 
-  .header {
-    height: auto;
-
-    &__left {
-      width: 100%;
-    }
-
-    &__right {
-      width: 100%;
-
-      > section {
-        margin: 5px 0;
-        width: 100%;
-
-        &:first-child {
-          margin-top: 0;
-        }
-
-        &:nth-child(odd) {
-          padding-left: 0;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
   .main {
     height: auto;
-  }
-
-  .experience {
-    &__overview {
-      padding: 0 20px;
-      width: 100%;
-      text-align: center;
-    }
-
-    &__details {
-      margin-bottom: 20px;
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  .skills,
-  .languages {
-    > section {
-      width: 100%;
-    }
-  }
-
-  .skill {
-    &__name {
-      width: 30%;
-    }
-  }
-
-  .nav-button {
-    display: none;
   }
 }

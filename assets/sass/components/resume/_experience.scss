@@ -1,0 +1,59 @@
+
+.experiences {
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+
+  &__overview {
+    padding-left: 10px;
+    width: 30%;
+    text-align: right;
+  }
+
+  &__employer {
+    margin: 0;
+    color: $color-theme--primary;
+    text-transform: uppercase;
+  }
+
+  &__period {
+    margin-top: 5px;
+  }
+
+  &__details {
+    width: 70%;
+    padding: 0 20px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .experience {
+    &__overview {
+      padding: 0 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__details {
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
