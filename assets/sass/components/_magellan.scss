@@ -18,8 +18,10 @@ $sticky-height: 50px;
   -webkit-touch-callout: none;
   user-select: none;
   // Animations
+  animation-duration: 0.5s;
   animation-delay: 0s;
   animation-fill-mode: both;
+  transition-duration: 0.5s;
   transition-delay: 0s;
 
   .section-loaded & {
@@ -27,8 +29,7 @@ $sticky-height: 50px;
   }
 
   &.is-sticky {
-    background-color: transparent;
-    box-shadow: inset 0 $sticky-height rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
 
     .sub-nav {
       &__title {
@@ -187,8 +188,6 @@ h2[data-magellan-destination] {
 
   .magellan-container {
     &.is-sticky {
-      box-shadow: inset 0 $sticky-height rgba(255, 255, 255, 0.9);
-
       .sub-nav {
         &__name,
         &__menu-link {
