@@ -36,70 +36,7 @@
 </head>
 
 <?php
-    require_once('classes/Contact.php');
-    require_once('classes/Experience.php');
-    require_once('classes/Skill.php');
-    require_once('classes/Reference.php');
-
-    $contacts = [
-      new Contact('Website', 'globe', 'peterwong.name', 'http://peterwong.name'),
-      new Contact('Email', 'envelope', 'peterwong.brisbane@gmail.com', 'mailto:peterwong.brisbane@gmail.com', ContactType::Email),
-      new Contact('Phone', 'phone', '0421957638', '', ContactType::Phone),
-      new Contact('LinkedIn', 'linkedin', 'linkedin.com/in/peterwcm', 'https://www.linkedin.com/in/peterwcm'),
-      new Contact('GitHub', 'github', 'github.com/peterwcm', 'https://github.com/peterwcm'),
-      new Contact('StackOverflow', 'stack-overflow', 'stackoverflow.com/users/731968', 'https://stackoverflow.com/users/731968/peter-wong'),
-    ];
-
-    $experiences = [
-      new Experience(
-        'May 2017 - Present',
-        'Flight Centre',
-        'Full Stack Drupal Developer',
-        'Develop and maintain the corporate travel websites using Drupal. Create new custom modules and features based on new project\'s needs.'
-      ),
-      new Experience(
-        'May 2016 - Present',
-        'Blossom Days',
-        'Full Stack WordPress Developer',
-        'Designed, developed and maintained the website in WordPress.'
-      ),
-      new Experience(
-        'May 2016 - Mar 2017',
-        'Auto & General',
-        'Full Stack Web Developer',
-        'Built Node.js websites using tech stacks such as Angular, Webpack and Jest. Back-end REST API was built in Java using Spring.'
-      ),
-      new Experience(
-          'Jun 2013 - May 2016',
-          'Zippity',
-          'Full Stack PHP Web Developer',
-          'Built the website in PHP with CodeIgniter and jQuery.'
-      )
-    ];
-
-    $skills = [
-      new Skill('PHP', 90),
-      new Skill('Java', 70),
-      new Skill('ASP.NET', 70),
-      new Skill('AngularJS', 60),
-      new Skill('React', 40),
-      new Skill('Node.js', 75),
-      new Skill('Javascript', 85),
-      new Skill('Sass', 90),
-      new Skill('Drupal', 80),
-      new Skill('WordPress', 70),
-    ];
-
-    $languages = [
-      new Skill('English', 95),
-      new Skill('Chinese', 90),
-      new Skill('Cantonese', 100),
-      new Skill('Korean', 35),
-    ];
-
-    $references = [
-      new Reference('Peter'),
-    ];
+    define('APP_ROOT', realpath(dirname(__FILE__)) . '/' );
 ?>
 
 <body>
@@ -113,61 +50,18 @@
                 <h5 class="job-title">Full Stack Web Developer</h5>
             </div>
             <div class="header__right">
-                <?php foreach($contacts as $key => $contact): ?>
-                    <section class="contact-info">
-                        <div class="contact-info__icon">
-                            <i class="fa fa-<?=$contact->getIcon()?>"
-                               aria-hidden="true"></i>
-                        </div>
-                        <div class="contact-info__details">
-                            <h5 class="contact-info__heading">
-                              <?=$contact->getName()?>
-                            </h5>
-                            <div class="contact-info__text">
-                                <?php if ($contact->getType() !== ContactType::Phone): ?>
-                                    <a href="<?=$contact->getUrl()?>"
-                                       <?=$contact->getType() === ContactType::Link ? 'target="_blank"' : ''?>>
-                                      <?=$contact->getDetails()?>
-                                    </a>
-                                <?php else: ?>
-                                  <?=$contact->getDetails()?>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </section>
-                <?php endforeach; ?>
+                <?php include 'templates/contacts.tpl.php'; ?>
             </div>
         </section>
 
         <section class="main">
             <section class="experiences">
                 <h3 class="experiences__title">Work Experience</h3>
-                <?php foreach($experiences as $key => $experience): ?>
-                    <section class="experience">
-                        <div class="experience__overview">
-                            <h5 class="experience__employer"><?=$experience->getEmployer()?></h5>
-                            <h5 class="experience__period"><?=$experience->getPeriod()?></h5>
-                        </div>
-                        <div class="experience__details">
-                            <h4 class="experience__title"><?=$experience->getTitle()?></h4>
-                            <p class="experience__description"><?=$experience->getDescription()?></p>
-                        </div>
-                    </section>
-                <?php endforeach; ?>
+                <?php include 'templates/experiences.tpl.php'; ?>
             </section>
             <section class="skills">
                 <h3 class="skills__title">Professional Skills</h3>
-                <?php foreach($skills as $key => $skill): ?>
-                    <section class="skill">
-                        <h5 class="skill__name"><?=$skill->getName()?></h5>
-                        <div class="skill__level">
-                            <div class="progress">
-                                <div class="progress__bar"
-                                     style="width: <?=$skill->getLevel()?>%;"></div>
-                            </div>
-                        </div>
-                    </section>
-                <?php endforeach; ?>
+                <?php include 'templates/skills.tpl.php'; ?>
             </section>
         </section>
 
@@ -185,27 +79,12 @@
         <section class="main">
             <section class="skills">
                 <h3 class="skills__title">Languages</h3>
-                <?php foreach($languages as $key => $language): ?>
-                    <section class="skill">
-                        <h5 class="skill__name"><?=$language->getName()?></h5>
-                        <div class="skill__level">
-                            <div class="progress">
-                                <div class="progress__bar"
-                                     style="width: <?=$language->getLevel()?>%;"></div>
-                            </div>
-                        </div>
-                    </section>
-                <?php endforeach; ?>
+                <?php include 'templates/languages.tpl.php'; ?>
             </section>
             
             <section class="references">
                 <h3 class="references__title">References</h3>
-                <?php foreach($references as $key => $reference): ?>
-                    <section class="reference">
-                        <h5 class="reference__name"><?=$reference->getName()?></h5>
-                        <div class="reference__contacts"></div>
-                    </section>
-                <?php endforeach; ?>
+                <?php include 'templates/references.tpl.php'; ?>
             </section>
         </section>
 

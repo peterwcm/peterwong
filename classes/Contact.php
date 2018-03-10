@@ -1,6 +1,5 @@
 <?php
-
-require_once('ContactType.php');
+require_once(APP_ROOT . 'classes/ContactType.php');
 
 class Contact {
   var $name;
