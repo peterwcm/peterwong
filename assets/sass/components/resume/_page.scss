@@ -1,0 +1,48 @@
+.page {
+  margin: 0 auto;
+  width: 595px;
+  height: 842px;
+  background-color: $color-white;
+
+  &--one {
+    .experiences {
+      flex-grow: 1;
+    }
+  }
+
+  &--two {
+    display: none;
+
+    .main {
+      height: 800px;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  overflow: hidden;
+
+  > section:nth-child(even) {
+    background-color: $color-neutral-light;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .page {
+    width: 100%;
+    height: 100%;
+
+    &--one,
+    &--two {
+      /* stylelint-disable-next-line declaration-no-important */
+      display: block !important;
+    }
+  }
+
+  .main {
+    height: auto;
+  }
+}

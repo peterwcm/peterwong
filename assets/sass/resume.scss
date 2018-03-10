@@ -3,15 +3,6 @@
 @import 'modules/fonts';
 @import 'modules/colors';
 
-// Components
-@import 'components/resume/nav-button';
-@import 'components/resume/bar';
-@import 'components/resume/header';
-@import 'components/resume/experience';
-@import 'components/resume/skill';
-@import 'components/resume/progress';
-@import 'components/resume/reference';
-
 * {
   box-sizing: border-box;
 }
@@ -37,39 +28,12 @@ a {
   color: $color-text--normal;
 }
 
-.page {
-  margin: 0 auto;
-  width: 595px;
-  height: 842px;
-  background-color: $color-white;
-
-  &--two {
-    display: none;
-
-    .main {
-      height: 800px;
-    }
-  }
-}
-
-.main {
-  height: 600px;
-  overflow: hidden;
-}
-
-@media only screen and (max-width: 595px) {
-  .page {
-    width: 100%;
-    height: 100%;
-
-    &--one,
-    &--two {
-      /* stylelint-disable-next-line declaration-no-important */
-      display: block !important;
-    }
-  }
-
-  .main {
-    height: auto;
-  }
-}
+// Components
+@import 'components/resume/page';
+@import 'components/resume/nav-button';
+@import 'components/resume/bar';
+@import 'components/resume/header';
+@import 'components/resume/experience';
+@import 'components/resume/skill';
+@import 'components/resume/progress';
+@import 'components/resume/reference';

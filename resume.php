@@ -42,26 +42,26 @@
     require_once('classes/Reference.php');
 
     $contacts = [
-        new Contact('Website', 'globe', 'peterwong.name', 'http://peterwong.name'),
-        new Contact('Email', 'envelope', 'peterwong.brisbane@gmail.com', 'mailto:peterwong.brisbane@gmail.com', ContactType::Email),
-        new Contact('Phone', 'phone', '0421957638', '', ContactType::Phone),
-        new Contact('LinkedIn', 'linkedin', 'linkedin.com/in/peterwcm', 'https://www.linkedin.com/in/peterwcm'),
-        new Contact('GitHub', 'github', 'github.com/peterwcm', 'https://github.com/peterwcm'),
-        new Contact('StackOverflow', 'stack-overflow', 'stackoverflow.com/users/731968', 'https://stackoverflow.com/users/731968/peter-wong'),
+      new Contact('Website', 'globe', 'peterwong.name', 'http://peterwong.name'),
+      new Contact('Email', 'envelope', 'peterwong.brisbane@gmail.com', 'mailto:peterwong.brisbane@gmail.com', ContactType::Email),
+      new Contact('Phone', 'phone', '0421957638', '', ContactType::Phone),
+      new Contact('LinkedIn', 'linkedin', 'linkedin.com/in/peterwcm', 'https://www.linkedin.com/in/peterwcm'),
+      new Contact('GitHub', 'github', 'github.com/peterwcm', 'https://github.com/peterwcm'),
+      new Contact('StackOverflow', 'stack-overflow', 'stackoverflow.com/users/731968', 'https://stackoverflow.com/users/731968/peter-wong'),
     ];
 
     $experiences = [
       new Experience(
         'May 2017 - Present',
         'Flight Centre',
-        'Freelance Drupal Developer',
-        'Deliver Drupal projects for the Flight Centre corporate team.'
+        'Full Stack Drupal Developer',
+        'Develop and maintain the corporate travel websites using Drupal. Create new custom modules and features based on new project\'s needs.'
       ),
       new Experience(
         'May 2016 - Present',
         'Blossom Days',
-        'Freelance WordPress Developer',
-        'Designed, built and maintain the website in WordPress.'
+        'Full Stack WordPress Developer',
+        'Designed, developed and maintained the website in WordPress.'
       ),
       new Experience(
         'May 2016 - Mar 2017',
@@ -69,30 +69,36 @@
         'Full Stack Web Developer',
         'Built Node.js websites using tech stacks such as Angular, Webpack and Jest. Back-end REST API was built in Java using Spring.'
       ),
+      new Experience(
+          'Jun 2013 - May 2016',
+          'Zippity',
+          'Full Stack PHP Web Developer',
+          'Built the website in PHP with CodeIgniter and jQuery.'
+      )
     ];
 
     $skills = [
-        new Skill('PHP', 90),
-        new Skill('Java', 70),
-        new Skill('ASP.NET', 70),
-        new Skill('AngularJS', 60),
-        new Skill('React', 30),
-        new Skill('Sass', 90),
-        new Skill('Node.js', 75),
-        new Skill('Laravel', 75),
-        new Skill('WordPress', 70),
-        new Skill('Drupal', 80),
+      new Skill('PHP', 90),
+      new Skill('Java', 70),
+      new Skill('ASP.NET', 70),
+      new Skill('AngularJS', 60),
+      new Skill('React', 40),
+      new Skill('Node.js', 75),
+      new Skill('Javascript', 85),
+      new Skill('Sass', 90),
+      new Skill('Drupal', 80),
+      new Skill('WordPress', 70),
     ];
 
     $languages = [
-        new Skill('English', 95),
-        new Skill('Chinese', 90),
-        new Skill('Cantonese', 100),
-        new Skill('Korean', 35),
+      new Skill('English', 95),
+      new Skill('Chinese', 90),
+      new Skill('Cantonese', 100),
+      new Skill('Korean', 35),
     ];
 
     $references = [
-        new Reference('Peter'),
+      new Reference('Peter'),
     ];
 ?>
 
@@ -192,7 +198,7 @@
                 <?php endforeach; ?>
             </section>
             
-            <scetion class="references">
+            <section class="references">
                 <h3 class="references__title">References</h3>
                 <?php foreach($references as $key => $reference): ?>
                     <section class="reference">
@@ -200,7 +206,7 @@
                         <div class="reference__contacts"></div>
                     </section>
                 <?php endforeach; ?>
-            </scetion>
+            </section>
         </section>
 
         <div class="bottom-bar"></div>
