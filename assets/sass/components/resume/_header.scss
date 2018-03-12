@@ -2,25 +2,34 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1.25rem;
-  height: 200px;
+  height: auto;
   background-color: $color-neutral-light;
   text-align: center;
   overflow: hidden;
 
   &__left {
-    width: 30%;
+    width: 100%;
   }
 
   &__right {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 100%;
 
     > section {
-      width: 50%;
+      margin: 5px 0;
+      width: 100%;
+
+      &:first-child {
+        margin-top: 0;
+      }
 
       &:nth-child(odd) {
-        padding-left: 45px;
+        padding-left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
@@ -66,31 +75,23 @@
   font-weight: normal;
 }
 
-@media only screen and (max-width: 595px) {
+@media only screen and (min-width: 900px) {
   .header {
-    height: auto;
+    height: 200px;
 
     &__left {
-      width: 100%;
+      width: 30%;
     }
 
     &__right {
-      width: 100%;
+      width: 70%;
 
       > section {
-        margin: 5px 0;
-        width: 100%;
-
-        &:first-child {
-          margin-top: 0;
-        }
+        margin: 0;
+        width: 50%;
 
         &:nth-child(odd) {
-          padding-left: 0;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
+          padding-left: 45px;
         }
       }
     }

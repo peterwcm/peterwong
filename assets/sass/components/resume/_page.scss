@@ -1,20 +1,12 @@
 .page {
   margin: 0 auto;
-  width: 595px;
-  height: 842px;
+  width: 100%;
+  height: 100%;
   background-color: $color-white;
 
-  &--one {
-    .experiences {
-      flex-grow: 1;
-    }
-  }
-
   &--two {
-    display: none;
-
     .main {
-      height: 800px;
+      height: auto;
     }
   }
 }
@@ -22,7 +14,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: auto;
   overflow: hidden;
 
   > section:nth-child(even) {
@@ -30,25 +22,35 @@
   }
 }
 
-@media only screen and (max-width: 595px) {
+@media only screen and (max-width: 899px) {
   .page {
-    width: 100%;
-    height: 100%;
-
     &--one,
     &--two {
       /* stylelint-disable-next-line declaration-no-important */
       display: block !important;
     }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .page {
+    width: 595px;
+    height: 842px;
+
+    &--one {
+      .experiences {
+        flex-grow: 1;
+      }
+    }
 
     &--two {
       .main {
-        height: auto;
+        height: 800px;
       }
     }
   }
 
   .main {
-    height: auto;
+    height: 600px;
   }
 }

@@ -11,9 +11,9 @@
   margin-bottom: 10px;
 
   &__overview {
-    padding-left: 10px;
-    width: 30%;
-    text-align: right;
+    padding: 0 1.25rem;
+    width: 100%;
+    text-align: center;
   }
 
   &__employer {
@@ -27,8 +27,9 @@
   }
 
   &__details {
-    width: 70%;
-    padding: 0 1.25rem;
+    margin-bottom: 1.25rem;
+    width: 100%;
+    text-align: center;
   }
 
   &__title {
@@ -41,18 +42,19 @@
   }
 }
 
-@media only screen and (max-width: 595px) {
+@media only screen and (min-width: 900px) {
   .experience {
     &__overview {
-      padding: 0 1.25rem;
-      width: 100%;
-      text-align: center;
+      padding: 0 0 0 10px;
+      width: 30%;
+      text-align: right;
     }
 
     &__details {
-      margin-bottom: 1.25rem;
-      width: 100%;
-      text-align: center;
+      margin-bottom: 0;
+      width: 70%;
+      padding: 0 1.25rem;
+      text-align: left;
     }
   }
 }

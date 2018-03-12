@@ -4,17 +4,31 @@
   height: 21px;
 }
 
-@media only screen and (max-width: 595px) {
+.page {
+  &--one {
+    .bottom-bar {
+      display: none;
+    }
+  }
+
+  &--two {
+    .top-bar {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
   .page {
     &--one {
       .bottom-bar {
-        display: none;
+        display: block;
       }
     }
 
     &--two {
       .top-bar {
-        display: none;
+        display: block;
       }
     }
   }
