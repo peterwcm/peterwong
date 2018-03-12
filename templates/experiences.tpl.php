@@ -6,7 +6,7 @@ $experiences = [
     'May 2017 - Present',
     'Flight Centre',
     'Full Stack Drupal Developer',
-    'Develop and maintain the corporate travel websites using Drupal. Create new custom modules and features based on new project\'s needs.',
+    'Develop and maintain the corporate travel websites using Drupal. Create new custom modules and features.',
     'https://www.stageandscreen.travel/'
   ),
   new Experience(
@@ -20,7 +20,7 @@ $experiences = [
     'May 2016 - Mar 2017',
     'Auto & General',
     'Full Stack Web Developer',
-    'Built Node.js websites using tech stacks such as Angular, Webpack and Jest. Back-end REST API was built in Java using Spring.',
+    'Built Node.js websites using tech stacks such as Angular, Webpack and Jest. Also helped building REST API in Java.',
     'https://ecommerce.disconline.com.au/life-express/?hSty=BUDD'
   ),
   new Experience(
