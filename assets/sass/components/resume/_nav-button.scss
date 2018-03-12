@@ -1,23 +1,35 @@
-$nav-icon-size: 44px;
+$nav-icon-size: 60px;
 
 .nav-button {
   position: fixed;
-  top: 842px;
-  padding: 0 10px;
-  width: 595px;
+  top: 421px;
+  margin-top: -($nav-icon-size / 2);
+  padding: 0 0.5rem;
   height: $nav-icon-size;
-  background-color: $color-white;
+  border-radius: $nav-icon-size;
+  transition: background-color 0.5s ease;
+  background-color: $color-neutral-light;
 
   .fa {
-    width: $nav-icon-size;
+    width: 44px;
     line-height: $nav-icon-size;
     color: $color-theme--primary;
     font-weight: $font-weight-highlight;
+    font-size: 2rem;
     text-align: center;
   }
 
-  &--next {
+  &:hover {
+    background-color: $color-white;
+  }
+
+  &--previous {
     text-align: right;
+    right: calc(50% + 350px);
+  }
+
+  &--next {
+    left: calc(50% + 350px);
   }
 }
 

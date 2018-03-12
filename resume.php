@@ -70,7 +70,7 @@
         <a href="javascript:void(0)"
            class="js-nav-button nav-button nav-button--next"
            data-target-page="2">
-            Next Page <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
     </div>
     <div class="page page--two" data-page="2">
@@ -96,7 +96,7 @@
         <a href="javascript:void(0)"
            class="js-nav-button nav-button nav-button--previous"
            data-target-page="1">
-            <i class="fa fa-angle-left" aria-hidden="true"></i> Previous Page
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
         </a>
     </div>
 
