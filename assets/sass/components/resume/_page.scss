@@ -34,8 +34,8 @@
 
 @media only screen and (min-width: 900px) {
   .page {
-    width: 595px;
-    height: 842px;
+    width: $a4-page-width;
+    height: $a4-page-height;
 
     &--one {
       .experiences {
@@ -45,12 +45,12 @@
 
     &--two {
       .main {
-        height: 800px;
+        height: $a4-page-height - ($a4-bar-height * 2);
       }
     }
   }
 
   .main {
-    height: 600px;
+    height: $a4-page-height - $a4-header-height - ($a4-bar-height * 2);
   }
 }

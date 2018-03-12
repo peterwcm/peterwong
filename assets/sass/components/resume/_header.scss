@@ -17,7 +17,7 @@
     width: 100%;
 
     > section {
-      margin: 5px 0;
+      margin: 0.4rem 0;
       width: 100%;
 
       &:first-child {
@@ -41,7 +41,7 @@
   text-align: left;
 
   &__icon {
-    margin-right: 10px;
+    margin-right: 0.625rem;
   }
 
   &__heading {
@@ -49,12 +49,12 @@
   }
 
   &__text {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 }
 
 .profile-pic {
-  $size: 110px;
+  $size: 7rem;
 
   margin: 0 auto;
   width: $size;
@@ -65,19 +65,19 @@
 }
 
 .full-name {
-  margin: 15px 0 0;
+  margin: 0.9rem 0 0;
   text-transform: uppercase;
 }
 
 .job-title {
-  margin: 5px 0 15px;
-  font-size: 11px;
+  margin: 0.3rem 0 0.9rem;
+  font-size: 0.7rem;
   font-weight: normal;
 }
 
 @media only screen and (min-width: 720px) {
   .header {
-    height: 200px;
+    height: $a4-header-height;
 
     &__left {
       width: 30%;
@@ -91,7 +91,7 @@
         width: 50%;
 
         &:nth-child(odd) {
-          padding-left: 45px;
+          padding-left: 2.8rem;
         }
       }
     }

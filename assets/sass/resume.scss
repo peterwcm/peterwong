@@ -28,6 +28,12 @@ a {
   color: $color-text--normal;
 }
 
+// Page structure
+$a4-page-width: 595px;
+$a4-page-height: 842px;
+$a4-header-height: 200px;
+$a4-bar-height: 21px;
+
 // Components
 @import 'components/resume/page';
 @import 'components/resume/nav-button';
