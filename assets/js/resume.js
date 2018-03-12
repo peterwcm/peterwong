@@ -7,8 +7,14 @@ class Page {
   }
 
   _goTo(targetPage) {
+    var $targetPage = $(`.page[data-page=${targetPage}]`);
+
+    if (!$targetPage.length) {
+      return;
+    }
+
     $('.page').hide();
-    $(`.page[data-page=${targetPage}]`).show();
+    $targetPage.show();
   }
 
   _loadPageNum() {
