@@ -10,7 +10,7 @@ $languages = [
 ?>
 
 <?php foreach($languages as $language): ?>
-    <section class="skill">
+    <section class="skill skill--language">
         <h5 class="skill__name"><?=$language->getName()?></h5>
         <div class="skill__level">
             <div class="progress">

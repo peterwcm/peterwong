@@ -81,7 +81,7 @@
                 <h3 class="educations__title">Educations</h3>
               <?php include 'templates/educations.tpl.php'; ?>
             </section>
-            <section class="skills">
+            <section class="skills skills--language">
                 <h3 class="skills__title">Languages</h3>
                 <?php include 'templates/languages.tpl.php'; ?>
             </section>
