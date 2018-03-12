@@ -15,7 +15,7 @@ $skills = [
 ];
 ?>
 
-<?php foreach($skills as $key => $skill): ?>
+<?php foreach($skills as $skill): ?>
     <section class="skill">
         <h5 class="skill__name"><?=$skill->getName()?></h5>
         <div class="skill__level">

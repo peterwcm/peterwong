@@ -33,7 +33,7 @@ $experiences = [
 ];
 ?>
 
-<?php foreach($experiences as $key => $experience): ?>
+<?php foreach($experiences as $experience): ?>
     <section class="experience">
         <div class="experience__overview">
             <a href="<?=$experience->getLink()?>" target="_blank">

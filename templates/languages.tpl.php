@@ -9,7 +9,7 @@ $languages = [
 ];
 ?>
 
-<?php foreach($languages as $key => $language): ?>
+<?php foreach($languages as $language): ?>
     <section class="skill">
         <h5 class="skill__name"><?=$language->getName()?></h5>
         <div class="skill__level">

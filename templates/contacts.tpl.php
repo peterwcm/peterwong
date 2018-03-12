@@ -11,7 +11,7 @@ $contacts = [
 ];
 ?>
 
-<?php foreach ($contacts as $key => $contact): ?>
+<?php foreach ($contacts as $contact): ?>
     <section class="contact-info">
         <div class="contact-info__icon">
             <i class="fa fa-<?= $contact->getIcon() ?>"
