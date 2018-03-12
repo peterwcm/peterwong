@@ -40,6 +40,12 @@
       /* stylelint-disable-next-line declaration-no-important */
       display: block !important;
     }
+
+    &--two {
+      .main {
+        height: auto;
+      }
+    }
   }
 
   .main {

@@ -1,11 +1,12 @@
 <?php
 
-class Referee {
+class Reference {
   var $name;
   var $title;
   var $company;
   var $phone;
   var $email;
+  var $active;
 
   public function getName() {
     return $this->name;
@@ -27,11 +28,16 @@ class Referee {
     return $this->email;
   }
 
-  function __construct($name, $title, $company, $phone, $email) {
+  public function getActive() {
+    return $this->active;
+  }
+
+  function __construct($name, $title, $company, $phone, $email, $active = TRUE) {
     $this->name = $name;
     $this->title = $title;
     $this->company = $company;
     $this->phone = $phone;
     $this->email = $email;
+    $this->active = $active;
   }
 }

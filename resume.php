@@ -82,9 +82,9 @@
                 <?php include 'templates/languages.tpl.php'; ?>
             </section>
             
-            <section class="referees">
-                <h3 class="referees__title">Referees</h3>
-                <?php include 'templates/referees.tpl.php'; ?>
+            <section class="references">
+                <h3 class="references__title">References</h3>
+                <?php include 'templates/references.tpl.php'; ?>
             </section>
         </section>
 

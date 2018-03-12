@@ -1,0 +1,41 @@
+.references {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.reference {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  padding-left: 45px;
+  width: 50%;
+  font-size: 0.75rem;
+
+  &__name {
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0.2rem 0;
+    color: $color-theme--primary;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+
+  .fa {
+    margin-right: 0.2rem;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .reference {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
