@@ -20,8 +20,8 @@ $skills = [
         <h5 class="skill__name"><?=$skill->getName()?></h5>
         <div class="skill__level">
             <div class="progress">
-                <div class="progress__bar"
-                     style="width: <?=$skill->getLevel()?>%;"></div>
+                <div class="js-progress progress__bar"
+                     data-progress="<?=$skill->getLevel()?>"></div>
             </div>
         </div>
     </section>

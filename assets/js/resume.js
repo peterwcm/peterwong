@@ -6,6 +6,7 @@ class Page {
     history.replaceState({targetPage}, 'Page ' + targetPage, '?page=' + targetPage);
     this.goTo(targetPage);
     this._initNavButton();
+    this._animateProgress();
   }
 
   goTo(targetPage) {
@@ -15,6 +16,7 @@ class Page {
 
     $('.page').hide();
     $(`.page[data-page=${targetPage}]`).show();
+    this._animateProgress();
     return true;
   }
 
@@ -42,6 +44,19 @@ class Page {
         history.pushState({targetPage}, 'Page ' + targetPage, '?page=' + targetPage);
       }
     });
+  }
+
+  _animateProgress() {
+    $('.js-progress').css('width', 0);
+
+    setTimeout(() => {
+      $('.js-progress').each((i, elem) => {
+        const $progress = $(elem);
+        if ($progress.data('progress')) {
+          $progress.css('width', $progress.data('progress') + '%');
+        }
+      });
+    }, 500);
   }
 }
 
