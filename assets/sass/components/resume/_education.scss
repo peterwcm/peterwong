@@ -20,8 +20,13 @@
     margin-top: 5px;
   }
 
+  &__title {
+    margin: 0;
+  }
+
   &__institution {
     margin: 0.2rem 0 0;
+    font-size: 0.75rem;
     color: $color-theme--primary;
     text-transform: uppercase;
   }
@@ -29,10 +34,6 @@
   &__details {
     width: 70%;
     padding: 0 1.25rem 0.8rem;
-  }
-
-  &__title {
-    margin: 0;
   }
 
   &__description {

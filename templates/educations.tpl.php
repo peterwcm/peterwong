@@ -13,7 +13,7 @@ $educations = [
     'Queensland University of Technology (QUT)',
     'Bachelor of Information Technology',
     6.813,
-    'Software Engineering and Database Warehousing'
+    'Software Engineering'
   )
 ];
 ?>
@@ -31,7 +31,7 @@ $educations = [
             </p>
             <?php if (!empty($education->getSpecialisation())): ?>
                 <p class="education__description">
-                  <?php printf('Specialisations: %s', $education->getSpecialisation());?>
+                  <?php printf('Specialisation: %s', $education->getSpecialisation());?>
                 </p>
             <?php endif; ?>
         </div>
