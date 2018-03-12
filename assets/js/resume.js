@@ -2,28 +2,35 @@ class Page {
   constructor() { }
 
   init() {
-    this._loadPageNum();
+    const targetPage = this._loadPageNum();
+    history.replaceState({targetPage}, 'Page ' + targetPage, '?page=' + targetPage);
+    this.goTo(targetPage);
     this._initNavButton();
   }
 
-  _goTo(targetPage) {
-    var $targetPage = $(`.page[data-page=${targetPage}]`);
-
-    if (!$targetPage.length) {
-      return;
+  goTo(targetPage) {
+    if (!this._isPageExist(targetPage)) {
+      return false;
     }
 
     $('.page').hide();
-    $targetPage.show();
+    $(`.page[data-page=${targetPage}]`).show();
+    return true;
+  }
+
+  _isPageExist(targetPage) {
+    return !!$(`.page[data-page=${targetPage}]`).length;
   }
 
   _loadPageNum() {
     const url = new URL(window.location.href);
     const targetPage = url.searchParams.get('page');
 
-    if (targetPage) {
-      this._goTo(targetPage);
+    if (!targetPage || !this._isPageExist(targetPage)) {
+      return 1;
     }
+
+    return targetPage;
   }
 
   _initNavButton() {
@@ -31,7 +38,9 @@ class Page {
       const $button = $(e.currentTarget);
       const targetPage = $button.data('targetPage');
 
-      this._goTo(targetPage);
+      if (this.goTo(targetPage)) {
+        history.pushState({targetPage}, 'Page ' + targetPage, '?page=' + targetPage);
+      }
     });
   }
 }
@@ -39,4 +48,12 @@ class Page {
 $(() => {
   const page = new Page();
   page.init();
+
+  window.addEventListener('popstate', event => {
+    if (!event.state.targetPage) {
+      return;
+    }
+
+    page.goTo(event.state.targetPage);
+  });
 });
