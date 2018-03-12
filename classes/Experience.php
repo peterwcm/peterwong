@@ -5,6 +5,7 @@ class Experience {
   var $employer;
   var $title;
   var $description;
+  var $link;
 
   public function getPeriod() {
     return $this->period;
@@ -22,10 +23,15 @@ class Experience {
     return $this->description;
   }
 
-  function __construct($period, $employer, $title, $description) {
+  public function getLink() {
+    return $this->link;
+  }
+
+  function __construct($period, $employer, $title, $description, $link = '#') {
     $this->period = $period;
     $this->employer = $employer;
     $this->title = $title;
     $this->description = $description;
+    $this->link = $link;
   }
 }
