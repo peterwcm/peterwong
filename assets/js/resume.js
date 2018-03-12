@@ -50,7 +50,7 @@ $(() => {
   page.init();
 
   window.addEventListener('popstate', event => {
-    if (!event.state.targetPage) {
+    if (!event.state || !event.state.targetPage) {
       return;
     }
 
