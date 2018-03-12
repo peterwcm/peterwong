@@ -8,6 +8,15 @@ class Reference {
   var $email;
   var $active;
 
+  function __construct($name, $title, $company, $phone, $email, $active = TRUE) {
+    $this->name = $name;
+    $this->title = $title;
+    $this->company = $company;
+    $this->phone = $phone;
+    $this->email = $email;
+    $this->active = $active;
+  }
+
   public function getName() {
     return $this->name;
   }
@@ -30,14 +39,5 @@ class Reference {
 
   public function getActive() {
     return $this->active;
-  }
-
-  function __construct($name, $title, $company, $phone, $email, $active = TRUE) {
-    $this->name = $name;
-    $this->title = $title;
-    $this->company = $company;
-    $this->phone = $phone;
-    $this->email = $email;
-    $this->active = $active;
   }
 }

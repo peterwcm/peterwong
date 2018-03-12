@@ -8,6 +8,14 @@ class Contact {
   var $url;
   var $type;
 
+  function __construct($name, $icon, $details, $url, $type = ContactType::Link) {
+    $this->name = $name;
+    $this->icon = $icon;
+    $this->details = $details;
+    $this->url = $url;
+    $this->type = $type;
+  }
+
   public function getName() {
     return $this->name;
   }
@@ -26,14 +34,5 @@ class Contact {
 
   public function getType() {
     return $this->type;
-  }
-
-  function __construct($name, $icon, $details, $url,
-                       $type = ContactType::Link) {
-    $this->name = $name;
-    $this->icon = $icon;
-    $this->details = $details;
-    $this->url = $url;
-    $this->type = $type;
   }
 }
