@@ -19,21 +19,21 @@ $references = [
   new Reference(
     'Simon Collier-Baker',
     'Development Manager',
-    'Auto & General Insurance Company Ltd',
+    'Auto & General Insurance Company',
     '0405 444 528',
     'simon.collierbaker@autogeneral.com.au'
   ),
   new Reference(
     'Dev Mayur Zaveri',
     'Lead Developer',
-    'Auto & General Insurance Company Ltd',
+    'Auto & General Insurance Company',
     '07 3377 8704',
     'dev.zaveri@autogeneral.com.au'
   ),
   new Reference(
     'Roxy Roberts',
     'Project Manager',
-    'Auto & General Insurance Company Ltd',
+    'Auto & General Insurance Company',
     '0424 737 193',
     'roxy.roberts@autogeneral.com.au'
   ),
