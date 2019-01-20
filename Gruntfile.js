@@ -79,6 +79,15 @@ module.exports = grunt => {
         files: {
           'build/css/resume.min.css': 'assets/sass/resume.scss'
         }
+      },
+      photography: {
+        options: {
+          loadPath: ['vendor/bower_components/foundation/scss'],
+          style: 'compressed'
+        },
+        files: {
+          'build/css/photography.min.css': 'assets/sass/photography.scss'
+        }
       }
     },
     postcss: {
@@ -92,6 +101,9 @@ module.exports = grunt => {
       },
       resume: {
         src: 'build/css/resume.min.css'
+      },
+      photography: {
+        src: 'build/css/photography.min.css'
       }
     },
     copy: {
@@ -117,6 +129,7 @@ module.exports = grunt => {
         files: [
           'assets/sass/**/*.scss',
           '!assets/sass/resume.scss',
+          '!assets/sass/photography.scss',
           '!assets/sass/components/resume/**/*.scss'
         ],
         tasks: ['sass:app', 'postcss:app']
@@ -127,6 +140,12 @@ module.exports = grunt => {
           'assets/sass/components/resume/**/*.scss'
         ],
         tasks: ['sass:resume', 'postcss:resume']
+      },
+      photographyCss: {
+        files: [
+          'assets/sass/photography.scss',
+        ],
+        tasks: ['sass:photography', 'postcss:photography']
       },
       images: {
         files: 'assets/images/**',

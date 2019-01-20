@@ -1,0 +1,34 @@
+// Variables
+@import 'modules/misc';
+@import 'modules/fonts';
+@import 'modules/colors';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-theme--primary;
+  font-family: $font-default;
+  color: $color-text--normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-heading;
+}
+
+.compare {
+  display: flex;
+
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+}
