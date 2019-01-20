@@ -23,11 +23,31 @@ h5 {
   font-family: $font-heading;
 }
 
+.top-bar {
+  margin: 0;
+  padding: 0.5rem 0;
+  color: $color-text--inverse;
+  background-color: $color-theme--secondary;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
 .compare {
   display: flex;
+  padding: 0 0.5rem 0.5rem;
 
   &__image {
+    &--left {
+      padding-right: 0.25rem;
+    }
+
+    &--right {
+      padding-left: 0.25rem;
+    }
+
     img {
+      display: block;
       max-width: 100%;
     }
   }

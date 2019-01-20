@@ -41,28 +41,31 @@
 
 <body>
 <div class="page">
+  <header>
+    <h1 class="top-bar">Free download</h1>
+  </header>
   <section class="main">
     <section class="compare">
-      <div class="compare__image">
+      <div class="compare__image compare__image--left">
         <img src="./build/images/presets/beach-before.jpg"/>
       </div>
-      <div class="compare__image">
+      <div class="compare__image compare__image--right">
         <img src="./build/images/presets/beach-after.jpg"/>
       </div>
     </section>
     <section class="compare">
-      <div class="compare__image">
+      <div class="compare__image compare__image--left">
         <img src="./build/images/presets/temple-before.jpg"/>
       </div>
-      <div class="compare__image">
+      <div class="compare__image compare__image--right">
         <img src="./build/images/presets/temple-after.jpg"/>
       </div>
     </section>
     <section class="compare">
-      <div class="compare__image">
+      <div class="compare__image compare__image--left">
         <img src="./build/images/presets/tree-before.jpg"/>
       </div>
-      <div class="compare__image">
+      <div class="compare__image compare__image--right">
         <img src="./build/images/presets/tree-after.jpg"/>
       </div>
     </section>
