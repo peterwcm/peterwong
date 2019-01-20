@@ -3,6 +3,10 @@
 @import 'modules/fonts';
 @import 'modules/colors';
 
+// Foundation
+@import 'modules/settings';
+@import 'foundation';
+
 * {
   box-sizing: border-box;
 }
@@ -23,11 +27,11 @@ h5 {
   font-family: $font-heading;
 }
 
-.top-bar {
+.heading {
   margin: 0;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   color: $color-text--inverse;
-  background-color: $color-theme--secondary;
+  background-color: $color-green--dark;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
@@ -51,4 +55,21 @@ h5 {
       max-width: 100%;
     }
   }
+}
+
+.cta {
+  &__button {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.footer {
+  padding: rem-calc(10) 0;
+  color: $color-text--inverse;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 80%;
 }

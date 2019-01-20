@@ -143,6 +143,7 @@ module.exports = grunt => {
       },
       photographyCss: {
         files: [
+          'assets/sass/modules/*.scss',
           'assets/sass/photography.scss',
         ],
         tasks: ['sass:photography', 'postcss:photography']

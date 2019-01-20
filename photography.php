@@ -42,8 +42,9 @@
 <body>
 <div class="page">
   <header>
-    <h1 class="top-bar">Free download</h1>
+    <h2 class="heading"><i class="fa fa-cloud-download"></i> Free download</h2>
   </header>
+  <section class="banner"></section>
   <section class="main">
     <section class="compare">
       <div class="compare__image compare__image--left">
@@ -70,6 +71,14 @@
       </div>
     </section>
   </section>
+  <section class="cta">
+    <a class="button secondary expand cta__button" href="#">Download <i class="fa fa-arrow-circle-down"></i></a>
+  </section>
+  <footer class="footer">
+    <div class="copyright">
+      Design & Created by Peter Wong &copy; <?php echo date('Y'); ?>
+    </div>
+  </footer>
 </div>
 </body>
 </html>
