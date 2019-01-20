@@ -36,3 +36,6 @@ vendor/
 # Compiled files
 .sass-cache/
 build/
+
+# Mac
+.DS_Store

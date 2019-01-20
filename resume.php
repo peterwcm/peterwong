@@ -24,7 +24,7 @@
           type="text/css"
           rel="stylesheet"
           href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link href="build/css/resume.min.css?v=<?php echo date("ymdGi", filemtime("build/css/app.min.css")); ?>" rel="stylesheet">
+    <link href="build/css/resume.min.css?v=<?php echo date("ymdGi", filemtime("build/css/resume.min.css")); ?>" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=
