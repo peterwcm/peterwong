@@ -107,14 +107,22 @@ module.exports = grunt => {
       }
     },
     copy: {
-      main: {
+      images: {
         files: [{
           expand: true,
           cwd: 'assets/images/',
           src: ['**'],
           dest: 'build/images/'
         }]
-      }
+      },
+      files: {
+        files: [{
+          expand: true,
+          cwd: 'assets/files/',
+          src: ['**'],
+          dest: 'build/files/'
+        }]
+      },
     },
     watch: {
       appJs: {

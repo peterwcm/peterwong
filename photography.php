@@ -72,7 +72,9 @@
     </section>
   </section>
   <section class="cta">
-    <a class="button secondary expand cta__button" href="#">Download <i class="fa fa-arrow-circle-down"></i></a>
+    <a class="button secondary expand cta__button"
+       download="Landscape Basic.xmp"
+       href="build/files/Landscape Basic.xmp">Download <i class="fa fa-arrow-circle-down"></i></a>
   </section>
   <footer class="footer">
     <div class="copyright">
