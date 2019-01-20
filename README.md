@@ -8,6 +8,8 @@ The online portfolio for Peter Wong
 * Node.js, download and install Node [here](https://nodejs.org/download/).
 * Bower, install it by running ```sudo npm install -g bower```
 * Grunt CLI, install it by running ```sudo npm install -g grunt-cli```
+* Make sure Ruby and Sass are installed (OS X should already have Ruby installed).
+Run ```sudo gem install sass``` to install sass on a Mac.
 
 ## Project Installation & Setup
 
