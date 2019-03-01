@@ -1,0 +1,13 @@
+{{#contacts}}
+<section class="contact-info">
+  <div class="contact-info__icon">
+    <i class="fa fa-{{icon}}" aria-hidden="true"></i>
+  </div>
+  <div class="contact-info__details">
+    <h5 class="contact-info__heading">{{ name }}</h5>
+    <div class="contact-info__text">
+      {{^types.phone}}<a href="{{{ url }}}" target="_blank">{{{ details }}}</a>{{/types.phone}}{{#types.phone}} {{details}} {{/types.phone}}
+    </div>
+  </div>
+</section>
+{{/contacts}}

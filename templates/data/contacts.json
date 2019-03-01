@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    { "name": "Website", "icon": "globe",
+      "details": "peterwong.me", "url": "http://peterwong.me", "types": {
+      "link": true, "email": false, "phone": false
+    }},
+    { "name": "Email", "icon": "envelope",
+      "details": "peterwong.brisbane@gmail.com", "url": "mailto:peterwong.brisbane@gmail.com", "types": {
+      "link": false, "email": true, "phone": false
+    }},
+    { "name": "Phone", "icon": "phone",
+      "details": "0421957638", "url": "", "types": {
+      "link": false, "email": false, "phone": true
+    }},
+    { "name": "LinkedIn", "icon": "linkedin",
+      "details": "linkedin.com/in/peterwcm", "url": "https://www.linkedin.com/in/peterwcm", "types": {
+      "link": true, "email": false, "phone": false
+    }},
+    { "name": "GitHub", "icon": "github",
+      "details": "github.com/peterwcm", "url": "https://github.com/peterwcm", "types": {
+      "link": true, "email": false, "phone": false
+    }},
+    { "name": "StackOverflow", "icon": "stack-overflow",
+      "details": "stackoverflow.com/users/731968", "url": "https://stackoverflow.com/users/731968/peter-wong", "types": {
+      "link": true, "email": false, "phone": false
+    }}
+  ]
+}
