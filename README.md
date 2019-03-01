@@ -1,7 +1,7 @@
 ## Peter Wong's Portfolio
 
 The online portfolio for Peter Wong
-[http://peterwong.name](http://peterwong.name)
+[http://peterwong.me](http://peterwong.me)
 
 ## Project Requirements
 
@@ -20,3 +20,14 @@ Run ```sudo gem install sass``` to install sass on a Mac.
 4. Run ```grunt``` to start the files watcher and start developing
 
 Since we are just using a plain HTML file, you can just simply open it and see the changes made.
+
+## Deploy it to Netlify
+
+This app is optimised for Continuous Deployment in Netlify.
+Please use the following build settings.
+
+```markdown
+Base directory: Not set
+Build command: gem install sass && grunt build
+Publish directory: build
+```
