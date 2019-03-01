@@ -12,7 +12,7 @@
   <meta name="description" content="Free lightroom preset."/>
 
   <!-- Canonical Link -->
-  <link rel="canonical" href="http://peterwong.name/photography">
+  <link rel="canonical" href="http://peterwong.me/photography">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/x-icon"/>
@@ -23,8 +23,7 @@
         type="text/css"
         rel="stylesheet"
         href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  <link href="build/css/photography.min.css?v=<?php echo date("ymdGi", filemtime("build/css/photography.min.css")); ?>"
-        rel="stylesheet">
+  <link href="css/photography.min.css" rel="stylesheet">
 
   <!-- Fonts -->
   <link href="http://fonts.googleapis.com/css?family=
@@ -35,10 +34,6 @@
 				Muli&subset=all" rel="stylesheet" type="text/css">
 </head>
 
-<?php
-  define('APP_ROOT', realpath(dirname(__FILE__)) . '/');
-?>
-
 <body>
 <div class="page">
   <header>
@@ -48,39 +43,40 @@
   <section class="main">
     <section class="compare">
       <div class="compare__image compare__image--left">
-        <img src="./build/images/presets/beach-before.jpg"/>
+        <img src="images/presets/beach-before.jpg"/>
       </div>
       <div class="compare__image compare__image--right">
-        <img src="./build/images/presets/beach-after.jpg"/>
+        <img src="images/presets/beach-after.jpg"/>
       </div>
     </section>
     <section class="compare">
       <div class="compare__image compare__image--left">
-        <img src="./build/images/presets/temple-before.jpg"/>
+        <img src="images/presets/temple-before.jpg"/>
       </div>
       <div class="compare__image compare__image--right">
-        <img src="./build/images/presets/temple-after.jpg"/>
+        <img src="images/presets/temple-after.jpg"/>
       </div>
     </section>
     <section class="compare">
       <div class="compare__image compare__image--left">
-        <img src="./build/images/presets/tree-before.jpg"/>
+        <img src="images/presets/tree-before.jpg"/>
       </div>
       <div class="compare__image compare__image--right">
-        <img src="./build/images/presets/tree-after.jpg"/>
+        <img src="images/presets/tree-after.jpg"/>
       </div>
     </section>
   </section>
   <section class="cta">
     <a class="button secondary expand cta__button"
        download="Landscape Basic.xmp"
-       href="build/files/Landscape Basic.xmp">Download <i class="fa fa-arrow-circle-down"></i></a>
+       href="files/Landscape%20Basic.xmp">Download <i class="fa fa-arrow-circle-down"></i></a>
   </section>
   <footer class="footer">
-    <div class="copyright">
-      Design & Created by Peter Wong &copy; <?php echo date('Y'); ?>
-    </div>
+    <div class="copyright">Design & Created by Peter Wong &copy; <span class="js-prefill-year">2019</span></div>
   </footer>
 </div>
+
+<!-- JS -->
+<script src="js/helper.min.js"></script>
 </body>
 </html>
