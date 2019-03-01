@@ -139,16 +139,6 @@ class Work {
   }
 }
 
-class Prefill {
-  constructor() {
-    this._currentYear = new Date().getFullYear();
-  }
-
-  init() {
-    $('.js-prefill-year').text(this._currentYear);
-  }
-}
-
 $(() => {
   $(document).foundation({
     'magellan-expedition': {
@@ -161,8 +151,6 @@ $(() => {
   // if (isLocal) $('.work__details').show();
   const loadingTime = isLocal ? 1000 : 3000;
 
-  const prefill = new Prefill();
-  prefill.init();
   const menu = new Menu();
   menu.init();
   const section = new Section(loadingTime);

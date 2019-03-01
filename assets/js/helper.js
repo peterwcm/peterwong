@@ -4,7 +4,8 @@ class Prefill {
   }
 
   init() {
-    $('.js-prefill-year').text(this._currentYear);
+    $('.js-prefill[data-type="current-year"]').text(this._currentYear);
+    $('.js-prefill[data-type="work-years-total"]').text(this._currentYear - 2012);
   }
 }
 
