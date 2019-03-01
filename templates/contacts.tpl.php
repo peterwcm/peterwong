@@ -2,7 +2,7 @@
 require_once(APP_ROOT . 'classes/Contact.php');
 
 $contacts = [
-  new Contact('Website', 'globe', 'peterwong.name', 'http://peterwong.name'),
+  new Contact('Website', 'globe', 'peterwong.me', 'http://peterwong.me'),
   new Contact('Email', 'envelope', 'peterwong.brisbane@gmail.com', 'mailto:peterwong.brisbane@gmail.com', ContactType::Email),
   new Contact('Phone', 'phone', '0421957638', '', ContactType::Phone),
   new Contact('LinkedIn', 'linkedin', 'linkedin.com/in/peterwcm', 'https://www.linkedin.com/in/peterwcm'),
