@@ -1,0 +1,15 @@
+{{#educations}}
+  <section class="education">
+    <div class="education__overview">
+      <h5 class="education__period">{{{ period }}}</h5>
+    </div>
+    <div class="education__details">
+      <h4 class="education__title">{{{ title }}}</h4>
+      <h5 class="education__institution">{{{ institution }}}</h5>
+      <p class="education__description">Course GPA: {{ gpa }} (on a 7 point ascending scale)</p>
+      {{#if major}}
+        <p class="education__description">Specialisation: {{{ major }}}</p>
+      {{/if}}
+    </div>
+  </section>
+{{/educations}}

@@ -36,6 +36,7 @@ vendor/
 # Compiled files
 .sass-cache/
 build/**/*
+build/**/*.html
 !build/*
 
 # Mac
