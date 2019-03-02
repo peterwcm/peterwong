@@ -1,0 +1,8 @@
+{
+  "languages": [
+    { "name": "English", "level": 95},
+    { "name": "Chinese", "level": 90},
+    { "name": "Cantonese", "level": 100},
+    { "name": "Korean", "level": 35}
+  ]
+}
