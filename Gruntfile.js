@@ -141,6 +141,17 @@ module.exports = grunt => {
         }]
       },
     },
+    assemble: {
+      options: {
+        flatten: true,
+        partials: ['templates/includes/**/*.hbs'],
+        data: ['templates/data/*.{json,yml}']
+      },
+      site: {
+        src: ['templates/*.hbs'],
+        dest: './build',
+      }
+    },
     watch: {
       appJs: {
         files: ['<%= concat.app.src %>'],
@@ -180,7 +191,11 @@ module.exports = grunt => {
       images: {
         files: 'assets/images/**',
         tasks: ['copy']
-      }
+      },
+      assemble: {
+        files: ['templates/**/*.{hbs,yml,json}'],
+        tasks: ['assemble']
+      },
     }
   });
 
@@ -194,9 +209,11 @@ module.exports = grunt => {
   grunt.loadNpmTasks('grunt-postcss');
   // Copy
   grunt.loadNpmTasks('grunt-contrib-copy');
+  // Assemble
+  grunt.loadNpmTasks('grunt-assemble');
   // Watch
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['build', 'watch']);
-  grunt.registerTask('build', ['concat', 'babel', 'uglify', 'sass', 'postcss', 'copy']);
+  grunt.registerTask('build', ['concat', 'babel', 'uglify', 'sass', 'postcss', 'copy', 'assemble']);
 };
