@@ -140,6 +140,12 @@ module.exports = grunt => {
           dest: 'build/files/'
         }]
       },
+      misc: {
+        files: [{
+          src: ['favicon.png', 'robots.txt', 'sitemap.xml'],
+          dest: 'build/'
+        }]
+      }
     },
     assemble: {
       options: {
@@ -188,9 +194,17 @@ module.exports = grunt => {
         ],
         tasks: ['sass:photography', 'postcss:photography']
       },
-      images: {
-        files: 'assets/images/**',
-        tasks: ['copy']
+      copyImages: {
+        files: ['assets/images/**'],
+        tasks: ['copy:images']
+      },
+      copyFiles: {
+        files: ['assets/files/**'],
+        tasks: ['copy:files']
+      },
+      copyMisc: {
+        files: ['favicon.png', 'robots.txt', 'sitemap.xml'],
+        tasks: ['copy:misc']
       },
       assemble: {
         files: ['templates/**/*.{hbs,yml,json}'],
