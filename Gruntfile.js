@@ -142,7 +142,7 @@ module.exports = grunt => {
       },
       misc: {
         files: [{
-          src: ['favicon.png', 'robots.txt', 'sitemap.xml'],
+          src: ['favicon.png', 'favicon-alice.png', 'robots.txt', 'sitemap.xml'],
           dest: 'build/'
         }]
       }
@@ -203,7 +203,7 @@ module.exports = grunt => {
         tasks: ['copy:files']
       },
       copyMisc: {
-        files: ['favicon.png', 'robots.txt', 'sitemap.xml'],
+        files: ['favicon.png', 'favicon-alice.png', 'robots.txt', 'sitemap.xml'],
         tasks: ['copy:misc']
       },
       assemble: {

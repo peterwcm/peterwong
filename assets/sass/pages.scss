@@ -7,6 +7,9 @@
 @import 'modules/settings';
 @import 'foundation';
 
+// Components
+@import 'components/footer';
+
 * {
   box-sizing: border-box;
 }
@@ -40,21 +43,15 @@ h5 {
   }
 }
 
+.footer {
+  padding: rem-calc(5) 0;
+}
+
 .cta {
   &__button {
     font-size: 1.5rem;
     text-transform: uppercase;
   }
-}
-
-.footer {
-  padding: rem-calc(10) 0;
-  color: $color-text--inverse;
-  text-align: center;
-}
-
-.copyright {
-  font-size: 80%;
 }
 
 .heart {
@@ -129,6 +126,7 @@ h5 {
 // Alice
 .alice-sidebar {
   padding: 1rem;
+  background-color: $white;
 
   @media #{$large-up} {
     width: 100%;
@@ -136,8 +134,20 @@ h5 {
 }
 
 .alice-name {
+  padding-left: 3.5rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  background-image: url('#{$image-dir}alice/logo.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  @media #{$medium-up} {
+    padding-left: 4.5rem;
+  }
+
+  .alice-sidebar & {
+    color: $color-red;
+  }
 }
 
 .alice-photos {
@@ -150,7 +160,91 @@ h5 {
     right: 0;
   }
 
+  &__row {
+    display: flex;
+
+    > div {
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--2-1 {
+      > div {
+        &:first-child {
+          flex: 2;
+        }
+      }
+    }
+
+    &--1-2 {
+      > div {
+        &:last-child {
+          flex: 2;
+        }
+      }
+    }
+  }
+
   @media #{$large-up} {
     width: 100%;
+  }
+}
+
+.alice-photo {
+  flex: 1;
+  margin: 0.25rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &[data-photo='1'] {
+    background-image: url('#{$image-dir}alice/1.jpg');
+  }
+
+  &[data-photo='2'] {
+    background-image: url('#{$image-dir}alice/2.jpeg');
+  }
+
+  &[data-photo='3'] {
+    background-image: url('#{$image-dir}alice/3.jpg');
+  }
+
+  &[data-photo='4'] {
+    background-image: url('#{$image-dir}alice/4.jpg');
+  }
+
+  &[data-photo='5'] {
+    background-image: url('#{$image-dir}alice/5.jpg');
+  }
+
+  &[data-photo='6'] {
+    background-image: url('#{$image-dir}alice/6.jpg');
+  }
+
+  &[data-photo='7'] {
+    background-image: url('#{$image-dir}alice/7.jpg');
+  }
+
+  &[data-photo='8'] {
+    background-image: url('#{$image-dir}alice/8.jpg');
+  }
+
+  &[data-photo='9'] {
+    background-image: url('#{$image-dir}alice/9.jpg');
+  }
+
+  &[data-photo='10'] {
+    background-image: url('#{$image-dir}alice/10.jpg');
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
   }
 }
