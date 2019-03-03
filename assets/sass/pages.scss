@@ -14,9 +14,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $color-theme--primary;
   font-family: $font-default;
-  color: $color-text--normal;
 }
 
 h1,
@@ -27,6 +25,39 @@ h5 {
   font-family: $font-heading;
 }
 
+.page {
+  &--primary {
+    color: $color-text--inverse;
+    background-color: $color-theme--primary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $color-text--inverse;
+    }
+  }
+}
+
+.cta {
+  &__button {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.footer {
+  padding: rem-calc(10) 0;
+  color: $color-text--inverse;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 80%;
+}
+
+// Photography
 .heading {
   margin: 0;
   padding: 0.5rem;
@@ -57,19 +88,19 @@ h5 {
   }
 }
 
-.cta {
-  &__button {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+// Alice
+.page--alice {
+  padding: 1rem;
+}
+
+.alice-sidebar {
+  @media #{$large-up} {
+    width: 20%;
   }
 }
 
-.footer {
-  padding: rem-calc(10) 0;
-  color: $color-text--inverse;
-  text-align: center;
-}
-
-.copyright {
-  font-size: 80%;
+.alice-photos {
+  @media #{$large-up} {
+    width: 80%;
+  }
 }
