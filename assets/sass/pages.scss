@@ -57,6 +57,44 @@ h5 {
   font-size: 80%;
 }
 
+.heart {
+  position: relative;
+  margin: 0 auto;
+  width: rem-calc(100);
+  height: rem-calc(90);
+  z-index: 1;
+  animation: heartbeat 1s infinite;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: rem-calc(50);
+    width: rem-calc(50);
+    height: rem-calc(80);
+    background: $color-red;
+    border-radius: rem-calc(50 50 0 0);
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+
+  &::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+}
+
+@keyframes heartbeat {
+  0% {transform: scale(0.75);}
+  20% {transform: scale(1);}
+  40% {transform: scale(0.75);}
+  60% {transform: scale(1);}
+  80% {transform: scale(0.75);}
+  100% {transform: scale(0.75);}
+}
+
 // Photography
 .heading {
   margin: 0;
@@ -89,18 +127,30 @@ h5 {
 }
 
 // Alice
-.page--alice {
-  padding: 1rem;
-}
-
 .alice-sidebar {
+  padding: 1rem;
+
   @media #{$large-up} {
-    width: 20%;
+    width: 100%;
   }
 }
 
+.alice-name {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
 .alice-photos {
+  position: relative;
+  padding: 1rem;
+
+  .heart {
+    position: absolute;
+    top: -1rem;
+    right: 0;
+  }
+
   @media #{$large-up} {
-    width: 80%;
+    width: 100%;
   }
 }
