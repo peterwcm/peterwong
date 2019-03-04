@@ -23,6 +23,14 @@ module.exports = grunt => {
         ],
         dest: 'build/js/resume.js'
       },
+      pages: {
+        src: [
+          'vendor/bower_components/foundation/js/vendor/jquery.js',
+          'vendor/bower_components/foundation/js/foundation.js',
+          'assets/js/pages.js'
+        ],
+        dest: 'build/js/pages.js'
+      },
       helper: {
         src: [
           'vendor/bower_components/foundation/js/vendor/jquery.js',
@@ -46,6 +54,11 @@ module.exports = grunt => {
           '<%= concat.resume.dest %>': '<%= concat.resume.dest %>'
         }
       },
+      pages: {
+        files: {
+          '<%= concat.pages.dest %>': '<%= concat.pages.dest %>'
+        }
+      },
       helper: {
         files: {
           '<%= concat.helper.dest %>': '<%= concat.helper.dest %>'
@@ -61,6 +74,11 @@ module.exports = grunt => {
       resume: {
         files: {
           'build/js/resume.min.js': ['<%= concat.resume.dest %>']
+        }
+      },
+      pages: {
+        files: {
+          'build/js/pages.min.js': ['<%= concat.pages.dest %>']
         }
       },
       helper: {
@@ -166,6 +184,10 @@ module.exports = grunt => {
       resumeJs: {
         files: ['<%= concat.resume.src %>'],
         tasks: ['concat:resume', 'babel:resume', 'uglify:resume']
+      },
+      pagesJs: {
+        files: ['<%= concat.pages.src %>'],
+        tasks: ['concat:pages', 'babel:pages', 'uglify:pages']
       },
       helperJs: {
         files: ['<%= concat.helper.src %>'],

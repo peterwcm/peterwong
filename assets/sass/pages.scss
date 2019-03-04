@@ -43,6 +43,14 @@ h5 {
   }
 }
 
+.form {
+  padding: 1rem;
+
+  .button {
+    margin-bottom: 0;
+  }
+}
+
 .footer {
   padding: rem-calc(5) 0;
 }
@@ -246,5 +254,67 @@ h5 {
     content: '';
     display: block;
     padding-bottom: 100%;
+  }
+}
+
+// Hashtags
+.hashtags {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+}
+
+
+.checkbox-tags {
+  margin: 0;
+  padding: 0.5rem 0 1rem;
+  list-style: none;
+
+  li {
+    display: inline;
+  }
+
+  label {
+    padding: rem-calc(8 12);
+    border: rem-calc(2) solid $color-green--dark2;
+    color: $color-green--dark;
+    background-color: $color-white;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &::before {
+      content: '\f067';
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font: normal normal normal 14px/1 FontAwesome;
+      padding: rem-calc(2 6 2 2);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+
+    + label {
+      margin: 0 0.5rem 0 0;
+    }
+
+    &:checked {
+      + label {
+        border: rem-calc(2) solid $color-green--dark;
+        background-color: $color-green--dark2;
+        color: $color-white;
+
+        &::before {
+          content: '\f00c';
+          transform: rotate(-360deg);
+        }
+      }
+    }
   }
 }
