@@ -27,6 +27,22 @@ $(() => {
   hashtags.init();
 });
 
+const type = {
+  any: 0,
+  travel: 1,
+};
+
 const hashtags = [
+  {'name': 'bestoftheday', 'size': 'large', 'types': [type.any]},
+  {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
+  {'name': 'instadaily', 'size': 'large', 'types': [type.any]},
+  {'name': 'instatravel', 'size': 'large', 'types': [type.travel]},
+  {'name': 'photooftheday', 'size': 'large', 'types': [type.any]},
+  {'name': 'picoftheday', 'size': 'large', 'types': [type.any]},
+  {'name': 'travel', 'size': 'large', 'types': [type.travel]},
+  {'name': 'traveling', 'size': 'large', 'types': [type.travel]},
+  {'name': 'wanderlust', 'size': 'large', 'types': [type.travel]},
+  {'name': '', 'size': '', 'types': []},
+  {'name': '', 'size': '', 'types': []}
 
 ];
