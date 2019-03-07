@@ -51,6 +51,7 @@ const type = {
 };
 
 const hashtags = [
+  // ---------- Any (L) ----------
   {'name': 'bestoftheday', 'size': 'large', 'types': [type.any]},
   {'name': 'follow', 'size': 'large', 'types': [type.any]},
   {'name': 'followme', 'size': 'large', 'types': [type.any]},
@@ -64,21 +65,25 @@ const hashtags = [
   {'name': 'photography', 'size': 'large', 'types': [type.any]},
   {'name': 'photooftheday', 'size': 'large', 'types': [type.any]},
   {'name': 'picoftheday', 'size': 'large', 'types': [type.any]},
-
-
+  // ---------- Travel (L) ----------
   {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
   {'name': 'instatravel', 'size': 'large', 'types': [type.travel]},
   {'name': 'travel', 'size': 'large', 'types': [type.travel]},
   {'name': 'traveling', 'size': 'large', 'types': [type.travel]},
+  {'name': 'travelphotography', 'size': 'large', 'types': [type.travel]},
+  {'name': 'trip', 'size': 'large', 'types': [type.travel]},
   {'name': 'wanderlust', 'size': 'large', 'types': [type.travel]},
-
-  {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
-  {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
-  {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
-  {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
-  {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
-
-  {'name': '', 'size': '', 'types': []},
-  {'name': '', 'size': '', 'types': []}
-
+  // ---------- Landscape (L) ----------
+  {'name': 'landscape', 'size': 'large', 'types': [type.landscape]},
+  {'name': 'landscapephotography', 'size': 'large', 'types': [type.landscape]},
+  // ---------- Landscape (M) ----------
+  {'name': 'landscaper', 'size': 'medium', 'types': [type.landscape]},
+  // ---------- Nature (L) ----------
+  {'name': 'naturelover', 'size': 'large', 'types': [type.nature]},
+  {'name': 'naturelovers', 'size': 'large', 'types': [type.nature]},
+  {'name': 'naturephotography', 'size': 'large', 'types': [type.nature]},
+  {'name': 'natures', 'size': 'large', 'types': [type.nature]},
+  // ---------- Nature (M) ----------
+  {'name': 'naturepicture', 'size': 'medium', 'types': [type.nature]},
+  {'name': 'naturescape', 'size': 'medium', 'types': [type.nature]},
 ];
