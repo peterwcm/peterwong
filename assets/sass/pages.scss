@@ -41,6 +41,31 @@ h5 {
       color: $color-text--inverse;
     }
   }
+
+  &--full {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .main {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+.main {
+  &--primary {
+    color: $color-text--inverse;
+    background-color: $color-theme--primary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $color-text--inverse;
+    }
+  }
 }
 
 .form {
@@ -301,7 +326,7 @@ h5 {
     opacity: 0;
 
     + label {
-      margin: 0 0.5rem 0 0;
+      margin: 0 0.5rem 0.5rem 0;
     }
 
     &:checked {

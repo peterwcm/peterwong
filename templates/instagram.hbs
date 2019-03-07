@@ -30,23 +30,27 @@
 </head>
 
 <body>
-<div class="page page--primary">
-  <section class="main">
+<div class="page page--full">
+  <section class="main main--primary">
     <form class="form js-hashtags-form">
       <h3>Hashtags</h3>
       <label>Categories: </label>
       <ul class="checkbox-tags">
-        <li><input id="checkbox1" type="checkbox" value="Rainbow Dash" /><label for="checkbox1">Rainbow Dash</label></li>
-        <li><input id="checkbox2" type="checkbox" value="Cotton Candy" /><label for="checkbox2">Cotton Candy</label></li>
-        <li><input id="checkbox3" type="checkbox" value="Rarity" /><label for="checkbox3">Rarity</label></li>
-        <li><input id="checkbox4" type="checkbox" value="Moondancer" /><label for="checkbox4">Moondancer</label></li>
+        <li><input id="type_travel" type="checkbox" value="travel" /><label for="type_travel">Travel</label></li>
+        <li><input id="type_landscape" type="checkbox" value="landscape" /><label for="type_landscape">Landscape</label></li>
+        <li><input id="type_portrait" type="checkbox" value="portrait" /><label for="type_portrait">Portrait</label></li>
+        <li><input id="type_urban" type="checkbox" value="urban" /><label for="type_urban">Urban</label></li>
+        <li><input id="type_nature" type="checkbox" value="nature" /><label for="type_nature">Nature</label></li>
+        <li><input id="type_food" type="checkbox" value="food" /><label for="type_food">Food</label></li>
+        <li><input id="type_couples" type="checkbox" value="couples" /><label for="type_couples">Couples</label></li>
       </ul>
-      <label>Location: </label>
+      <label>Weather: </label>
       <ul class="checkbox-tags">
-        <li><input id="checkbox5" type="checkbox" value="Taiwan" /><label for="checkbox5">Taiwan</label></li>
-        <li><input id="checkbox6" type="checkbox" value="Taipei" /><label for="checkbox6">Taipei</label></li>
-        <li><input id="checkbox7" type="checkbox" value="Taichung" /><label for="checkbox7">Taichung</label></li>
-        <li><input id="checkbox8" type="checkbox" value="Yilan" /><label for="checkbox8">Yilan</label></li>
+        <li><input id="weather_sunny" type="checkbox" value="sunny" /><label for="weather_sunny">Sunny</label></li>
+        <li><input id="weather_rainy" type="checkbox" value="rainy" /><label for="weather_rainy">Rainy</label></li>
+        <li><input id="weather_cloudy" type="checkbox" value="cloudy" /><label for="weather_cloudy">Cloudy</label></li>
+        <li><input id="weather_misty" type="checkbox" value="misty" /><label for="weather_misty">Misty</label></li>
+        <li><input id="weather_night" type="checkbox" value="night" /><label for="weather_night">Night</label></li>
       </ul>
       <label>Activities: </label>
       <ul class="checkbox-tags">
@@ -55,8 +59,7 @@
         <li><input id="checkbox7" type="checkbox" value="Taichung" /><label for="checkbox7">Taichung</label></li>
         <li><input id="checkbox8" type="checkbox" value="Yilan" /><label for="checkbox8">Yilan</label></li>
       </ul>
-      <input type="text" placeholder="#location">
-      <input type="text" placeholder="#activity">
+      <textarea placeholder="#custom"></textarea>
       <input type="submit" class="button secondary" value="Submit">
     </form>
     <div class="hashtags js-hashtags"></div>
