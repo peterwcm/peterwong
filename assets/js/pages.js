@@ -86,4 +86,10 @@ const hashtags = [
   // ---------- Nature (M) ----------
   {'name': 'naturepicture', 'size': 'medium', 'types': [type.nature]},
   {'name': 'naturescape', 'size': 'medium', 'types': [type.nature]},
+  // ---------- Food (L) ----------
+  {'name': 'yum', 'size': 'large', 'types': [type.food]},
+  {'name': 'yummy', 'size': 'large', 'types': [type.food]},
+  {'name': 'tasty', 'size': 'large', 'types': [type.food]},
+  // ---------- Food (S) ----------
+  {'name': 'tastytasty', 'size': 'small', 'types': [type.food]}
 ];
