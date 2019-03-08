@@ -1,11 +1,11 @@
 class Hashtags {
   constructor() {
     this._hashtags = {
-      // < 100k, pick 8.
+      // < 100k, pick 9 (30%).
       'small': [],
-      // < 500k, pick 16.
+      // < 500k, pick 15 (50%).
       'medium': [],
-      // > 500k, pick 6.
+      // > 500k, pick 6 (20%).
       'large': [],
     };
 
@@ -47,7 +47,8 @@ const type = {
   urban: 4,
   nature: 5,
   food: 6,
-  couples: 7
+  couples: 7,
+  chinese: 8
 };
 
 const hashtags = [
@@ -65,6 +66,9 @@ const hashtags = [
   {'name': 'photography', 'size': 'large', 'types': [type.any]},
   {'name': 'photooftheday', 'size': 'large', 'types': [type.any]},
   {'name': 'picoftheday', 'size': 'large', 'types': [type.any]},
+  // ---------- Any (M) ----------
+  // ---------- Any (S) ----------
+
   // ---------- Travel (L) ----------
   {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
   {'name': 'instatravel', 'size': 'large', 'types': [type.travel]},
@@ -73,11 +77,16 @@ const hashtags = [
   {'name': 'travelphotography', 'size': 'large', 'types': [type.travel]},
   {'name': 'trip', 'size': 'large', 'types': [type.travel]},
   {'name': 'wanderlust', 'size': 'large', 'types': [type.travel]},
+  // ---------- Travel (M) ----------
+  // ---------- Travel (S) ----------
+
   // ---------- Landscape (L) ----------
   {'name': 'landscape', 'size': 'large', 'types': [type.landscape]},
   {'name': 'landscapephotography', 'size': 'large', 'types': [type.landscape]},
   // ---------- Landscape (M) ----------
   {'name': 'landscaper', 'size': 'medium', 'types': [type.landscape]},
+  // ---------- Landscape (S) ----------
+
   // ---------- Nature (L) ----------
   {'name': 'naturelover', 'size': 'large', 'types': [type.nature]},
   {'name': 'naturelovers', 'size': 'large', 'types': [type.nature]},
@@ -86,10 +95,13 @@ const hashtags = [
   // ---------- Nature (M) ----------
   {'name': 'naturepicture', 'size': 'medium', 'types': [type.nature]},
   {'name': 'naturescape', 'size': 'medium', 'types': [type.nature]},
+  // ---------- Nature (S) ----------
+
   // ---------- Food (L) ----------
   {'name': 'yum', 'size': 'large', 'types': [type.food]},
   {'name': 'yummy', 'size': 'large', 'types': [type.food]},
   {'name': 'tasty', 'size': 'large', 'types': [type.food]},
+  // ---------- Food (M) ----------
   // ---------- Food (S) ----------
   {'name': 'tastytasty', 'size': 'small', 'types': [type.food]}
 ];
