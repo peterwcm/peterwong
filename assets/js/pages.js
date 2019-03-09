@@ -19,13 +19,15 @@ class Hashtags {
    *
    * @param {string} hashtagType
    *   The hashtag type.
+   * @param {array} languages
+   *   The languages to be loaded.
    *
    * @returns {array}
    *   The list of hashtag objects array.
    * @private
    */
-  _getFilteredHashtags(hashtagType) {
-    return $.grep(hashtags, obj => obj.types.indexOf(type[hashtagType]) !== -1);
+  _getFilteredHashtags(hashtagType, languages) {
+    return $.grep(hashtags, obj => obj.types.indexOf(type[hashtagType]) !== -1 && languages.indexOf(obj.language) !== -1);
   }
 
   /**
@@ -84,16 +86,19 @@ class Hashtags {
    */
   _clean(hashtags) {
     const cleanHashtags = hashtags.map(hashtag => hashtag.trim());
-    return cleanHashtags.sort().filter((e, i, a) => i === a.indexOf(e)).slice(0, this._maxHashtagsNum);
+    return cleanHashtags.sort().filter((e, i, a) => i === a.indexOf(e) && e).slice(0, this._maxHashtagsNum);
   }
 
   init() {
     $('.js-hashtags-form').submit(() => {
 
+      // Get all languages.
+      const languages = $('.hashtag-language:checkbox:checked').map((i, elem) => language[$(elem).val()]).get();
+
       // Combine all hashtag objects based on user selections.
-      let filteredHashtags = this._getFilteredHashtags('any');
-      $('input[type="checkbox"]:checked').each((index, elem) => {
-        $.merge(filteredHashtags, this._getFilteredHashtags($(elem).val()));
+      let filteredHashtags = [];
+      $('.hashtag-type:checkbox:checked').each((i, elem) => {
+        $.merge(filteredHashtags, this._getFilteredHashtags($(elem).val(), languages));
       });
 
       // Randomise hashtag objects.
@@ -152,63 +157,68 @@ const type = {
   urban: 4,
   nature: 5,
   food: 6,
-  couples: 7,
-  chinese: 8
+  couples: 7
+};
+
+const language = {
+  english: 0,
+  chinese: 1
 };
 
 const hashtags = [
   // ---------- Any (L) ----------
-  {'name': 'bestoftheday', 'size': 'large', 'types': [type.any]},
-  {'name': 'follow', 'size': 'large', 'types': [type.any]},
-  {'name': 'followme', 'size': 'large', 'types': [type.any]},
-  {'name': 'igers', 'size': 'large', 'types': [type.any]},
-  {'name': 'instadaily', 'size': 'large', 'types': [type.any]},
-  {'name': 'instagood', 'size': 'large', 'types': [type.any]},
-  {'name': 'instagram', 'size': 'large', 'types': [type.any]},
-  {'name': 'like4like', 'size': 'large', 'types': [type.any]},
-  {'name': 'likeforlike', 'size': 'large', 'types': [type.any]},
-  {'name': 'photo', 'size': 'large', 'types': [type.any]},
-  {'name': 'photography', 'size': 'large', 'types': [type.any]},
-  {'name': 'photooftheday', 'size': 'large', 'types': [type.any]},
-  {'name': 'picoftheday', 'size': 'large', 'types': [type.any]},
+  {'name': 'bestoftheday', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'follow', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'followme', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'igers', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'instadaily', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'instagood', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'instagram', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'like4like', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'likeforlike', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'photo', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'photography', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'photooftheday', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'picoftheday', 'size': 'large', 'types': [type.any], 'language': language.english},
   // ---------- Any (M) ----------
   // ---------- Any (S) ----------
 
   // ---------- Travel (L) ----------
-  {'name': 'explorer', 'size': 'large', 'types': [type.travel]},
-  {'name': 'instatravel', 'size': 'large', 'types': [type.travel]},
-  {'name': 'travel', 'size': 'large', 'types': [type.travel]},
-  {'name': 'traveling', 'size': 'large', 'types': [type.travel]},
-  {'name': 'travelphotography', 'size': 'large', 'types': [type.travel]},
-  {'name': 'trip', 'size': 'large', 'types': [type.travel]},
-  {'name': 'wanderlust', 'size': 'large', 'types': [type.travel]},
+  {'name': 'explorer', 'size': 'large', 'types': [type.travel], 'language': language.english},
+  {'name': 'instatravel', 'size': 'large', 'types': [type.travel], 'language': language.english},
+  {'name': 'instatrip', 'size': 'large', 'types': [type.travel], 'language': language.english},
+  {'name': 'travel', 'size': 'large', 'types': [type.travel], 'language': language.english},
+  {'name': 'traveling', 'size': 'large', 'types': [type.travel], 'language': language.english},
+  {'name': 'travelphotography', 'size': 'large', 'types': [type.travel], 'language': language.english},
+  {'name': 'trip', 'size': 'large', 'types': [type.travel], 'language': language.english},
+  {'name': 'wanderlust', 'size': 'large', 'types': [type.travel], 'language': language.english},
   // ---------- Travel (M) ----------
   // ---------- Travel (S) ----------
 
   // ---------- Landscape (L) ----------
-  {'name': 'landscape', 'size': 'large', 'types': [type.landscape]},
-  {'name': 'landscapephotography', 'size': 'large', 'types': [type.landscape]},
+  {'name': 'landscape', 'size': 'large', 'types': [type.landscape], 'language': language.english},
+  {'name': 'landscapephotography', 'size': 'large', 'types': [type.landscape], 'language': language.english},
   // ---------- Landscape (M) ----------
-  {'name': 'landscaper', 'size': 'medium', 'types': [type.landscape]},
+  {'name': 'landscaper', 'size': 'medium', 'types': [type.landscape], 'language': language.english},
   // ---------- Landscape (S) ----------
 
   // ---------- Nature (L) ----------
-  {'name': 'naturelover', 'size': 'large', 'types': [type.nature]},
-  {'name': 'naturelovers', 'size': 'large', 'types': [type.nature]},
-  {'name': 'naturephotography', 'size': 'large', 'types': [type.nature]},
-  {'name': 'natures', 'size': 'large', 'types': [type.nature]},
+  {'name': 'naturelover', 'size': 'large', 'types': [type.nature], 'language': language.english},
+  {'name': 'naturelovers', 'size': 'large', 'types': [type.nature], 'language': language.english},
+  {'name': 'naturephotography', 'size': 'large', 'types': [type.nature], 'language': language.english},
+  {'name': 'natures', 'size': 'large', 'types': [type.nature], 'language': language.english},
   // ---------- Nature (M) ----------
-  {'name': 'naturepicture', 'size': 'medium', 'types': [type.nature]},
-  {'name': 'naturescape', 'size': 'medium', 'types': [type.nature]},
+  {'name': 'naturepicture', 'size': 'medium', 'types': [type.nature], 'language': language.english},
+  {'name': 'naturescape', 'size': 'medium', 'types': [type.nature], 'language': language.english},
   // ---------- Nature (S) ----------
 
   // ---------- Food (L) ----------
-  {'name': 'yum', 'size': 'large', 'types': [type.food]},
-  {'name': 'yummy', 'size': 'large', 'types': [type.food]},
-  {'name': 'tasty', 'size': 'large', 'types': [type.food]},
+  {'name': 'yum', 'size': 'large', 'types': [type.food], 'language': language.english},
+  {'name': 'yummy', 'size': 'large', 'types': [type.food], 'language': language.english},
+  {'name': 'tasty', 'size': 'large', 'types': [type.food], 'language': language.english},
   // ---------- Food (M) ----------
   // ---------- Food (S) ----------
-  {'name': 'tastytasty', 'size': 'small', 'types': [type.food]}
+  {'name': 'tastytasty', 'size': 'small', 'types': [type.food], 'language': language.english},
 
   // ---------- Chinese (L) ----------
   // ---------- Chinese (M) ----------

@@ -36,25 +36,27 @@
       <h3>Hashtags</h3>
       <label>Categories: </label>
       <ul class="checkbox-tags">
-        <li><input id="type_travel" type="checkbox" value="travel" /><label for="type_travel">Travel</label></li>
-        <li><input id="type_landscape" type="checkbox" value="landscape" /><label for="type_landscape">Landscape</label></li>
-        <li><input id="type_portrait" type="checkbox" value="portrait" /><label for="type_portrait">Portrait</label></li>
-        <li><input id="type_urban" type="checkbox" value="urban" /><label for="type_urban">Urban</label></li>
-        <li><input id="type_nature" type="checkbox" value="nature" /><label for="type_nature">Nature</label></li>
-        <li><input id="type_food" type="checkbox" value="food" /><label for="type_food">Food</label></li>
-        <li><input id="type_couples" type="checkbox" value="couples" /><label for="type_couples">Couples</label></li>
+        <li><input id="type_any" class="hashtag-type" type="checkbox" value="any" checked /><label for="type_any">Any</label></li>
+        <li><input id="type_travel" class="hashtag-type" type="checkbox" value="travel" /><label for="type_travel">Travel</label></li>
+        <li><input id="type_landscape" class="hashtag-type" type="checkbox" value="landscape" /><label for="type_landscape">Landscape</label></li>
+        <li><input id="type_portrait" class="hashtag-type" type="checkbox" value="portrait" /><label for="type_portrait">Portrait</label></li>
+        <li><input id="type_urban" class="hashtag-type" type="checkbox" value="urban" /><label for="type_urban">Urban</label></li>
+        <li><input id="type_nature" class="hashtag-type" type="checkbox" value="nature" /><label for="type_nature">Nature</label></li>
+        <li><input id="type_food" class="hashtag-type" type="checkbox" value="food" /><label for="type_food">Food</label></li>
+        <li><input id="type_couples" class="hashtag-type" type="checkbox" value="couples" /><label for="type_couples">Couples</label></li>
       </ul>
-      <label>Weather: </label>
-      <ul class="checkbox-tags">
-        <li><input id="weather_sunny" type="checkbox" value="sunny" /><label for="weather_sunny">Sunny</label></li>
-        <li><input id="weather_rainy" type="checkbox" value="rainy" /><label for="weather_rainy">Rainy</label></li>
-        <li><input id="weather_cloudy" type="checkbox" value="cloudy" /><label for="weather_cloudy">Cloudy</label></li>
-        <li><input id="weather_misty" type="checkbox" value="misty" /><label for="weather_misty">Misty</label></li>
-        <li><input id="weather_night" type="checkbox" value="night" /><label for="weather_night">Night</label></li>
-      </ul>
+      <!--<label>Weather: </label>-->
+      <!--<ul class="checkbox-tags">-->
+        <!--<li><input id="weather_sunny" class="hashtag-type" type="checkbox" value="sunny" /><label for="weather_sunny">Sunny</label></li>-->
+        <!--<li><input id="weather_rainy" class="hashtag-type" type="checkbox" value="rainy" /><label for="weather_rainy">Rainy</label></li>-->
+        <!--<li><input id="weather_cloudy" class="hashtag-type" type="checkbox" value="cloudy" /><label for="weather_cloudy">Cloudy</label></li>-->
+        <!--<li><input id="weather_misty" class="hashtag-type" type="checkbox" value="misty" /><label for="weather_misty">Misty</label></li>-->
+        <!--<li><input id="weather_night" class="hashtag-type" type="checkbox" value="night" /><label for="weather_night">Night</label></li>-->
+      <!--</ul>-->
       <label>Language: </label>
       <ul class="checkbox-tags">
-        <li><input id="language_chinese" type="checkbox" value="chinese" /><label for="language_chinese">Chinese</label></li>
+        <li><input id="language_english" class="hashtag-language" type="checkbox" value="english" checked /><label for="language_english">English</label></li>
+        <li><input id="language_chinese" class="hashtag-language" type="checkbox" value="chinese" /><label for="language_chinese">Chinese</label></li>
       </ul>
       <label>Custom (1 per line): </label>
       <textarea id="custom_hashtags" placeholder="#custom" rows="7"></textarea>
