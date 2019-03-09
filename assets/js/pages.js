@@ -159,7 +159,8 @@ const type = {
   food: 6,
   couples: 7,
   taiwan: 8,
-  a7iii: 9
+  a7iii: 9,
+  asia: 10
 };
 
 const language = {
@@ -235,6 +236,14 @@ const hashtags = [
 
   // ====================================================================================================
 
+  // ---------- Couples (L) ----------
+  {'name': 'instalove', 'size': 'large', 'types': [type.couples], 'language': language.english},
+  {'name': 'love', 'size': 'large', 'types': [type.couples], 'language': language.english},
+  // ---------- Couples (M) ----------
+  // ---------- Couples (S) ----------
+
+  // ====================================================================================================
+
   // ---------- Taiwan (L) ----------
   {'name': 'taiwan', 'size': 'large', 'types': [type.taiwan], 'language': language.english},
   // ---------- Taiwan (M) ----------
@@ -253,14 +262,22 @@ const hashtags = [
 
   // ====================================================================================================
 
+  // ---------- Asia (L) ----------
+  {'name': 'asia', 'size': 'large', 'types': [type.asia], 'language': language.english},
+  // ---------- Asia (M) ----------
+  // ---------- Asia (S) ----------
+
+  // ====================================================================================================
+
   // ---------- Mixed (L) ----------
-  // {'name': 'taiwan', 'size': 'large', 'types': [], 'language': language.english},
   // ---------- Mixed (M) ----------
   {'name': 'taiwantravel', 'size': 'medium', 'types': [type.taiwan, type.travel], 'language': language.english},
   {'name': 'taiwanfood', 'size': 'medium', 'types': [type.taiwan, type.food], 'language': language.english},
   // ---------- Mixed (S) ----------
   {'name': 'traveltaiwan', 'size': 'small', 'types': [type.taiwan, type.travel], 'language': language.english},
   {'name': 'taiwanfoodie', 'size': 'small', 'types': [type.taiwan, type.food], 'language': language.english},
+  {'name': 'travelinasia', 'size': 'small', 'types': [type.asia, type.travel], 'language': language.english},
+  {'name': 'travelintaiwan', 'size': 'small', 'types': [type.taiwan, type.travel], 'language': language.english},
 
   // ====================================================================================================
 
@@ -284,6 +301,9 @@ const hashtags = [
   // ---------- Chinese (M) ----------
   // <<<<<<<<<< Travel >>>>>>>>>>
   {'name': '旅遊', 'size': 'medium', 'types': [type.travel], 'language': language.chinese},
+
+  // <<<<<<<<<< Mixed >>>>>>>>>>
+  {'name': '台灣美食', 'size': 'medium', 'types': [type.taiwan, type.food], 'language': language.chinese},
 
   // ====================================================================================================
 
