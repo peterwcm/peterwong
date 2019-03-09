@@ -15,10 +15,10 @@ class Hashtags {
   }
 
   /**
-   * Get certain hashtags type from the global collection.
+   * Get hashtags from the global collection filtered by hashtag types and languages.
    *
-   * @param {string} hashtagType
-   *   The hashtag type.
+   * @param {array} hashtagTypes
+   *   The hashtag types.
    * @param {array} languages
    *   The languages to be loaded.
    *
@@ -26,8 +26,8 @@ class Hashtags {
    *   The list of hashtag objects array.
    * @private
    */
-  _getFilteredHashtags(hashtagType, languages) {
-    return $.grep(hashtags, obj => obj.types.indexOf(type[hashtagType]) !== -1 && languages.indexOf(obj.language) !== -1);
+  _getFilteredHashtags(hashtagTypes, languages) {
+    return $.grep(hashtags, obj => obj.types.every(type => hashtagTypes.indexOf(type) !== -1) && languages.indexOf(obj.language) !== -1);
   }
 
   /**
@@ -96,10 +96,8 @@ class Hashtags {
       const languages = $('.hashtag-language:checkbox:checked').map((i, elem) => language[$(elem).val()]).get();
 
       // Combine all hashtag objects based on user selections.
-      let filteredHashtags = [];
-      $('.hashtag-type:checkbox:checked').each((i, elem) => {
-        $.merge(filteredHashtags, this._getFilteredHashtags($(elem).val(), languages));
-      });
+      const hashtagTypes = $('.hashtag-type:checkbox:checked').map((i, elem) => type[$(elem).val()]).get();
+      let filteredHashtags =  this._getFilteredHashtags(hashtagTypes, languages);
 
       // Randomise hashtag objects.
       filteredHashtags = this._shuffle(filteredHashtags);
@@ -138,7 +136,9 @@ class Hashtags {
       }
 
       // Output hashtag results.
-      $('.js-hashtags').text(this._clean(hashtagsOutput).map(text => `#${text}`).join(' '));
+      const finalHashtags = this._clean(hashtagsOutput);
+      $('.js-hashtags-count').text(`Total: ${finalHashtags.length}`);
+      $('.js-hashtags').text(finalHashtags.map(text => `#${text}`).join(' '));
       return false;
     });
   }
@@ -157,7 +157,9 @@ const type = {
   urban: 4,
   nature: 5,
   food: 6,
-  couples: 7
+  couples: 7,
+  taiwan: 8,
+  a7iii: 9
 };
 
 const language = {
@@ -183,6 +185,8 @@ const hashtags = [
   // ---------- Any (M) ----------
   // ---------- Any (S) ----------
 
+  // ====================================================================================================
+
   // ---------- Travel (L) ----------
   {'name': 'explorer', 'size': 'large', 'types': [type.travel], 'language': language.english},
   {'name': 'instatravel', 'size': 'large', 'types': [type.travel], 'language': language.english},
@@ -193,7 +197,10 @@ const hashtags = [
   {'name': 'trip', 'size': 'large', 'types': [type.travel], 'language': language.english},
   {'name': 'wanderlust', 'size': 'large', 'types': [type.travel], 'language': language.english},
   // ---------- Travel (M) ----------
+  {'name': 'travelcommunity', 'size': 'large', 'types': [type.travel], 'language': language.english},
   // ---------- Travel (S) ----------
+
+  // ====================================================================================================
 
   // ---------- Landscape (L) ----------
   {'name': 'landscape', 'size': 'large', 'types': [type.landscape], 'language': language.english},
@@ -201,6 +208,8 @@ const hashtags = [
   // ---------- Landscape (M) ----------
   {'name': 'landscaper', 'size': 'medium', 'types': [type.landscape], 'language': language.english},
   // ---------- Landscape (S) ----------
+
+  // ====================================================================================================
 
   // ---------- Nature (L) ----------
   {'name': 'naturelover', 'size': 'large', 'types': [type.nature], 'language': language.english},
@@ -212,15 +221,73 @@ const hashtags = [
   {'name': 'naturescape', 'size': 'medium', 'types': [type.nature], 'language': language.english},
   // ---------- Nature (S) ----------
 
+  // ====================================================================================================
+
   // ---------- Food (L) ----------
+  {'name': 'food', 'size': 'large', 'types': [type.food], 'language': language.english},
+  {'name': 'foodphotography', 'size': 'large', 'types': [type.food], 'language': language.english},
+  {'name': 'tasty', 'size': 'large', 'types': [type.food], 'language': language.english},
   {'name': 'yum', 'size': 'large', 'types': [type.food], 'language': language.english},
   {'name': 'yummy', 'size': 'large', 'types': [type.food], 'language': language.english},
-  {'name': 'tasty', 'size': 'large', 'types': [type.food], 'language': language.english},
   // ---------- Food (M) ----------
   // ---------- Food (S) ----------
   {'name': 'tastytasty', 'size': 'small', 'types': [type.food], 'language': language.english},
 
+  // ====================================================================================================
+
+  // ---------- Taiwan (L) ----------
+  {'name': 'taiwan', 'size': 'large', 'types': [type.taiwan], 'language': language.english},
+  // ---------- Taiwan (M) ----------
+  // ---------- Taiwan (S) ----------
+
+  // ====================================================================================================
+
+  // ---------- a7 III (L) ----------
+  {'name': 'camera', 'size': 'large', 'types': [type.a7iii], 'language': language.english},
+  {'name': 'mirrorless', 'size': 'large', 'types': [type.a7iii], 'language': language.english},
+  {'name': 'sony', 'size': 'large', 'types': [type.a7iii], 'language': language.english},
+  // ---------- a7 III (M) ----------
+  {'name': 'a7iii', 'size': 'medium', 'types': [type.a7iii], 'language': language.english},
+  {'name': 'mirrorlesscamera', 'size': 'medium', 'types': [type.a7iii], 'language': language.english},
+  // ---------- a7 III (S) ----------
+
+  // ====================================================================================================
+
+  // ---------- Mixed (L) ----------
+  // {'name': 'taiwan', 'size': 'large', 'types': [], 'language': language.english},
+  // ---------- Mixed (M) ----------
+  {'name': 'taiwantravel', 'size': 'medium', 'types': [type.taiwan, type.travel], 'language': language.english},
+  {'name': 'taiwanfood', 'size': 'medium', 'types': [type.taiwan, type.food], 'language': language.english},
+  // ---------- Mixed (S) ----------
+  {'name': 'traveltaiwan', 'size': 'small', 'types': [type.taiwan, type.travel], 'language': language.english},
+  {'name': 'taiwanfoodie', 'size': 'small', 'types': [type.taiwan, type.food], 'language': language.english},
+
+  // ====================================================================================================
+
   // ---------- Chinese (L) ----------
+  // <<<<<<<<<< Any >>>>>>>>>>
+  {'name': '攝影', 'size': 'large', 'types': [type.any], 'language': language.chinese},
+
+  // <<<<<<<<<< Travel >>>>>>>>>>
+  {'name': '旅行', 'size': 'large', 'types': [type.travel], 'language': language.chinese},
+
+  // <<<<<<<<<< Food >>>>>>>>>>
+  {'name': '美食', 'size': 'large', 'types': [type.food], 'language': language.chinese},
+
+  // <<<<<<<<<< Taiwan >>>>>>>>>>
+  {'name': '台灣', 'size': 'large', 'types': [type.taiwan], 'language': language.english},
+
+  // <<<<<<<<<< Mixed >>>>>>>>>>
+
+  // ====================================================================================================
+
   // ---------- Chinese (M) ----------
+  // <<<<<<<<<< Travel >>>>>>>>>>
+  {'name': '旅遊', 'size': 'medium', 'types': [type.travel], 'language': language.chinese},
+
+  // ====================================================================================================
+
   // ---------- Chinese (S) ----------
+  // <<<<<<<<<< Mixed >>>>>>>>>>
+  {'name': '台灣旅行', 'size': 'small', 'types': [type.taiwan, type.travel], 'language': language.chinese},
 ];

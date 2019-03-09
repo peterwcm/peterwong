@@ -283,12 +283,13 @@ h5 {
 }
 
 // Hashtags
-.hashtags {
-  margin: 0 auto;
+.hashtags-count {
   padding: 1rem;
-  width: 100%;
 }
 
+.hashtags {
+  padding: 0 1rem 2rem;
+}
 
 .checkbox-tags {
   margin: 0;
