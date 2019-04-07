@@ -38,9 +38,8 @@ class Hashtags {
    *
    * @returns {*}
    *   List of shuffled items.
-   * @private
    */
-  _shuffle(items) {
+  static shuffle(items) {
     let currentIndex = items.length;
     let temporaryValue;
     let randomIndex;
@@ -100,10 +99,17 @@ class Hashtags {
       let filteredHashtags =  this._getFilteredHashtags(hashtagTypes, languages);
 
       // Randomise hashtag objects.
-      filteredHashtags = this._shuffle(filteredHashtags);
+      filteredHashtags = Hashtags.shuffle(filteredHashtags);
+
+      // Custom hashtags.
+      const customHashtags = this._clean($('#custom_hashtags').val().split('\n'));
 
       // Fill large, medium, small hashtags.
       filteredHashtags.forEach(elem => {
+        if (customHashtags.includes(elem.name)) {
+          return;
+        }
+
         switch(elem.size) {
           case 'small':
             if (this._hashtags.small.length < this._sHashtagsNum) {
@@ -126,7 +132,7 @@ class Hashtags {
       });
 
       // Start with custom hashtags and add from large, medium, small while not reaching 30.
-      let hashtagsOutput = this._clean($('#custom_hashtags').val().split('\n'));
+      let hashtagsOutput = customHashtags;
       while (hashtagsOutput.length < this._maxHashtagsNum && !this._isHashtagsEmpty()) {
         for (let list of Object.values(this._hashtags)) {
           if (list.length) {
@@ -177,6 +183,7 @@ const hashtags = [
   {'name': 'instadaily', 'size': 'large', 'types': [type.any], 'language': language.english},
   {'name': 'instagood', 'size': 'large', 'types': [type.any], 'language': language.english},
   {'name': 'instagram', 'size': 'large', 'types': [type.any], 'language': language.english},
+  {'name': 'instalike', 'size': 'large', 'types': [type.any], 'language': language.english},
   {'name': 'like4like', 'size': 'large', 'types': [type.any], 'language': language.english},
   {'name': 'likeforlike', 'size': 'large', 'types': [type.any], 'language': language.english},
   {'name': 'photo', 'size': 'large', 'types': [type.any], 'language': language.english},
@@ -197,6 +204,7 @@ const hashtags = [
 
   // ---------- Travel (L) ----------
   {'name': 'explorer', 'size': 'large', 'types': [type.travel], 'language': language.english},
+  {'name': 'holiday', 'size': 'large', 'types': [type.travel], 'language': language.english},
   {'name': 'instatravel', 'size': 'large', 'types': [type.travel], 'language': language.english},
   {'name': 'instatrip', 'size': 'large', 'types': [type.travel], 'language': language.english},
   {'name': 'travel', 'size': 'large', 'types': [type.travel], 'language': language.english},
@@ -211,6 +219,7 @@ const hashtags = [
   {'name': 'trip', 'size': 'large', 'types': [type.travel], 'language': language.english},
   {'name': 'wanderlust', 'size': 'large', 'types': [type.travel], 'language': language.english},
   // ---------- Travel (M) ----------
+  {'name': 'getlost', 'size': 'medium', 'types': [type.travel], 'language': language.english},
   {'name': 'travelaroundtheworld', 'size': 'medium', 'types': [type.travel], 'language': language.english},
   {'name': 'travelguide', 'size': 'medium', 'types': [type.travel], 'language': language.english},
   {'name': 'travelinspiration', 'size': 'medium', 'types': [type.travel], 'language': language.english},
@@ -220,6 +229,7 @@ const hashtags = [
   {'name': 'travelstyle', 'size': 'medium', 'types': [type.travel], 'language': language.english},
   {'name': 'travelwithme', 'size': 'medium', 'types': [type.travel], 'language': language.english},
   // ---------- Travel (S) ----------
+  {'name': 'nomadlife', 'size': 'small', 'types': [type.travel], 'language': language.english},
   {'name': 'travelcommunity', 'size': 'small', 'types': [type.travel], 'language': language.english},
   {'name': 'travelforlife', 'size': 'small', 'types': [type.travel], 'language': language.english},
   {'name': 'travelnow', 'size': 'small', 'types': [type.travel], 'language': language.english},
@@ -243,6 +253,7 @@ const hashtags = [
   // ====================================================================================================
 
   // ---------- Nature (L) ----------
+  {'name': 'nature', 'size': 'large', 'types': [type.nature], 'language': language.english},
   {'name': 'natureaddict', 'size': 'large', 'types': [type.nature], 'language': language.english},
   {'name': 'naturelove', 'size': 'large', 'types': [type.nature], 'language': language.english},
   {'name': 'naturelover', 'size': 'large', 'types': [type.nature], 'language': language.english},
@@ -280,8 +291,12 @@ const hashtags = [
   // ====================================================================================================
 
   // ---------- Couples (L) ----------
+  {'name': 'couples', 'size': 'large', 'types': [type.couples], 'language': language.english},
+  {'name': 'girlfriend', 'size': 'large', 'types': [type.couples], 'language': language.english},
   {'name': 'instalove', 'size': 'large', 'types': [type.couples], 'language': language.english},
+  {'name': 'love', 'size': 'large', 'types': [type.couples], 'language': language.english},
   {'name': 'loveyou', 'size': 'large', 'types': [type.couples], 'language': language.english},
+  {'name': 'relationship', 'size': 'large', 'types': [type.couples], 'language': language.english},
   // ---------- Couples (M) ----------
   // ---------- Couples (S) ----------
 
