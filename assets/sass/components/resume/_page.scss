@@ -13,28 +13,28 @@
     height: $a4-page-height;
     flex-direction: column;
   }
+
+  @include print() {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 .main {
-  > section:nth-child(odd) {
+  > section:nth-of-type(even) {
     background-color: $color-neutral-light;
   }
 
   @include large-screen(true) {
     display: flex;
-    height: $a4-page-height - ($a4-bar-height * 2);
+    height: $a4-page-height;
     flex-direction: column;
     flex-grow: 1;
   }
 
-  .page--two & {
-    > section:nth-child(odd) {
-      background-color: $color-white;
-    }
-
-    > section:nth-child(even) {
-      background-color: $color-neutral-light;
-    }
+  @include print() {
+    height: 100vh;
+    overflow: hidden;
   }
 }
 

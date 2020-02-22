@@ -32,17 +32,16 @@
 
 <body>
 <div class="page page--one" data-page="1">
-  <div class="bar bar--top"></div>
-
   <section class="main">
-    <section class="header">
+    <div class="bar bar--top"></div>
+    <div class="header">
       <div class="header__left">
         <div class="profile-pic"></div>
         <h4 class="full-name">Peter Wong</h4>
         <h5 class="job-title">Full Stack Web Developer</h5>
       </div>
       <div class="header__right">{{> contacts }}</div>
-    </section>
+    </div>
     <section class="section experiences">
       <h3 class="section__title experiences__title">Work Experience</h3>
       {{> experiences }}
@@ -51,18 +50,16 @@
       <h3 class="section__title skills__title">Professional Skills</h3>
       {{> skills }}
     </section>
+    <div class="bar bar--bottom"></div>
   </section>
-
-  <div class="bar bar--bottom"></div>
 
   <a href="javascript:void(0)" class="js-nav-button nav-button nav-button--next" data-target-page="2">
     <i class="fa fa-angle-right" aria-hidden="true"></i>
   </a>
 </div>
 <div class="page page--two" data-page="2">
-  <div class="bar bar--top"></div>
-
   <section class="main">
+    <div class="bar bar--top"></div>
     <section class="section educations">
       <h3 class="section__title educations__title">Educations</h3>
       {{> educations }}
@@ -79,9 +76,8 @@
       <h3 class="section__title references__title">References</h3>
       {{> references }}
     </section>
+    <div class="bar bar--bottom"></div>
   </section>
-
-  <div class="bar bar--bottom"></div>
 
   <a href="javascript:void(0)" class="js-nav-button nav-button nav-button--previous" data-target-page="1">
     <i class="fa fa-angle-left" aria-hidden="true"></i>
