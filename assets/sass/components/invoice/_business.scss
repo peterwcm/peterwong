@@ -1,0 +1,12 @@
+.business {
+  &__logo {
+    $size: 7rem;
+
+    margin: 0 auto;
+    width: $size;
+    height: $size;
+    border-radius: $size / 2;
+    background: $color-theme--primary url('#{$image-dir}logo.png') no-repeat;
+    background-size: cover;
+  }
+}

@@ -7,8 +7,8 @@
   <title>Invoice - Peter Wong</title>
 
   <!-- Meta Tags -->
-  <meta name="keywords" content="portfolio, web design, web development, freelance, freelancer, resume, brisbane, australia" />
-  <meta name="description" content="I have recently commenced work as a freelance web developer. Come check out my online portfolio." />
+  <meta name="keywords" content="portfolio, web design, web development, freelance, freelancer, resume, brisbane, australia"/>
+  <meta name="description" content="I have recently commenced work as a freelance web developer. Come check out my online portfolio."/>
 
   <!-- Canonical Link -->
   <link rel="canonical" href="//peterwong.me/invoice">
@@ -31,27 +31,54 @@
 </head>
 
 <body>
-<div class="page page--one" data-page="1">
-  <div class="top-bar"></div>
-
-  <section class="header">
+<div class="page">
+  <header>
     <div class="header__left">
-      <div class="profile-pic"></div>
-      <h4 class="full-name">Peter Wong</h4>
-      <h5 class="job-title">Full Stack Web Developer</h5>
+      <div class="business">
+        <div class="business__logo"></div>
+        <h5 class="business__name">Chun Mo Wong</h5>
+        <div class="business__abn">ABN: 59621437981</div>
+        <div class="business__address">128 Charlotte Street, Brisbane City, QLD 4000</div>
+        <div class="business__phone">0421957638</div>
+        <div class="business__email">peterwong.brisbane@gmail.com</div>
+      </div>
     </div>
-    <div class="header__right">{{> contacts }}</div>
-  </section>
+    <div class="header__right">
+      <div class="invoice">
+        <div class="invoice__number">#20200124</div>
+        <div class="invoice__date">14 Jan 2020</div>
+        <div class="invoice__total">$2850.00</div>
+      </div>
+    </div>
+  </header>
 
   <section class="main">
-    <section class="experiences">
-      <h3 class="experiences__title">Work Experience</h3>
-      {{> experiences }}
-    </section>
-    <section class="skills">
-      <h3 class="skills__title">Professional Skills</h3>
-      {{> skills }}
-    </section>
+    <table class="wv-table">
+      <thead class="wv-table__header" style="background-color: rgb(244, 245, 245);">
+      <tr class="wv-table__row">
+        <th class="wv-table__cell" colspan="4" style="color: rgb(0, 0, 0);">Services</th>
+        <th class="wv-table__cell--amount contemporary-template__items__column--center" colspan="1" style="color: rgb(0, 0, 0);">Hours</th>
+        <th class="wv-table__cell--amount" colspan="1" style="color: rgb(0, 0, 0);">Rate</th>
+        <th class="wv-table__cell--amount" colspan="1" style="color: rgb(0, 0, 0);">Amount</th>
+      </tr>
+      </thead>
+      <tbody class="wv-table__body">
+      <tr class="wv-table__row">
+        <td class="wv-table__cell" colspan="4"><strong class="wv-text--strong">Web Development Service</strong>
+          <p class="wv-table__cell--nested">20/1/2020 - 31/1/2020</p></td>
+        <td class="wv-table__cell contemporary-template__items__column--center" colspan="1">
+          <span class="wv-text wv-text--body ">54</span></td>
+        <td class="wv-table__cell--amount" colspan="1"><span class="wv-text wv-text--body">$70.00</span></td>
+        <td class="wv-table__cell--amount" colspan="1"><span class="wv-text wv-text--body">$3,780.00</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer></footer>
+
+  <section class="header">
+
   </section>
 
   <div class="bottom-bar"></div>

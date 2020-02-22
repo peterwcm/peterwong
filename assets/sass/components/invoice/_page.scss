@@ -1,56 +1,21 @@
 .page {
   margin: 0 auto;
-  width: 100%;
-  height: 100%;
+  width: $a4-page-width;
+  height: $a4-page-height;
   background-color: $color-white;
+}
 
-  &--two {
-    .main {
-      height: auto;
-    }
-  }
+header {
+  background-color: $color-neutral-light;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  height: auto;
   overflow: hidden;
+  height: $a4-page-height - $a4-header-height - ($a4-bar-height * 2);
 
   > section:nth-child(even) {
     background-color: $color-neutral-light;
-  }
-}
-
-@media only screen and (max-width: 899px) {
-  .page {
-    &--one,
-    &--two {
-      /* stylelint-disable-next-line declaration-no-important */
-      display: block !important;
-    }
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .page {
-    width: $a4-page-width;
-    height: $a4-page-height;
-
-    &--one {
-      .experiences {
-        flex-grow: 1;
-      }
-    }
-
-    &--two {
-      .main {
-        height: $a4-page-height - ($a4-bar-height * 2);
-      }
-    }
-  }
-
-  .main {
-    height: $a4-page-height - $a4-header-height - ($a4-bar-height * 2);
   }
 }
