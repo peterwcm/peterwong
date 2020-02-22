@@ -1,0 +1,38 @@
+@mixin mobile-screens($print: false) {
+  @if $print {
+    @media screen and (max-width: 1023px), print {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (max-width: 1023px) {
+      @content;
+    }
+  }
+}
+
+@mixin medium-screen($print: false) {
+  @if $print {
+    @media screen and (min-width: 720px), print {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: 720px) {
+      @content;
+    }
+  }
+}
+
+@mixin large-screen($print: false) {
+  @if $print {
+    @media screen and (min-width: 1024px), print {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+}

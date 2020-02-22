@@ -1,10 +1,4 @@
-.experiences {
-  @include medium-screen(true) {
-    flex-grow: 1;
-  }
-}
-
-.experience {
+.cert {
   margin-bottom: $section-margin--small;
 
   @include medium-screen(true) {
@@ -24,7 +18,7 @@
     }
   }
 
-  &__employer {
+  &__issuer {
     margin: 0;
     color: $color-theme--primary;
     text-transform: uppercase;

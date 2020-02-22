@@ -1,1 +1,27 @@
-@import 'partials/base';
+// Variables
+@import 'modules/misc';
+@import 'modules/fonts';
+@import 'modules/colors';
+
+// Foundation
+@import 'modules/settings';
+@import 'foundation';
+
+// Typography
+@import 'partials/typography';
+
+// Structure
+@import 'partials/structure';
+
+// Components
+@import 'components/app/spinner';
+@import 'components/app/magellan';
+@import 'components/app/banner';
+@import 'components/app/text-slides';
+@import 'components/app/heading';
+@import 'components/app/works';
+@import 'components/app/about';
+@import 'components/app/text-block';
+@import 'components/app/image-block';
+@import 'components/app/contact';
+@import 'components/app/footer';

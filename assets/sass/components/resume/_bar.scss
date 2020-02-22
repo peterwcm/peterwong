@@ -6,18 +6,8 @@
 .page--one .bar--bottom,
 .page--two .bar--top {
   display: none;
-}
 
-@media only screen and (min-width: 900px) {
-  .page--one .bar--bottom,
-  .page--two .bar--top {
-    display: block;
-  }
-}
-
-@media print {
-  .page--one .bar--bottom,
-  .page--two .bar--top {
-    display: block;
+  @include large-screen(true) {
+      display: block;
   }
 }

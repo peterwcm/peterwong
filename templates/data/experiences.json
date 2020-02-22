@@ -25,8 +25,15 @@
       "period": "Jun 2013 - May 2016",
       "employer": "Zippity",
       "title": "Full Stack PHP Web Developer",
-      "summary": "Built the website from scratch in PHP with CodeIgniter and jQuery.",
+      "summary": "Built the platform from scratch in PHP with CodeIgniter and jQuery. I was responsible for leading a 3-people dev team and the quality of its technical deliverables",
       "link": ""
+    },
+    {
+      "period": "Jun 2013 - Aug 2014",
+      "employer": "Anglo American",
+      "title": "ASP.NET MVC Developer",
+      "summary": "Designed and built an internal .NET web application to help improve the process of data entry and data analysis for the company.",
+      "link": "https://www.angloamerican.com/"
     }
   ]
 }

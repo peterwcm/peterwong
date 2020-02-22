@@ -1,14 +1,13 @@
-$nav-icon-size: 3.75rem;
+$nav-icon-size: 3.75rem !default;
+$nav-icon-offset: $a4-page-width / 10 * 5.5 !default;
 
 .nav-button {
   display: none;
-}
 
-@media only screen and (min-width: 900px) {
-  .nav-button {
+  @include large-screen() {
     display: block;
     position: fixed;
-    top: $a4-page-height / 2;
+    top: 50%;
     margin-top: -($nav-icon-size / 2);
     padding: 0 0.5rem;
     height: $nav-icon-size;
@@ -31,11 +30,11 @@ $nav-icon-size: 3.75rem;
 
     &--previous {
       text-align: right;
-      right: calc(50% + 21.5rem);
+      right: calc(50% + #{$nav-icon-offset});
     }
 
     &--next {
-      left: calc(50% + 21.5rem);
+      left: calc(50% + #{$nav-icon-offset});
     }
   }
 }

@@ -1,46 +1,23 @@
 // Variables
-@import 'modules/misc';
-@import 'modules/fonts';
 @import 'modules/colors';
+@import 'modules/fonts';
+@import 'modules/misc';
+@import 'components/resume/modules/structure';
 
-* {
-  box-sizing: border-box;
-}
+// Mixins
+@import 'components/resume/modules/mixins';
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: $color-neutral;
-  font-family: $font-default;
-  color: $color-text--normal;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: $font-heading;
-}
-
-a {
-  text-decoration: none;
-  color: $color-text--normal;
-}
-
-// Page structure
-$a4-page-width: 595px;
-$a4-page-height: 842px;
-$a4-header-height: 200px;
-$a4-bar-height: 21px;
+// Base global styles
+@import 'components/resume/base';
 
 // Components
-@import 'components/resume/page';
-@import 'components/resume/nav-button';
 @import 'components/resume/bar';
-@import 'components/resume/header';
-@import 'components/resume/experience';
+@import 'components/resume/certs';
 @import 'components/resume/education';
-@import 'components/resume/skill';
+@import 'components/resume/experience';
+@import 'components/resume/header';
+@import 'components/resume/nav-button';
+@import 'components/resume/page';
 @import 'components/resume/progress';
 @import 'components/resume/reference';
+@import 'components/resume/skill';

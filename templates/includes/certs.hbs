@@ -1,0 +1,18 @@
+{{#certs}}
+  <section class="cert">
+    <div class="cert__overview">
+      {{#if link}}
+        <a href="{{ link }}" target="_blank">
+          <h5 class="cert__issuer">{{{ issuer }}}</h5>
+        </a>
+      {{else}}
+        <h5 class="cert__issuer">{{{ issuer }}}</h5>
+      {{/if}}
+      <h5 class="cert__period">{{{ period }}}</h5>
+    </div>
+    <div class="cert__details">
+      <h4 class="cert__title">{{{ title }}}</h4>
+      <p class="cert__description">{{{ summary }}}</p>
+    </div>
+  </section>
+{{/certs}}

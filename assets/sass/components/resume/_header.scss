@@ -1,31 +1,38 @@
+$profile-pic-size: 7rem !default;
+
 .header {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1.25rem;
-  height: auto;
+  padding: $section-margin;
   background-color: $color-neutral-light;
   text-align: center;
-  overflow: hidden;
+
+  @include medium-screen(true) {
+    display: flex;
+  }
 
   &__left {
-    width: 100%;
+    @include medium-screen(true) {
+      width: 30%;
+    }
   }
 
   &__right {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    @include medium-screen(true) {
+      display: flex;
+      padding-left: $section-margin--large;
+      flex-wrap: wrap;
+      width: 70%;
+    }
 
     > section {
-      margin: 0.4rem 0;
-      width: 100%;
+      margin: $section-margin--small 0;
+
+      @include medium-screen(true) {
+        margin: 0;
+        width: 50%;
+      }
 
       &:first-child {
         margin-top: 0;
-      }
-
-      &:nth-child(odd) {
-        padding-left: 0;
       }
 
       &:last-child {
@@ -35,13 +42,35 @@
   }
 }
 
+.profile-pic {
+  $size: 7rem;
+
+  margin: 0 auto;
+  width: $profile-pic-size;
+  height: $profile-pic-size;
+  border-radius: 50%;
+  background: $color-theme--primary url('#{$image-dir}profile-pic.jpg') no-repeat;
+  background-size: cover;
+}
+
+.full-name {
+  margin: $section-margin--small 0 0;
+  text-transform: uppercase;
+}
+
+.job-title {
+  margin: $section-margin--tiny 0 $section-margin--small;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
 .contact-info {
   display: flex;
   align-items: center;
   text-align: left;
 
   &__icon {
-    margin-right: 0.625rem;
+    margin-right: $section-margin--small;
   }
 
   &__heading {
@@ -50,50 +79,5 @@
 
   &__text {
     font-size: 0.625rem;
-  }
-}
-
-.profile-pic {
-  $size: 7rem;
-
-  margin: 0 auto;
-  width: $size;
-  height: $size;
-  border-radius: $size / 2;
-  background: $color-theme--primary url('#{$image-dir}profile-pic.jpg') no-repeat;
-  background-size: cover;
-}
-
-.full-name {
-  margin: 0.9rem 0 0;
-  text-transform: uppercase;
-}
-
-.job-title {
-  margin: 0.3rem 0 0.9rem;
-  font-size: 0.7rem;
-  font-weight: normal;
-}
-
-@media only screen and (min-width: 720px) {
-  .header {
-    height: $a4-header-height;
-
-    &__left {
-      width: 30%;
-    }
-
-    &__right {
-      width: 70%;
-
-      > section {
-        margin: 0;
-        width: 50%;
-
-        &:nth-child(odd) {
-          padding-left: 2.8rem;
-        }
-      }
-    }
   }
 }

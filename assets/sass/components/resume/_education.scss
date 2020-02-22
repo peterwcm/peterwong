@@ -1,15 +1,17 @@
-.educations {
-  &__title {
-    width: 100%;
-    text-align: center;
-  }
-}
+//.educations {
+//  @include medium-screen(true) {
+//    margin-top: auto;
+//  }
+//}
 
 .education {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 0.8rem;
-  padding: 0 2rem;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &__overview {
     padding: 0 1.25rem;
@@ -33,7 +35,6 @@
   }
 
   &__details {
-    margin-bottom: 1.25rem;
     width: 100%;
     text-align: center;
   }
@@ -44,21 +45,21 @@
   }
 }
 
-@media only screen and (min-width: 720px) {
-  .education {
-    padding: 0 0 0 1rem;
-
-    &__overview {
-      padding: 0 0 0 0.625rem;
-      width: 30%;
-      text-align: right;
-    }
-
-    &__details {
-      width: 70%;
-      margin-bottom: 0;
-      padding: 0 1.25rem 0.8rem;
-      text-align: left;
-    }
-  }
-}
+//@media only screen and (min-width: 720px) {
+//  .education {
+//    padding: 0 0 0 1rem;
+//
+//    &__overview {
+//      padding: 0 0 0 0.625rem;
+//      width: 30%;
+//      text-align: right;
+//    }
+//
+//    &__details {
+//      width: 70%;
+//      margin-bottom: 0;
+//      padding: 0 1.25rem 0.8rem;
+//      text-align: left;
+//    }
+//  }
+//}

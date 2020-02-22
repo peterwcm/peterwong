@@ -1,43 +1,41 @@
 .references {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 1rem;
+  @include medium-screen(true) {
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
 
-  &__title {
-    width: 100%;
-    text-align: center;
+    &__title {
+      width: 100%;
+    }
   }
 }
 
 .reference {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.6rem;
-  padding: 0 2rem;
+  margin-bottom: $section-margin;
   width: 100%;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-align: center;
+
+  @include medium-screen(true) {
+    width: 50%;
+    text-align: left;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &__name {
     margin: 0;
   }
 
   &__title {
-    margin: 0.2rem 0;
+    margin: $section-margin--tiny 0;
     color: $color-theme--primary;
     text-transform: uppercase;
-    font-size: 0.75rem;
   }
 
   .fa {
-    margin-right: 0.2rem;
-  }
-}
-
-@media only screen and (min-width: 720px) {
-  .reference {
-    padding: 0 0 0 3.75rem;
-    width: 50%;
-    text-align: left;
+    margin-right: $section-margin--tiny;
   }
 }

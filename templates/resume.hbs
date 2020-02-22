@@ -34,22 +34,21 @@
 <div class="page page--one" data-page="1">
   <div class="bar bar--top"></div>
 
-  <section class="header">
-    <div class="header__left">
-      <div class="profile-pic"></div>
-      <h4 class="full-name">Peter Wong</h4>
-      <h5 class="job-title">Full Stack Web Developer</h5>
-    </div>
-    <div class="header__right">{{> contacts }}</div>
-  </section>
-
   <section class="main">
-    <section class="experiences">
-      <h3 class="experiences__title">Work Experience</h3>
+    <section class="header">
+      <div class="header__left">
+        <div class="profile-pic"></div>
+        <h4 class="full-name">Peter Wong</h4>
+        <h5 class="job-title">Full Stack Web Developer</h5>
+      </div>
+      <div class="header__right">{{> contacts }}</div>
+    </section>
+    <section class="section experiences">
+      <h3 class="section__title experiences__title">Work Experience</h3>
       {{> experiences }}
     </section>
-    <section class="skills">
-      <h3 class="skills__title">Professional Skills</h3>
+    <section class="section skills skills--web">
+      <h3 class="section__title skills__title">Professional Skills</h3>
       {{> skills }}
     </section>
   </section>
@@ -64,16 +63,20 @@
   <div class="bar bar--top"></div>
 
   <section class="main">
-    <section class="educations">
-      <h3 class="educations__title">Educations</h3>
+    <section class="section educations">
+      <h3 class="section__title educations__title">Educations</h3>
       {{> educations }}
     </section>
-    <section class="skills skills--language">
-      <h3 class="skills__title">Languages</h3>
+    <section class="section certs">
+      <h3 class="section__title certs__title">Certifications</h3>
+      {{> certs }}
+    </section>
+    <section class="section skills skills--language">
+      <h3 class="section__title skills__title">Languages</h3>
       {{> languages }}
     </section>
-    <section class="references">
-      <h3 class="references__title">References</h3>
+    <section class="section references">
+      <h3 class="section__title references__title">References</h3>
       {{> references }}
     </section>
   </section>
