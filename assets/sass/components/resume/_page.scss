@@ -1,5 +1,4 @@
 .page {
-  display: block !important;
   background-color: $color-white;
 
   @include mobile-screens(true) {
