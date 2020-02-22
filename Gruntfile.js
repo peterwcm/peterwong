@@ -146,7 +146,7 @@ module.exports = grunt => {
         files: [{
           expand: true,
           cwd: 'assets/images/',
-          src: ['**'],
+          src: ['**', '!archive/**'],
           dest: 'build/images/'
         }]
       },
@@ -160,7 +160,7 @@ module.exports = grunt => {
       },
       misc: {
         files: [{
-          src: ['favicon.png', 'favicon-alice.png', 'robots.txt', 'sitemap.xml'],
+          src: ['favicon.png', 'robots.txt', 'sitemap.xml'],
           dest: 'build/'
         }]
       }
