@@ -1,35 +1,23 @@
-.top-bar,
-.bottom-bar {
+.bar {
   background-color: $color-theme--primary;
   height: $a4-bar-height;
 }
 
-.page {
-  &--one {
-    .bottom-bar {
-      display: none;
-    }
-  }
-
-  &--two {
-    .top-bar {
-      display: none;
-    }
-  }
+.page--one .bar--bottom,
+.page--two .bar--top {
+  display: none;
 }
 
 @media only screen and (min-width: 900px) {
-  .page {
-    &--one {
-      .bottom-bar {
-        display: block;
-      }
-    }
+  .page--one .bar--bottom,
+  .page--two .bar--top {
+    display: block;
+  }
+}
 
-    &--two {
-      .top-bar {
-        display: block;
-      }
-    }
+@media print {
+  .page--one .bar--bottom,
+  .page--two .bar--top {
+    display: block;
   }
 }
