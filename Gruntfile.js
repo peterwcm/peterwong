@@ -115,6 +115,15 @@ module.exports = grunt => {
           'build/css/resume.min.css': 'assets/sass/resume.scss'
         }
       },
+      invoice: {
+        options: {
+          loadPath: ['vendor/bower_components/foundation/scss'],
+          style: 'compressed'
+        },
+        files: {
+          'build/css/invoice.min.css': 'assets/sass/invoice.scss'
+        }
+      },
       pages: {
         options: {
           loadPath: ['vendor/bower_components/foundation/scss'],
@@ -136,6 +145,9 @@ module.exports = grunt => {
       },
       resume: {
         src: 'build/css/resume.min.css'
+      },
+      invoice: {
+        src: 'build/css/invoice.min.css'
       },
       pages: {
         src: 'build/css/pages.min.css'
@@ -208,6 +220,13 @@ module.exports = grunt => {
           'assets/sass/components/resume/**/*.scss'
         ],
         tasks: ['sass:resume', 'postcss:resume']
+      },
+      invoiceCss: {
+        files: [
+          'assets/sass/invoice.scss',
+          'assets/sass/components/invoice/**/*.scss'
+        ],
+        tasks: ['sass:invoice', 'postcss:invoice']
       },
       pagesCss: {
         files: [
