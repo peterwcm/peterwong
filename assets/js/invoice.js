@@ -14,6 +14,9 @@ class Invoice {
       if (!$body.hasClass('is-edit')) {
         this._syncLabel();
         this.updatePrice();
+
+        // Update document title.
+        document.title = "Peter's Invoice " + $('.js-invoice-num').val().replace('#', '');
       }
     });
   }
