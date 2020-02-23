@@ -1,2 +1,4 @@
+/invoice/*
+  Basic-Auth: test:test
 /invoice.html
   Basic-Auth: test:test

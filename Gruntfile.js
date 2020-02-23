@@ -172,7 +172,7 @@ module.exports = grunt => {
       },
       misc: {
         files: [{
-          src: ['favicon.png', 'robots.txt', 'sitemap.xml', '_headers.txt'],
+          src: ['favicon.png', 'robots.txt', 'sitemap.xml', '_headers'],
           dest: 'build/'
         }]
       }
