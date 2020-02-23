@@ -1,12 +1,21 @@
 .business {
-  &__logo {
-    $size: 7rem;
+  display: flex;
+  align-items: center;
 
-    margin: 0 auto;
-    width: $size;
-    height: $size;
-    border-radius: $size / 2;
-    background: $color-theme--primary url('#{$image-dir}logo.png') no-repeat;
+  &__logo {
+    margin-right: auto;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: url('#{$image-dir}logo.svg') no-repeat;
     background-size: cover;
+  }
+
+  &__name {
+    margin: 0 0 $section-margin--tiny;
+  }
+
+  &__phone {
+    margin-top: $section-margin--small;
   }
 }

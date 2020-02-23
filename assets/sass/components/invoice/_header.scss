@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  color: $color-text--inverse;
+  font-size: $font-size--small;
+
+  &__business,
+  &__invoice {
+    padding: $section-margin $section-margin--large;
+  }
+
+  &__business {
+    width: 70%;
+    background-color: $color-theme--primary;
+  }
+
+  &__invoice {
+    width: 30%;
+    text-align: right;
+    background-color: $color-green--light3;
+  }
+}

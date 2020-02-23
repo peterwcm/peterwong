@@ -1,21 +1,18 @@
 .page {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: $a4-page-width;
   height: $a4-page-height;
+  font-size: $font-size;
   background-color: $color-white;
-}
 
-header {
-  background-color: $color-neutral-light;
+  @include print() {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  height: $a4-page-height - $a4-header-height - ($a4-bar-height * 2);
-
-  > section:nth-child(even) {
-    background-color: $color-neutral-light;
-  }
+  flex-grow: 1;
 }

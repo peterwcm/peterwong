@@ -6,10 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   <title>Invoice - Peter Wong</title>
 
-  <!-- Meta Tags -->
-  <meta name="keywords" content="portfolio, web design, web development, freelance, freelancer, resume, brisbane, australia"/>
-  <meta name="description" content="I have recently commenced work as a freelance web developer. Come check out my online portfolio."/>
-
   <!-- Canonical Link -->
   <link rel="canonical" href="//peterwong.me/invoice">
 
@@ -19,7 +15,7 @@
 
   <!-- CSS -->
   <link media="all" type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  <link href="css/invoice.min.css" rel="stylesheet">
+  <link media="all" type="text/css" rel="stylesheet" href="css/invoice.min.css">
 
   <!-- Fonts -->
   <link href="//fonts.googleapis.com/css?family=
@@ -31,62 +27,89 @@
 </head>
 
 <body>
-<div class="page">
-  <header>
-    <div class="header__left">
-      <div class="business">
-        <div class="business__logo"></div>
-        <h5 class="business__name">Chun Mo Wong</h5>
-        <div class="business__abn">ABN: 59621437981</div>
-        <div class="business__address">128 Charlotte Street, Brisbane City, QLD 4000</div>
-        <div class="business__phone">0421957638</div>
-        <div class="business__email">peterwong.brisbane@gmail.com</div>
+  <div class="page">
+    <header class="header">
+      <div class="header__business">
+        <div class="business">
+          <div class="business__logo"></div>
+          <div class="business__details">
+            <h2 class="business__name">Chun Mo Wong</h2>
+            <div class="business__abn">ABN: 59621437981</div>
+            <div class="business__address">128 Charlotte Street, Brisbane City, QLD 4000</div>
+            <div class="business__phone">0421957638</div>
+            <div class="business__email">peterwong.brisbane@gmail.com</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="header__right">
-      <div class="invoice">
-        <div class="invoice__number">#20200124</div>
-        <div class="invoice__date">14 Jan 2020</div>
-        <div class="invoice__total">$2850.00</div>
+      <div class="header__invoice">
+        <div class="invoice">
+          <h2 class="invoice__title">Tax Invoice</h2>
+          <div class="invoice__number">#20200124</div>
+          <div class="invoice__date">14 Jan 2020</div>
+          <div class="invoice__total">$2850.00</div>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
+    <section class="main">
+      <div class="client">
+        <h3 class="client__title">Bill To</h3>
+        <div class="client__name">Flight Centre</div>
+        <div class="client__address">275 Grey Street, South Brisbane, QLD 4101</div>
+      </div>
 
-  <section class="main">
-    <table class="wv-table">
-      <thead class="wv-table__header" style="background-color: rgb(244, 245, 245);">
-      <tr class="wv-table__row">
-        <th class="wv-table__cell" colspan="4" style="color: rgb(0, 0, 0);">Services</th>
-        <th class="wv-table__cell--amount contemporary-template__items__column--center" colspan="1" style="color: rgb(0, 0, 0);">Hours</th>
-        <th class="wv-table__cell--amount" colspan="1" style="color: rgb(0, 0, 0);">Rate</th>
-        <th class="wv-table__cell--amount" colspan="1" style="color: rgb(0, 0, 0);">Amount</th>
-      </tr>
-      </thead>
-      <tbody class="wv-table__body">
-      <tr class="wv-table__row">
-        <td class="wv-table__cell" colspan="4"><strong class="wv-text--strong">Web Development Service</strong>
-          <p class="wv-table__cell--nested">20/1/2020 - 31/1/2020</p></td>
-        <td class="wv-table__cell contemporary-template__items__column--center" colspan="1">
-          <span class="wv-text wv-text--body ">54</span></td>
-        <td class="wv-table__cell--amount" colspan="1"><span class="wv-text wv-text--body">$70.00</span></td>
-        <td class="wv-table__cell--amount" colspan="1"><span class="wv-text wv-text--body">$3,780.00</span></td>
-      </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <footer></footer>
-
-  <section class="header">
-
-  </section>
-
-  <div class="bottom-bar"></div>
-
-  <a href="javascript:void(0)" class="js-nav-button nav-button nav-button--next" data-target-page="2">
-    <i class="fa fa-angle-right" aria-hidden="true"></i>
-  </a>
-</div>
+      <div class="price">
+        <table class="price__table">
+          <thead>
+          <tr>
+            <th colspan="4">Services</th>
+            <th colspan="1">Hours</th>
+            <th colspan="2">Rate</th>
+            <th colspan="2">Amount</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4">
+                <p>Freelance Web Development Service</p>
+                <small>20/1/2020 - 31/1/2020</small>
+              </td>
+              <td colspan="1">54</td>
+              <td colspan="2">$70.00</td>
+              <td colspan="2" class="price__amount">$3,780.00</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="7" class="price__label">Subtotal</td>
+              <td colspan="2" class="price__amount">5,674.00</td>
+            </tr>
+            <tr>
+              <td colspan="7" class="price__label">GST</td>
+              <td colspan="2" class="price__amount">$200.00</td>
+            </tr>
+            <tr>
+              <td colspan="7" class="price__label">Total</td>
+              <td colspan="2" class="price__amount">$5,874.00</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="payment">
+        <div class="bank">
+          <h3 class="bank__title">Bank Account Details</h3>
+          <div class="contact-bank__icon">
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+          </div>
+          <div class="bank__name">ANZ Bank</div>
+          <div class="bank__acc-name">Account Name: Chun Mo Wong</div>
+          <div class="bank__bsb">BSB: 014125</div>
+          <div class="bank__acc-number">Account Number: 410328586</div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
 <!-- JS -->
 <!--<script src="js/resume.min.js"></script>-->
