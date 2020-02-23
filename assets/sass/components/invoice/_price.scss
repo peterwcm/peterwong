@@ -11,7 +11,11 @@
 
     th {
       padding: $section-margin--small $section-margin;
-      text-align: left;
+      text-align: center;
+
+      &:first-child {
+        text-align: left;
+      }
 
       &:last-child {
         text-align: right;
@@ -36,6 +40,11 @@
       td {
         padding-top: $section-margin--small;
         padding-bottom: $section-margin--small;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          text-align: center;
+        }
       }
     }
 
