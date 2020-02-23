@@ -1,5 +1,5 @@
 .price {
-  padding: $section-margin $section-margin--large;
+  padding: $section-margin--large;
 
   &__table {
     width: 100%;
@@ -10,11 +10,16 @@
     }
 
     th {
-      padding: $section-margin--small;
+      padding: $section-margin--small $section-margin;
+      text-align: left;
     }
 
     p {
       margin: 0;
+    }
+
+    small {
+      color: $color-neutral3;
     }
 
     td {
@@ -22,11 +27,25 @@
     }
 
     tbody {
-      border-bottom: 0.0625rem solid $color-neutral-light;
+      border-bottom: 0.0625rem solid $color-neutral;
 
       td {
         padding-top: $section-margin--small;
         padding-bottom: $section-margin--small;
+      }
+    }
+
+    tfoot {
+      tr {
+        &:first-of-type {
+          td {
+            padding-top: $section-margin--medium;
+          }
+        }
+      }
+
+      td {
+        padding: ($section-margin--tiny * 2) $section-margin;
       }
     }
   }
@@ -36,7 +55,7 @@
     text-transform: uppercase;
   }
 
-  &__amount {
-    text-align: right;
+  &__total {
+    font-weight: $font-weight-bold;
   }
 }
