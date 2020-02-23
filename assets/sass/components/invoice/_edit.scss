@@ -1,0 +1,19 @@
+.editable {
+  &__input {
+    display: none;
+  }
+
+  .is-edit & {
+    &:not([disabled]) {
+      .editable__input {
+        display: block;
+        width: 100%;
+        padding: $section-margin--tiny;
+      }
+
+      .editable__label {
+        display: none;
+      }
+    }
+  }
+}

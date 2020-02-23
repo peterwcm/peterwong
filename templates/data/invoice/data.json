@@ -1,0 +1,15 @@
+{
+  "invoice": {
+    "business": {
+      "name": "Chun Mo Wong",
+      "abn": "59621437981",
+      "address": "128 Charlotte Street, Brisbane City, QLD 4000",
+      "phone": "0421957638",
+      "email": "peterwong.brisbane@gmail.com"
+    },
+    "client": {
+      "name": "Flight Centre",
+      "address": "275 Grey Street, South Brisbane, QLD 4101"
+    }
+  }
+}

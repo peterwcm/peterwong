@@ -23,6 +23,13 @@ module.exports = grunt => {
         ],
         dest: 'build/js/resume.js'
       },
+      invoice: {
+        src: [
+          'vendor/bower_components/foundation/js/vendor/jquery.js',
+          'assets/js/invoice.js'
+        ],
+        dest: 'build/js/invoice.js'
+      },
       pages: {
         src: [
           'vendor/bower_components/foundation/js/vendor/jquery.js',
@@ -54,6 +61,11 @@ module.exports = grunt => {
           '<%= concat.resume.dest %>': '<%= concat.resume.dest %>'
         }
       },
+      invoice: {
+        files: {
+          '<%= concat.invoice.dest %>': '<%= concat.invoice.dest %>'
+        }
+      },
       pages: {
         files: {
           '<%= concat.pages.dest %>': '<%= concat.pages.dest %>'
@@ -74,6 +86,11 @@ module.exports = grunt => {
       resume: {
         files: {
           'build/js/resume.min.js': ['<%= concat.resume.dest %>']
+        }
+      },
+      invoice: {
+        files: {
+          'build/js/invoice.min.js': ['<%= concat.invoice.dest %>']
         }
       },
       pages: {
@@ -181,7 +198,7 @@ module.exports = grunt => {
       options: {
         flatten: true,
         partials: ['templates/includes/**/*.hbs'],
-        data: ['templates/data/*.{json,yml}']
+        data: ['templates/data/**/*.{json,yml}']
       },
       site: {
         src: ['templates/*.hbs'],
@@ -196,6 +213,10 @@ module.exports = grunt => {
       resumeJs: {
         files: ['<%= concat.resume.src %>'],
         tasks: ['concat:resume', 'babel:resume', 'uglify:resume']
+      },
+      invoiceJs: {
+        files: ['<%= concat.invoice.src %>'],
+        tasks: ['concat:invoice', 'babel:invoice', 'uglify:invoice']
       },
       pagesJs: {
         files: ['<%= concat.pages.src %>'],

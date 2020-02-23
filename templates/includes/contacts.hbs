@@ -1,21 +1,21 @@
 {{#contacts}}
-<section class="contact-info">
-  <div class="contact-info__icon">
-    <i class="fa fa-{{icon}}" aria-hidden="true"></i>
-  </div>
-  <div class="contact-info__details">
-    <h5 class="contact-info__heading">{{ name }}</h5>
-    <div class="contact-info__text">
-      {{#eq type "link"}}
-        <a href="{{{ url }}}" target="_blank">{{{ details }}}</a>
-      {{else}}
-        {{#eq type "email"}}
-          <a href="{{{ url }}}">{{{ details }}}</a>
-        {{else}}
-          {{details}}
-        {{/eq}}
-      {{/eq}}
+  <section class="contact-info">
+    <div class="contact-info__icon">
+      <i class="fa fa-{{icon}}" aria-hidden="true"></i>
     </div>
-  </div>
-</section>
+    <div class="contact-info__details">
+      <h5 class="contact-info__heading">{{ name }}</h5>
+      <div class="contact-info__text">
+        {{#eq type "link"}}
+          <a href="{{{ url }}}" target="_blank">{{{ details }}}</a>
+        {{else}}
+          {{#eq type "email"}}
+            <a href="{{{ url }}}">{{{ details }}}</a>
+          {{else}}
+            {{details}}
+          {{/eq}}
+        {{/eq}}
+      </div>
+    </div>
+  </section>
 {{/contacts}}

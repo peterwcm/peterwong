@@ -26,93 +26,115 @@
 				Muli&subset=all" rel="stylesheet" type="text/css">
 </head>
 
-<body>
-  <div class="page">
-    <header class="header">
-      <div class="header__business">
-        <div class="business">
-          <div class="business__logo"></div>
-          <div class="business__details">
-            <h2 class="business__name">Chun Mo Wong</h2>
-            <div class="business__abn">ABN: 59621437981</div>
-            <div class="business__address">128 Charlotte Street, Brisbane City, QLD 4000</div>
-            <div class="business__phone">0421957638</div>
-            <div class="business__email">peterwong.brisbane@gmail.com</div>
+<body class="is-edit">
+  {{#invoice}}
+    <div class="page">
+      <header class="header">
+        <div class="header__business">
+          <div class="business">
+            <div class="business__logo"></div>
+            <div class="business__details">
+              <h2 class="business__name">{{business.name}}</h2>
+              <div class="business__abn">ABN: {{business.abn}}</div>
+              <div class="business__address">{{business.address}}</div>
+              <div class="business__phone">{{business.phone}}</div>
+              <div class="business__email">{{business.email}}</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="header__invoice">
-        <div class="invoice">
-          <h2 class="invoice__title">Tax Invoice</h2>
-          <div class="invoice__number">#20200124</div>
-          <div class="invoice__date">14 Jan 2020</div>
-          <div class="invoice__total">$2850.00</div>
-        </div>
-      </div>
-    </header>
-    <section class="main">
-      <div class="client">
-        <h3 class="client__title">Bill To</h3>
-        <div class="client__name">Flight Centre</div>
-        <div class="client__address">275 Grey Street, South Brisbane, QLD 4101</div>
-      </div>
-
-      <div class="price">
-        <table class="price__table">
-          <thead>
-          <tr>
-            <th colspan="4">Services</th>
-            <th colspan="1">Hours</th>
-            <th colspan="2">Rate</th>
-            <th colspan="2">Amount</th>
-          </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="4">
-                <p>Freelance Web Development Service</p>
-                <small>20/1/2020 - 31/1/2020</small>
-              </td>
-              <td colspan="1">54</td>
-              <td colspan="2">$70.00</td>
-              <td colspan="2" class="price__amount">$3,780.00</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="7" class="price__label">Subtotal</td>
-              <td colspan="2" class="price__amount">5,674.00</td>
-            </tr>
-            <tr>
-              <td colspan="7" class="price__label">GST</td>
-              <td colspan="2" class="price__amount">$200.00</td>
-            </tr>
-            <tr>
-              <td colspan="7" class="price__label price__total">Total</td>
-              <td colspan="2" class="price__amount price__total">$5,874.00</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="payment">
-        <h3 class="payment__title">Payment</h3>
-        <div class="bank">
-          <div class="contact-bank__icon">
-            <i class="fa fa-university" aria-hidden="true"></i>
-            <span class="bank__title">Direct Deposit</span>
+        <div class="header__invoice">
+          <div class="invoice">
+            <h2 class="invoice__title">Tax Invoice</h2>
+            <div class="invoice__number">
+              <div class="editable js-editable">
+                <input type="text" class="editable__input js-input" value="#20200124" />
+                <span class="editable__label js-label">#20200124</span>
+              </div>
+            </div>
+            <div class="invoice__date">
+              <div class="editable js-editable">
+                <input type="text" class="editable__input js-input" value="14 Jan 2020" />
+                <span class="editable__label js-label">14 Jan 2020</span>
+              </div>
+            </div>
+            <div class="invoice__total js-total">$0.00</div>
           </div>
-          <div class="bank__name">ANZ Bank</div>
-          <div class="bank__acc-name">Account Name: Chun Mo Wong</div>
-          <div class="bank__bsb">BSB: 014125</div>
-          <div class="bank__acc-number">Account Number: 410328586</div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </header>
+      <section class="main">
+        <div class="client">
+          <h3 class="client__title">Bill To</h3>
+          <div class="client__name">{{client.name}}</div>
+          <div class="client__address">{{client.address}}</div>
+        </div>
 
+        <div class="price">
+          <table class="price__table">
+            <thead>
+              <tr>
+                <th colspan="4">Services</th>
+                <th colspan="1">Hours</th>
+                <th colspan="2">Rate</th>
+                <th colspan="2">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4">
+                  <p>Freelance Web Development Service</p>
+                  <div class="editable js-editable">
+                    <input type="text" class="editable__input js-input" value="20/1/2020 - 31/1/2020" />
+                    <small class="editable__label js-label">20/1/2020 - 31/1/2020</small>
+                  </div>
+                </td>
+                <td colspan="1">
+                  <div class="editable js-editable">
+                    <input type="number" class="editable__input js-input js-hours" value="0" />
+                    <span class="editable__label js-label">0</span>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <input type="hidden" class="js-rate" value="70" />
+                  <span>$70.00</span>
+                </td>
+                <td colspan="2" class="price__amount js-subtotal">$0.00</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="7" class="price__label">Subtotal</td>
+                <td colspan="2" class="price__amount js-subtotal">$0.00</td>
+              </tr>
+              <tr>
+                <td colspan="7" class="price__label">GST</td>
+                <td colspan="2" class="price__amount js-gst">$0.00</td>
+              </tr>
+              <tr>
+                <td colspan="7" class="price__label price__total">Total</td>
+                <td colspan="2" class="price__amount price__total js-total">$0.00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="payment">
+          <h3 class="payment__title">Payment</h3>
+          <div class="bank">
+            <div class="contact-bank__icon">
+              <i class="fa fa-university" aria-hidden="true"></i>
+              <span class="bank__title">Direct Deposit</span>
+            </div>
+            <div class="bank__name">ANZ Bank</div>
+            <div class="bank__acc-name">Account Name: Chun Mo Wong</div>
+            <div class="bank__bsb">BSB: 014125</div>
+            <div class="bank__acc-number">Account Number: 410328586</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  {{/invoice}}
 <!-- JS -->
-<!--<script src="js/resume.min.js"></script>-->
+<script src="js/invoice.min.js"></script>
 </body>
 </html>
