@@ -74,6 +74,17 @@ class Invoice {
     // Update invoice number.
     $('.js-invoice-number').text(`#${invoiceNumber}`);
 
+    // Special handling for job notes.
+    const startDateVal = $('.js-start-date').val();
+    const endDateVal = $('.js-end-date').val();
+
+    if (startDateVal && endDateVal) {
+      const startDate = new Date(startDateVal).toLocaleString('en-AU', {month:'short', year:'numeric', day:'numeric'});
+      const endDate = new Date(endDateVal).toLocaleString('en-AU', {month:'short', year:'numeric', day:'numeric'});
+
+      $('.js-job-notes').text(`${startDate} - ${endDate}`);
+    }
+
     // Update document title.
     document.title = `Peter's Invoice ${invoiceNumber}`;
   }
