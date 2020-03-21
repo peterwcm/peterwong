@@ -139,6 +139,7 @@ $sticky-height: 50px;
       letter-spacing: 1px;
       margin: 0 3% 0 0;
       padding: 0 1%;
+      white-space: nowrap;
 
       &:hover,
       &.is-active {
