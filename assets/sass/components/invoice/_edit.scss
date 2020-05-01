@@ -6,7 +6,7 @@
   .is-edit & {
     &:not([disabled]) {
       .editable__input {
-        display: block;
+        display: inline;
         width: 100%;
         padding: $section-margin--tiny;
       }

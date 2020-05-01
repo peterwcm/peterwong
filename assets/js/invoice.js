@@ -64,12 +64,16 @@ class Invoice {
   _syncInvoiceLabels() {
     const $invoiceDate = $('.js-invoice-date');
     const invoiceDateVal = $invoiceDate.val();
+    const invoiceDate = new Date(invoiceDateVal);
+    // Due date will be hardcoded to 2 weeks after the invoice date.
+    const dueDate = new Date(invoiceDate.getTime() + 12096e5);
     const invoiceNumber = invoiceDateVal.replace(/-/g, '');
 
     // Update invoice date label.
-    $invoiceDate.next('.js-label').text(
-      new Date(invoiceDateVal).toLocaleString('en-AU',{month:'long', year:'numeric', day:'numeric'})
-    );
+    $invoiceDate.next('.js-label').text(this._formatDate(invoiceDate, {month: 'long'}));
+
+    // Update invoice due date label.
+    $('.js-due-date').text(this._formatDate(dueDate, {month: 'long'}));
 
     // Update invoice number.
     $('.js-invoice-number').text(`#${invoiceNumber}`);
@@ -79,14 +83,18 @@ class Invoice {
     const endDateVal = $('.js-end-date').val();
 
     if (startDateVal && endDateVal) {
-      const startDate = new Date(startDateVal).toLocaleString('en-AU', {month:'short', year:'numeric', day:'numeric'});
-      const endDate = new Date(endDateVal).toLocaleString('en-AU', {month:'short', year:'numeric', day:'numeric'});
+      const startDate = this._formatDate(new Date(startDateVal));
+      const endDate = this._formatDate(new Date(endDateVal));
 
       $('.js-job-notes').text(`${startDate} - ${endDate}`);
     }
 
     // Update document title.
     document.title = `Peter's Invoice ${invoiceNumber}`;
+  }
+
+  _formatDate(date, settings = {}) {
+    return date.toLocaleString('en-AU', Object.assign({month: 'short', year: 'numeric', day: 'numeric'}, settings));
   }
 
   _formatPrice(price) {
