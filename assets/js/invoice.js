@@ -35,7 +35,16 @@ class Invoice {
 
   _initInputs() {
     // Setup default input values.
-    $('.js-invoice-date').val(new Date().toISOString().substr(0, 10));
+    const currentDate = new Date();
+    const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+    const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+
+    // Fill in default invoice dates.
+    $('.js-invoice-date').val(this._dateValue(firstDayOfMonth));
+    $('.js-due-date').val(this._dateValue(lastDayOfMonth));
+    // Fill in default project dates.
+    $('.js-start-date').val(this._dateValue(firstDayOfMonth));
+    $('.js-end-date').val(this._dateValue(lastDayOfMonth));
 
     // Setup edit toggle event.
     $(document).dblclick(e => {
@@ -62,18 +71,19 @@ class Invoice {
   }
 
   _syncInvoiceLabels() {
+    // Invoice date.
     const $invoiceDate = $('.js-invoice-date');
     const invoiceDateVal = $invoiceDate.val();
     const invoiceDate = new Date(invoiceDateVal);
-    // Due date will be hardcoded to 2 weeks after the invoice date.
-    const dueDate = new Date(invoiceDate.getTime() + 12096e5);
+    // Due date.
+    const $dueDate = $('.js-due-date');
+    const dueDate = new Date($dueDate.val());
+    // Invoice number.
     const invoiceNumber = invoiceDateVal.replace(/-/g, '');
 
     // Update invoice date label.
     $invoiceDate.next('.js-label').text(this._formatDate(invoiceDate, {month: 'long'}));
-
-    // Update invoice due date label.
-    $('.js-due-date').text(this._formatDate(dueDate, {month: 'long'}));
+    $dueDate.next('.js-label').text(this._formatDate(dueDate, {month: 'long'}));
 
     // Update invoice number.
     $('.js-invoice-number').text(`#${invoiceNumber}`);
@@ -91,6 +101,10 @@ class Invoice {
 
     // Update document title.
     document.title = `Peter's Invoice ${invoiceNumber}`;
+  }
+
+  _dateValue(date) {
+    return `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
   }
 
   _formatDate(date, settings = {}) {
