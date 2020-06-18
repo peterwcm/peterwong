@@ -95,8 +95,14 @@ class Invoice {
     if (startDateVal && endDateVal) {
       const startDate = this._formatDate(new Date(startDateVal));
       const endDate = this._formatDate(new Date(endDateVal));
+      const notes = $('.js-notes').val();
+      let jobNotes = `${startDate} - ${endDate}`;
 
-      $('.js-job-notes').text(`${startDate} - ${endDate}`);
+      if (notes) {
+        jobNotes += ` (${$('.js-notes').val()})`;
+      }
+
+      $('.js-job-notes').text(jobNotes);
     }
 
     // Update document title.
