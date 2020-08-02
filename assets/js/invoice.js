@@ -82,8 +82,8 @@ class Invoice {
     const invoiceNumber = invoiceDateVal.replace(/-/g, '');
 
     // Update invoice date label.
-    $invoiceDate.next('.js-label').text(this._formatDate(invoiceDate, {month: 'long'}));
-    $dueDate.next('.js-label').text(this._formatDate(dueDate, {month: 'long'}));
+    $invoiceDate.next('.js-label').text(this._formatDate(invoiceDate));
+    $dueDate.next('.js-label').text(this._formatDate(dueDate));
 
     // Update invoice number.
     $('.js-invoice-number').text(`#${invoiceNumber}`);
