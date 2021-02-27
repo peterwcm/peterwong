@@ -42,4 +42,10 @@
       padding: 0;
     }
   }
+
+  &--language {
+    @include medium-screen(true) {
+      width: 60%;
+    }
+  }
 }
