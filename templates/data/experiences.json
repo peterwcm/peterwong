@@ -4,7 +4,7 @@
       "period": "May 2017 - Present",
       "employer": "Flight Centre",
       "title": "Freelance Drupal Developer",
-      "summary": "Develop and maintain the corporate travel websites using Drupal. Create new custom modules and features.",
+      "summary": "Develop and maintain Corporate Travel websites using Drupal. Create new custom modules and features.",
       "link": "https://www.stageandscreen.travel/"
     },
     {
@@ -20,6 +20,13 @@
       "title": "Full Stack Web Developer",
       "summary": "Built Node.js websites using tech stacks such as Angular, Webpack and Jest. Also helped building REST API in Java.",
       "link": "https://ecommerce.disconline.com.au/life-express/?hSty=BUDD"
+    },
+    {
+      "period": "Feb 2015 - May 2016",
+      "employer": "Flight Centre",
+      "title": "Full Stack Drupal Developer",
+      "summary": "Developed and maintained the Flight Centre AU website using Drupal. Provided technical solutions for different marketing campaigns.",
+      "link": "https://www.flightcentre.com.au/"
     },
     {
       "period": "Jun 2013 - May 2016",
