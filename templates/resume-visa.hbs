@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>Resume - Peter Wong</title>
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="//peterwong.me/resume">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+  <!-- CSS -->
+  <link media="all" type="text/css" rel="stylesheet"
+    href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link media="all" type="text/css" rel="stylesheet" href="css/resume.min.css">
+  <link media="all" type="text/css" rel="stylesheet" href="css/visa.min.css">
+
+  <!-- Fonts -->
+  <link href="//fonts.googleapis.com/css?family=
+				Open+Sans:300normal,300italic,400normal,400italic,600normal,600italic,700normal,700italic,800normal,800italic|
+				Open+Sans+Condensed:300normal|
+				League+Script|
+				Montserrat:400normal|
+				Muli&subset=all" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <style>
+    .header__right>section {
+      width: 100%;
+    }
+
+    .skills>section:nth-child(even) {
+      margin-right: 2rem;
+    }
+  </style>
+  <div class="page page--one" data-page="1">
+    <section class="main">
+      <div class="bar bar--top"></div>
+      <div class="header">
+        <div class="header__left">
+          <div class="profile-pic"></div>
+          <h4 class="full-name">Chun Mo Wong</h4>
+          <h5 class="job-title">全端網頁工程師</h5>
+        </div>
+        <div class="header__right">
+          <section class="skills skills--web">
+            <h3 class="section__title skills__title">技能</h3>
+            {{#skills}}
+            <section class="skill">
+              <h5 class="skill__name">{{{ name }}}</h5>
+              <div class="skill__level">
+                <div class="progress">
+                  <div class="js-progress progress__bar" data-progress="{{ level }}"></div>
+                </div>
+              </div>
+            </section>
+            {{/skills}}
+          </section>
+        </div>
+      </div>
+      <section class="section experiences">
+        <h3 class="section__title experiences__title">工作經驗</h3>
+        {{#experiences}}
+        <section class="experience">
+          <div class="experience__overview">
+            {{#if link}}
+            <a href="{{ link }}" target="_blank">
+              <h5 class="experience__employer">{{{ employer }}}</h5>
+            </a>
+            {{else}}
+            <h5 class="experience__employer">{{{ employer }}}</h5>
+            {{/if}}
+            <h5 class="experience__period">{{{ period }}}</h5>
+          </div>
+          <div class="experience__details">
+            <h4 class="experience__title">{{{ title }}}</h4>
+            <p class="experience__description">{{{ summary }}}</p>
+          </div>
+        </section>
+        {{/experiences}}
+      </section>
+
+      <div class="bar bar--bottom"></div>
+    </section>
+
+    <a href="javascript:void(0)" class="js-nav-button nav-button nav-button--next" data-target-page="2">
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div class="page page--two" data-page="2">
+    <section class="main">
+      <div class="bar bar--top"></div>
+      <section class="section educations">
+        <h3 class="section__title educations__title">學歷</h3>
+        {{> educations }}
+      </section>
+      <section class="section certs">
+        <h3 class="section__title certs__title">證照</h3>
+        {{#vCerts}}
+        <section class="cert">
+          <div class="cert__overview">
+            {{#if link}}
+            <a href="{{ link }}" target="_blank">
+              <h5 class="cert__issuer">{{{ issuer }}}</h5>
+            </a>
+            {{else}}
+            <h5 class="cert__issuer">{{{ issuer }}}</h5>
+            {{/if}}
+            <h5 class="cert__period">{{{ period }}}</h5>
+          </div>
+          <div class="cert__details">
+            <h4 class="cert__title">{{{ title }}}</h4>
+            <p class="cert__description">{{{ summary }}}</p>
+          </div>
+        </section>
+        {{/vCerts}}
+
+      </section>
+      <section class="section skills skills--language">
+        <h3 class="section__title skills__title">語言</h3>
+        {{#vLangs}}
+        <section class="skill skill--language">
+          <h5 class="skill__name">{{{ name }}}</h5>
+          <div class="skill__level">
+            <div class="progress">
+              <div class="js-progress progress__bar" data-progress="{{ level }}"></div>
+            </div>
+          </div>
+        </section>
+        {{/vLangs}}
+      </section>
+      <section class="section references">
+        <h3 class="section__title references__title">推薦人</h3>
+        {{#vRefs}}
+        {{#unless disabled}}
+        <section class="reference">
+          <h3 class="reference__name">{{{ name }}}</h3>
+          <h4 class="reference__title">{{{ title }}}</h4>
+          <div class="reference__company"><i class="fa fa-building" aria-hidden="true"></i>{{{ company }}}</div>
+          <div class="reference__phone"><i class="fa fa-phone" aria-hidden="true"></i>{{{ phone }}}</div>
+          <a href="mailto:{{{ email }}}" class="reference__email"><i class="fa fa-envelope" aria-hidden="true"></i>{{{
+            email
+            }}}</a>
+        </section>
+        {{/unless}}
+        {{/vRefs}}
+
+      </section>
+      <div class="bar bar--bottom"></div>
+    </section>
+
+    <a href="javascript:void(0)" class="js-nav-button nav-button nav-button--previous" data-target-page="1">
+      <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- JS -->
+  <script src="js/resume.min.js"></script>
+</body>
+
+</html>

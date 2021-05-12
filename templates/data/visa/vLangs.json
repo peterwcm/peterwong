@@ -1,0 +1,7 @@
+{
+  "vLangs": [
+    { "name": "英文", "level": 95},
+    { "name": "中文", "level": 90},
+    { "name": "廣東話", "level": 100}
+  ]
+}
