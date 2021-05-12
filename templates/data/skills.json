@@ -1,14 +1,14 @@
 {
   "skills": [
-    { "name": "PHP", "level": 90},
+    { "name": "PHP", "level": 95},
     { "name": "Java", "level": 70},
     { "name": "ASP.NET", "level": 70},
     { "name": "AngularJS", "level": 60},
     { "name": "React", "level": 40},
     { "name": "Node.js", "level": 75},
     { "name": "Javascript", "level": 85},
-    { "name": "Sass", "level": 90},
-    { "name": "Drupal", "level": 85},
+    { "name": "Sass", "level": 95},
+    { "name": "Drupal", "level": 95},
     { "name": "WordPress", "level": 70}
   ]
 }
