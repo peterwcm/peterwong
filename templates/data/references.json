@@ -4,47 +4,41 @@
       "name": "Nathan ter Bogt",
       "title": "Technical Lead",
       "company": "Flight Centre Travel Group",
-      "email": "nathan_terbogt@flightcentre.com",
-      "linkedin": "https://www.linkedin.com/in/nterbogt/"
+      "email": "nathan_terbogt@flightcentre.com"
     },
     {
       "name": "Luis Landaverde",
       "title": "Digital Experience Leader",
       "company": "Flight Centre Travel Group",
       "phone": "07 3170 8041",
-      "email": "luis_landaverde@flightcentre.com",
-      "linkedin": "https://www.linkedin.com/in/luislandaverde/"
+      "email": "luis_landaverde@flightcentre.com"
     },
     {
       "name": "Roger Wee",
       "title": "Product Manager",
       "company": "Flight Centre Travel Group",
       "phone": "07 3170 7050",
-      "email": "roger_wee@flightcentre.com",
-      "linkedin": "https://www.linkedin.com/in/roger-wee-19b03a44/"
+      "email": "roger_wee@flightcentre.com"
     },
     {
       "name": "Libby O'Brien",
       "title": "Chief Digital Officer",
       "company": "Sentis",
-      "email": "libby.obrien@hotmail.com",
-      "linkedin": "https://www.linkedin.com/in/libby-o-brien/"
+      "email": "libby.obrien@hotmail.com"
     },
     {
       "name": "Simon Collier-Baker",
       "title": "Software Development Manager",
       "company": "Amazon",
       "phone": "0405 444 528",
-      "email": "simoncb@amazon.com",
-      "linkedin": "https://www.linkedin.com/in/simoncb/"
+      "email": "simoncb@amazon.com"
     },
     {
       "name": "Dev Mayur Zaveri",
       "title": "Technical Lead",
       "company": "Auto & General Insurance Company",
       "phone": "07 3377 8704",
-      "email": "dev.zaveri@autogeneral.com.au",
-      "linkedin": "http://linkedin.com/in/dev-mayur-zaveri-7a226429"
+      "email": "dev.zaveri@autogeneral.com.au"
     }
   ]
 }
