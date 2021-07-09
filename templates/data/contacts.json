@@ -2,7 +2,7 @@
   "contacts": [
     { "name": "Website", "icon": "globe", "details": "peterwong.me", "url": "http://peterwong.me", "type": "link"},
     { "name": "Email", "icon": "envelope", "details": "peterwong.brisbane@gmail.com", "url": "mailto:peterwong.brisbane@gmail.com", "type": "email"},
-    { "name": "Phone", "icon": "phone", "details": "0421957638", "url": "", "type": "phone"},
+    { "name": "Phone", "icon": "phone", "details": "+886 905 660 932", "url": "", "type": "phone"},
     { "name": "LinkedIn", "icon": "linkedin", "details": "linkedin.com/in/peterwcm", "url": "https://www.linkedin.com/in/peterwcm", "type": "link"},
     { "name": "GitHub", "icon": "github", "details": "github.com/peterwcm", "url": "https://github.com/peterwcm", "type": "link"},
     { "name": "StackOverflow", "icon": "stack-overflow", "details": "stackoverflow.com/users/731968", "url": "https://stackoverflow.com/users/731968/peter-wong", "type": "link"}

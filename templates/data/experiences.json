@@ -3,8 +3,8 @@
     {
       "period": "May 2017 - Present",
       "employer": "Flight Centre",
-      "title": "Freelance Drupal Developer",
-      "summary": "Develop and maintain Corporate Travel websites using Drupal. Create new custom modules and features.",
+      "title": "Senior Drupal Developer",
+      "summary": "Develop and maintain corporate travel websites using Drupal9 and PHP. Create new custom modules and features based on new project's needs. Make use of Drupal Paragraphs to create reusable components for site builders. Build front-end components with Sass, Javascript and Vue.js.",
       "link": "https://www.stageandscreen.travel/"
     },
     {
@@ -12,34 +12,35 @@
       "employer": "Blossom Days",
       "title": "Co-founder & Full Stack WordPress Developer",
       "summary": "Designed, developed and maintained the website in WordPress.",
-      "link": "http://blossomdays.hk/"
+      "link": "http://blossomdays.hk/",
+      "disabled": true
     },
     {
       "period": "May 2016 - Mar 2017",
       "employer": "Auto & General",
       "title": "Full Stack Web Developer",
-      "summary": "Built Node.js websites using tech stacks such as Angular, Webpack and Jest. Also helped building REST API in Java.",
+      "summary": "I was responsible for all partnership websites and life products, such as Income Protection. My responsibilities included building websites with tech stacks such as Java Spring, Angular, Webpack and Jest. I also needed to maintain old applications that are written in JSTL.",
       "link": "https://ecommerce.disconline.com.au/life-express/?hSty=BUDD"
     },
     {
       "period": "Feb 2015 - May 2016",
       "employer": "Flight Centre",
-      "title": "Full Stack Drupal Developer",
-      "summary": "Developed and maintained the Flight Centre AU website using Drupal. Provided technical solutions for different marketing campaigns.",
+      "title": "Drupal Developer",
+      "summary": "Developed and maintained the Flight Centre Australia website using Drupal7 and PHP. My responsibilities included building front-end components using jQuery, React and Sass. I also needed to create REST API endpoints that could be consumed by the front-end.",
       "link": "https://www.flightcentre.com.au/"
     },
     {
       "period": "Jun 2013 - May 2016",
       "employer": "Zippity",
       "title": "Co-founder & Full Stack Web Developer",
-      "summary": "Built the platform from scratch in PHP with CodeIgniter and jQuery. I was responsible for leading a 3-people dev team and the quality of its technical deliverables.",
+      "summary": "and MySQL. I was also responsible for leading a 4-people dev team and the quality of its technical deliverables.",
       "link": ""
     },
     {
       "period": "Jun 2013 - Aug 2014",
       "employer": "Anglo American",
       "title": "ASP.NET MVC Developer",
-      "summary": "Designed and built an internal .NET web application to help improve the process of data entry and data analysis for the company.",
+      "summary": "Designed and built an internal web application using ASP.NET MVC and C# to help improve the process of data entry and data analysis.",
       "link": "https://www.angloamerican.com/"
     }
   ]

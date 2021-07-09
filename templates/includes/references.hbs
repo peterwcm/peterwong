@@ -4,8 +4,17 @@
       <h3 class="reference__name">{{{ name }}}</h3>
       <h4 class="reference__title">{{{ title }}}</h4>
       <div class="reference__company"><i class="fa fa-building" aria-hidden="true"></i>{{{ company }}}</div>
-      <div class="reference__phone"><i class="fa fa-phone" aria-hidden="true"></i>{{{ phone }}}</div>
-      <a href="mailto:{{{ email }}}" class="reference__email"><i class="fa fa-envelope" aria-hidden="true"></i>{{{ email }}}</a>
+      {{#if phone}}
+        <div class="reference__phone"><i class="fa fa-phone" aria-hidden="true"></i>{{{ phone }}}</div>
+      {{/if}}
+      <div>
+        <a href="mailto:{{{ email }}}"
+           class="reference__email"><i class="fa fa-envelope"
+             aria-hidden="true"></i>{{{ email }}}</a>
+      </div>
+      {{#if linkedin}}
+        <a href="{{{ linkedin }}}" class="reference__email"><i class="fa fa-linkedin" aria-hidden="true"></i>{{{ linkedin }}}</a>
+      {{/if}}
     </section>
   {{/unless}}
 {{/references}}

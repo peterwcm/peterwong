@@ -1,54 +1,50 @@
 {
   "references": [
     {
-      "name": "Libby O'Brien",
-      "title": "Head of Digital",
+      "name": "Nathan ter Bogt",
+      "title": "Technical Lead",
       "company": "Flight Centre Travel Group",
-      "phone": "0466 501 644",
-      "email": "libby_obrien@flightcentre.com"
-    },
-    {
-      "name": "Adam Awada",
-      "title": "Global Tech Lead",
-      "company": "Flight Centre Travel Group",
-      "phone": "0435 960 214",
-      "email": "adam_awada@flightcentre.com"
-    },
-    {
-      "name": "Simon Collier-Baker",
-      "title": "Development Manager",
-      "company": "Auto & General Insurance Company",
-      "phone": "0405 444 528",
-      "email": "simon.collierbaker@autogeneral.com.au"
-    },
-    {
-      "name": "Dev Mayur Zaveri",
-      "title": "Lead Developer",
-      "company": "Auto & General Insurance Company",
-      "phone": "07 3377 8704",
-      "email": "dev.zaveri@autogeneral.com.au"
-    },
-    {
-      "name": "Roxy Roberts",
-      "title": "Project Manager",
-      "company": "Auto & General Insurance Company",
-      "phone": "0424 737 193",
-      "email": "roxy.roberts@autogeneral.com.au"
+      "email": "nathan_terbogt@flightcentre.com",
+      "linkedin": "https://www.linkedin.com/in/nterbogt/"
     },
     {
       "name": "Luis Landaverde",
       "title": "Digital Experience Leader",
       "company": "Flight Centre Travel Group",
       "phone": "07 3170 8041",
-      "email": "luis_landaverde@flightcentre.com"
+      "email": "luis_landaverde@flightcentre.com",
+      "linkedin": "https://www.linkedin.com/in/luislandaverde/"
     },
     {
       "name": "Roger Wee",
-      "title": "Development Team Leader",
+      "title": "Product Manager",
       "company": "Flight Centre Travel Group",
       "phone": "07 3170 7050",
       "email": "roger_wee@flightcentre.com",
-      "disabled": true
+      "linkedin": "https://www.linkedin.com/in/roger-wee-19b03a44/"
+    },
+    {
+      "name": "Libby O'Brien",
+      "title": "Chief Digital Officer",
+      "company": "Sentis",
+      "email": "libby.obrien@hotmail.com",
+      "linkedin": "https://www.linkedin.com/in/libby-o-brien/"
+    },
+    {
+      "name": "Simon Collier-Baker",
+      "title": "Software Development Manager",
+      "company": "Amazon",
+      "phone": "0405 444 528",
+      "email": "simoncb@amazon.com",
+      "linkedin": "https://www.linkedin.com/in/simoncb/"
+    },
+    {
+      "name": "Dev Mayur Zaveri",
+      "title": "Technical Lead",
+      "company": "Auto & General Insurance Company",
+      "phone": "07 3377 8704",
+      "email": "dev.zaveri@autogeneral.com.au",
+      "linkedin": "http://linkedin.com/in/dev-mayur-zaveri-7a226429"
     }
   ]
 }

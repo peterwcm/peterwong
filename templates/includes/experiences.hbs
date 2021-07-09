@@ -1,4 +1,5 @@
 {{#experiences}}
+  {{#unless disabled}}
   <section class="experience">
     <div class="experience__overview">
       {{#if link}}
@@ -15,4 +16,5 @@
       <p class="experience__description">{{{ summary }}}</p>
     </div>
   </section>
+  {{/unless}}
 {{/experiences}}
