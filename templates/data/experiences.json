@@ -25,7 +25,7 @@
     {
       "period": "Feb 2015 - May 2016",
       "employer": "Flight Centre",
-      "title": "Drupal Developer",
+      "title": "Full Stack Drupal Developer",
       "summary": "Developed and maintained the Flight Centre Australia website using Drupal7 and PHP. My responsibilities included building front-end components using jQuery, React and Sass. I also needed to create REST API endpoints that could be consumed by the front-end.",
       "link": "https://www.flightcentre.com.au/"
     },
